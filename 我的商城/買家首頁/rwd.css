@@ -1,0 +1,232 @@
+@media (max-width:1000px) {
+    .wrapper {
+        width: 100% !important;
+    }
+
+    .wrapper h1 {
+        float: unset !important;
+        margin: auto;
+    }
+
+    .wrapper nav {
+        float: unset !important;
+        margin: auto;
+    }
+}
+
+
+/*#container*/
+
+@media (max-width:1000px) {
+
+    .layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 798px !important;
+        margin: auto;
+        margin-top: 3em;
+    }
+
+
+
+    /*sidebar*/
+    .layout .sidebar {
+        float: unset !important;
+        background-color: rgb(244, 247, 251);
+    }
+
+
+
+
+    /*right*/
+
+    .layout .right-content {
+        width: 644px !important;
+        float: unset !important;
+    }
+
+    .layout .wrap {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .layout .wrap .layout-r {
+        width: 500px !important;
+        margin: auto;
+        display: flex;
+        float: unset;
+    }
+
+    .layout .wrap .layout-r img {
+        width: 150px !important;
+        height: unset !important;
+    }
+
+    .layout .wrap .layout-l {
+        margin: auto;
+        float: unset;
+    }
+}
+
+
+/*footer*/
+
+@media (max-width :1000px) {
+    #footer {
+        width: 100% !important;
+    }
+}
+
+/*-----------------820px-------------------------*/
+/*頭*/
+
+@media (max-width:820px) {
+
+
+
+    .wrapper {
+        position: relative !important;
+    }
+
+    .wrapper nav {
+        width: 462px !important;
+    }
+
+    .wrapper .search-box {
+        width: 181px !important;
+        position: absolute !important;
+        bottom: -36px;
+        border: none !important;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+
+    .wrapper .search-box #keyword {
+        position: relative;
+        margin: auto;
+        outline: solid 5px rgb(254, 114, 59);
+    }
+
+    .wrapper .search-box::before {
+        width: 216px;
+        height: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 1px;
+        margin: auto;
+        background-color: rgb(250, 112, 58);
+    }
+
+
+}
+
+/*container*/
+@media (max-width:820px) {
+
+    #container.wrapper {
+        margin-top: 1em;
+    }
+
+    .layout {
+        width: 80% !important;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3.6fr;
+        background: none !important;
+        background-color: white !important;
+    }
+
+    .layout .sidebar {
+        display: flex;
+        width: 100% !important;
+        margin: auto;
+    }
+
+    .layout .sidebar .business-handle {
+        width: 170px !important;
+
+    }
+
+    /*right*/
+    .layout .right-content {
+        margin: 0 auto;
+    }
+
+    .layout .right-content {
+        width: 100% !important;
+    }
+
+    .layout .right-content .layout-l {
+        width: 100% !important;
+    }
+
+    .layout .right-content .layout-l .member-intro {
+        width: 96% !important;
+    }
+
+    .layout .right-content .layout-l .member-intro dl {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100% !important;
+    }
+
+    .layout .right-content .layout-l .member-intro dl dd,
+    .layout .right-content .layout-l .member-intro dl dt {
+        display: block !important;
+    }
+
+
+    .layout .right-content .layout-l .textarea {
+        width: 96% !important;
+        margin: auto !important;
+    }
+
+    .layout .right-content .layout-l .button {
+        left: unset !important;
+        right: 0px;
+
+    }
+
+    /*layout-r*/
+    .layout .wrap .layout-r {
+        width: 100% !important;
+        margin: auto;
+    }
+}
+
+/*------------------iphone-------------------*/
+
+@media(max-width:500px) {
+    .layout .sidebar {
+        flex-direction: column;
+    }
+
+    .layout .sidebar .business-handle {
+        position: relative;
+        left: 21px;
+    }
+
+
+    /**/
+
+    .wrapper nav {
+        width: 291px !important;
+        height: 76px !important;
+    }
+
+    /**/
+
+    .layout {
+        grid-template-rows: 1fr 2fr;
+        margin-top: 4.5em;
+    }
+
+    /**/
+
+    .layout .wrap .layout-r .visitors.pngFix h4 {
+        border: solid 1px rgb(213, 229, 245);
+    }
+}

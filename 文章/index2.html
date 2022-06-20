@@ -1,0 +1,896 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校友會商城 - 違規停復權說明規則</title>
+    <meta name="keywords" content="校友會商城," />
+    <meta name="description" content="校友會商城," />
+    <meta name="author" content="ShopNC">
+    <meta name="copyright" content="ShopNC Inc. All Rights Reserved">
+    <style type="text/css">
+        body {
+            _behavior: url(https://www.lineshop.tw/templates/default/css/csshover.htc);
+        }
+    </style>
+    <link href="https://www.lineshop.tw/templates/default/css/layout.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/templates/default/css/rwd.css">
+    <link rel="stylesheet" href="./rwd.css">
+    <link rel="stylesheet" href="/lineshop_正式/最終rwd/rwd.css">
+    <!--[if IE]>
+<script src="https://www.lineshop.tw/resource/js/html5.js"></script>
+<![endif]-->
+    <!--[if IE 6]>
+<script src="https://www.lineshop.tw/resource/js/IE6_PNG.js"></script>
+<script>
+DD_belatedPNG.fix('.pngFix');
+</script>
+<script> 
+// <![CDATA[ 
+if((window.navigator.appName.toUpperCase().indexOf("MICROSOFT")>=0)&&(document.execCommand)) 
+try{ 
+document.execCommand("BackgroundImageCache", false, true); 
+   } 
+catch(e){} 
+// ]]> 
+</script> 
+<![endif]-->
+    <script>
+        COOKIE_PRE = '3E41_'; _CHARSET = 'utf-8'; SITEURL = 'https://www.lineshop.tw';
+    </script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery-ui/jquery.ui.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.validation.min.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/common.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        var PRICE_FORMAT = 'NT$%s';
+        $(function () {
+            //search
+            $("#details").children('ul').children('li').click(function () {
+                $(this).parent().children('li').removeClass("current");
+                $(this).addClass("current");
+                $('#search_act').attr("value", $(this).attr("act"));
+            });
+            var search_act = $("#details").find("li[class='current']").attr("act");
+            $('#search_act').attr("value", search_act);
+            $("#keyword").blur();
+        });
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/common2.2.js" charset="utf-8"></script>
+    <link href="https://www.lineshop.tw/templates/default/css/dialog2.2.css" rel="stylesheet" type="text/css">
+    <div id="append_parent"></div>
+    <div id="ajaxwaitid"></div>
+    <div id="page">
+        <div id="topNav" class="warp-all">
+
+            <dl class="user-entry">
+                <dt>您好，歡迎來到<span><a href="https://www.lineshop.tw" title="首頁" alt="首頁">校友會商城</a></span></dt>
+                <dd>[<a href="https://www.lineshop.tw/index.php?act=login">登錄</a>]</dd>
+                <dd>[<a href="https://www.lineshop.tw/index.php?act=login&op=register">註冊</a>]</dd>
+
+            </dl>
+            <ul class="quick-menu">
+                <li class="user-center">
+                    <div class="menu"><a class="menu-hd" href="https://www.lineshop.tw/index.php?act=member_snsindex"
+                            target="_top" title="我的商城">我的商城<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member&op=order" target="_top"
+                                        title="已買到的商品">已買到的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_snshome" target="_top"
+                                        title="個人主頁">個人主頁</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_snsfriend&op=find"
+                                        target="_top" title="我的好友">我的好友</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="seller-center">
+                    <div class="menu"><a class="menu-hd" href="https://www.lineshop.tw/index.php?act=store"
+                            target="_top" title="賣家中心">賣家中心<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=store&op=store_order" target="_top"
+                                        title="已售出的商品">已售出的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=store_goods&op=goods_list"
+                                        target="_top" title="銷售中的商品">銷售中的商品</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="cart">
+                    <div class="menu"><span class="menu-hd"><s></s>購物車<strong
+                                class="goods_num">0</strong>種商品<i></i></span>
+                        <div class="menu-bd" id="top_cartlist"><img class="loading"
+                                src="https://www.lineshop.tw/templates/default/images/loading.gif" /></div>
+                    </div>
+                </li>
+                <!-- 收藏夹 -->
+                <li class="favorite">
+                    <div class="menu"><a class="menu-hd"
+                            href="https://www.lineshop.tw/index.php?act=member_favorites&op=fglist" title="我的收藏"
+                            target="_top">我的收藏<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_favorites&op=fglist"
+                                        target="_top" title="收藏的商品">收藏的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_favorites&op=fslist"
+                                        target="_top" title="收藏的店舖">收藏的店舖</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- 站内信 -->
+                <li class="pm"><a href="https://www.lineshop.tw/index.php?act=home&op=message" title="站內消息"
+                        target="_top"> 站內消息 (<span style="color: #FE5400;">2855</span>) </a></li>
+
+                <!--google多語系翻譯 start -->
+                <div id="google_translate_element"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'zh-TW', includedLanguages: 'zh-CN,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <!--google多語系翻譯 end -->
+                <!--臉書登入
+        [<a href="FB_Login2/fbconfig.php">FBLogin(test)</a>]
+      -->
+
+            </ul>
+
+        </div>
+        <script language="javascript">
+            $(function () {
+            });
+        </script>
+    </div>
+    <header id="topHeader">
+        <div class="site-logo"><a href="https://www.lineshop.tw"><img
+                    src="upload/common/9e0e7c5bccbac2ed9e6c800edc5ca9f5.png" class="pngFix"></a></div>
+        <div id="search" class="search" style="left:260px;width:500px;">
+            <div class="details" id="details">
+                <ul class="tab">
+                    <li class="current" act="search">商品</li>
+                    <li act="shop_search">店舖</li>
+                </ul>
+                <div id="a1" class="form">
+                    <form action="index.php" onSubmit="return searchInput();" method="get">
+                        <input name="act" id="search_act" value="search" type="hidden">
+                        <div class="formstyle">
+                            <input name="keyword" id="keyword" type="text" class="textinput" value=" 搜尋其實很容易！"
+                                onFocus="searchFocus(this)" onBlur="searchBlur(this)" maxlength="60" x-webkit-speech
+                                lang="zh-CN" onwebkitspeechchange="foo()" x-webkit-grammar="builtin:search" />
+                            <input name="" type="submit" class="search-button" value="">
+                        </div>
+                    </form>
+                </div>
+                <div class="tag">
+                    <a href="index.php?act=search&keyword=%E5%A4%8F%E5%AD%A3+">夏季 </a>
+                    <a href="index.php?act=search&keyword=%E5%86%B7%E6%B0%A3">冷氣</a>
+                </div>
+            </div>
+        </div>
+        <!--20170617 加入當月交易總金額及總積分-->
+
+        <div style="display: block;position: absolute;left: 820px;margin-top: 20px;width: 200px;line-height:20px;">
+
+            <!--
+	<span>當月總交易金額：</span>
+	<br/>
+	
+	 <span>當月商城總積分：</span>
+	<br/> 
+	
+	<a href="#">查看分潤說明</a>
+	-->
+        </div>
+
+    </header>
+    <div id="navBar" class="mb10">
+        <div id="all-category">
+            <div class="title">
+                <h2 title="所有商品分類"><a href="javascript:void(0)">所有商品分類</a></h2>
+                <i></i>
+            </div>
+            <div id="category" class="category pngFix">
+                <ul class="menu">
+                    <li id="cat_1">
+                        <h3><a href="index.php?act=search&cate_id=5607" title="好康爆報">好康爆報</a></h3>
+                        <div class="cat-menu" id="cat_1_menu">
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8820" title="好文分享">好文分享</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=8979" title="美食分享">美食分享</a>
+                                    <a href="index.php?act=search&cate_id=8983" title="電影文章">電影文章</a>
+                                    <a href="index.php?act=search&cate_id=8982" title="親子分享">親子分享</a>
+                                    <a href="index.php?act=search&cate_id=8981" title="3c資訊">3c資訊</a>
+                                    <a href="index.php?act=search&cate_id=8995" title="小說分享">小說分享</a>
+                                    <a href="index.php?act=search&cate_id=8997" title="新聞分享">新聞分享</a>
+                                    <a href="index.php?act=search&cate_id=8998" title="漫畫分享">漫畫分享</a>
+                                    <a href="index.php?act=search&cate_id=9001" title="動物資訊文章分享">動物資訊文章分享</a>
+                                    <a href="index.php?act=search&cate_id=9002" title="公司資訊分享(黃頁)">公司資訊分享(黃頁)</a>
+                                    <a href="index.php?act=search&cate_id=9041" title="運動">運動</a>
+                                    <a href="index.php?act=search&cate_id=9042" title="娛樂">娛樂</a>
+                                    <a href="index.php?act=search&cate_id=8986" title="職場分享">職場分享</a>
+                                    <a href="index.php?act=search&cate_id=8987" title="宗教文章">宗教文章</a>
+                                    <a href="index.php?act=search&cate_id=8984" title="健康文">健康文</a>
+                                    <a href="index.php?act=search&cate_id=8996" title="知識文章分享">知識文章分享</a>
+                                    <a href="index.php?act=search&cate_id=8980" title="旅行分享">旅行分享</a>
+                                    <a href="index.php?act=search&cate_id=8985" title="流行時尚">流行時尚</a>
+                                    <a href="index.php?act=search&cate_id=8988" title="居家文章">居家文章</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8940" title="影音分享">影音分享</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9013" title="有趣影音">有趣影音</a>
+                                    <a href="index.php?act=search&cate_id=8999" title="有聲書分享">有聲書分享</a>
+                                    <a href="index.php?act=search&cate_id=9000" title="動物頻道">動物頻道</a>
+                                    <a href="index.php?act=search&cate_id=8989" title="電視劇">電視劇</a>
+                                    <a href="index.php?act=search&cate_id=8990" title="動漫">動漫</a>
+                                    <a href="index.php?act=search&cate_id=8991" title="綜藝">綜藝</a>
+                                    <a href="index.php?act=search&cate_id=8992" title="電影">電影</a>
+                                    <a href="index.php?act=search&cate_id=8993" title="音樂">音樂</a>
+                                    <a href="index.php?act=search&cate_id=8994" title="獨創影音">獨創影音</a>
+                                    <a href="index.php?act=search&cate_id=8942" title="知識影片">知識影片</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=6202" title="服裝百貨">服裝百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=6213" title="配飾精品">配飾精品</a>
+                                    <a href="index.php?act=search&cate_id=6212" title="包包">包包</a>
+                                    <a href="index.php?act=search&cate_id=6211" title="鞋子">鞋子</a>
+                                    <a href="index.php?act=search&cate_id=6210" title="服裝">服裝</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=6204" title="美妝百貨">美妝百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9049" title="洗護用品">洗護用品</a>
+                                    <a href="index.php?act=search&cate_id=8638" title="彩妝">彩妝</a>
+                                    <a href="index.php?act=search&cate_id=6386" title="保養品">保養品</a>
+                                    <a href="index.php?act=search&cate_id=6385" title="保健食品">保健食品</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=6203" title="美食百貨">美食百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=8952" title="飲品">飲品</a>
+                                    <a href="index.php?act=search&cate_id=6250" title="美食">美食</a>
+                                    <a href="index.php?act=search&cate_id=6251" title="農產品">農產品</a>
+                                    <a href="index.php?act=search&cate_id=6253" title="食品">食品</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=6207" title="生活百貨">生活百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=8956" title="生活">生活</a>
+                                    <a href="index.php?act=search&cate_id=8959" title="居家收納">居家收納</a>
+                                    <a href="index.php?act=search&cate_id=8928" title="餐廚用具/用品">餐廚用具/用品</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=6205" title="3C百貨">3C百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=8960" title="家電">家電</a>
+                                    <a href="index.php?act=search&cate_id=8961" title="3C用品">3C用品</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=7699" title="收藏百貨">收藏百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=8957" title="玩具">玩具</a>
+                                    <a href="index.php?act=search&cate_id=8958" title="收藏">收藏</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li id="cat_2">
+                        <h3><a href="index.php?act=search&cate_id=9115" title="B2B專區">B2B專區</a></h3>
+                        <div class="cat-menu" id="cat_2_menu">
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9158" title="工商服務">工商服務</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9165" title="資訊通訊">資訊通訊</a>
+                                    <a href="index.php?act=search&cate_id=9166" title="包裝服務">包裝服務</a>
+                                    <a href="index.php?act=search&cate_id=9161" title="廣告印刷">廣告印刷</a>
+                                    <a href="index.php?act=search&cate_id=9162" title="金融工商">金融工商</a>
+                                    <a href="index.php?act=search&cate_id=9163" title="事務文具">事務文具</a>
+                                    <a href="index.php?act=search&cate_id=9164" title="聲光影視">聲光影視</a>
+                                    <a href="index.php?act=search&cate_id=9159" title="行車運輸">行車運輸</a>
+                                    <a href="index.php?act=search&cate_id=9160" title="環境保護">環境保護</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9116" title="生活消費">生活消費</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9118" title="食品餐飲">食品餐飲</a>
+                                    <a href="index.php?act=search&cate_id=9119" title="衣著配件">衣著配件</a>
+                                    <a href="index.php?act=search&cate_id=9120" title="住屋居家">住屋居家</a>
+                                    <a href="index.php?act=search&cate_id=9122" title="百貨購物">百貨購物</a>
+                                    <a href="index.php?act=search&cate_id=9117" title="家用電器">家用電器</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9123" title="休閒文化">休閒文化</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9124" title="育才學術">育才學術</a>
+                                    <a href="index.php?act=search&cate_id=9125" title="樂在休閒">樂在休閒</a>
+                                    <a href="index.php?act=search&cate_id=9156" title="美容護膚">美容護膚</a>
+                                    <a href="index.php?act=search&cate_id=9126" title="新聞文化">新聞文化</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9131" title="社會服務">社會服務</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9132" title="醫療保健">醫療保健</a>
+                                    <a href="index.php?act=search&cate_id=9133" title="社會服務">社會服務</a>
+                                    <a href="index.php?act=search&cate_id=9135" title="公用事業">公用事業</a>
+                                    <a href="index.php?act=search&cate_id=9134" title="生命禮儀">生命禮儀</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9146" title="工業製品">工業製品</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9148" title="紡織工業">紡織工業</a>
+                                    <a href="index.php?act=search&cate_id=9147" title="電工器材">電工器材</a>
+                                    <a href="index.php?act=search&cate_id=9149" title="化學工業">化學工業</a>
+                                    <a href="index.php?act=search&cate_id=9150" title="工業機械">工業機械</a>
+                                    <a href="index.php?act=search&cate_id=9151" title="金屬工業">金屬工業</a>
+                                    <a href="index.php?act=search&cate_id=9152" title="農林漁業">農林漁業</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li id="cat_3">
+                        <h3><a href="index.php?act=search&cate_id=8777" title="服裝百貨">服裝百貨</a></h3>
+                        <div class="cat-menu" id="cat_3_menu">
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8779" title="服裝">服裝</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=8827" title="女士服裝">女士服裝</a>
+                                    <a href="index.php?act=search&cate_id=8826" title="男士服裝">男士服裝</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8780" title="鞋子">鞋子</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=8832" title="女鞋">女鞋</a>
+                                    <a href="index.php?act=search&cate_id=8831" title="男鞋">男鞋</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8781" title="包包">包包</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=8825" title="女士包">女士包</a>
+                                    <a href="index.php?act=search&cate_id=8824" title="男士包">男士包</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8783" title="配飾精品">配飾精品</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9063" title="男性配飾">男性配飾</a>
+                                    <a href="index.php?act=search&cate_id=9062" title="女性配飾">女性配飾</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li id="cat_4">
+                        <h3><a href="index.php?act=search&cate_id=8778" title="美妝百貨">美妝百貨</a></h3>
+                        <div class="cat-menu" id="cat_4_menu">
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9069" title="洗護品">洗護品</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9074" title="專櫃洗護品">專櫃洗護品</a>
+                                    <a href="index.php?act=search&cate_id=9075" title="洗護品">洗護品</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9067" title="彩妝">彩妝</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9070" title="專櫃彩妝">專櫃彩妝</a>
+                                    <a href="index.php?act=search&cate_id=9071" title="彩妝">彩妝</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9068" title="保養品">保養品</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9073" title="保養品">保養品</a>
+                                    <a href="index.php?act=search&cate_id=9072" title="專櫃保養品">專櫃保養品</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li id="cat_5">
+                        <h3><a href="index.php?act=search&cate_id=8426" title="美食百貨">美食百貨</a></h3>
+                        <div class="cat-menu" id="cat_5_menu">
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8905" title="熟食百貨">熟食百貨</a></dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8901" title="麵食百貨">麵食百貨</a></dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8902" title="烘焙百貨">烘焙百貨</a></dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8903" title="飲品百貨">飲品百貨</a></dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9110" title="保健百貨">保健百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9114" title="養生保健">養生保健</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8907" title="零食百貨">零食百貨</a></dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8904" title="食材百貨">食材百貨</a></dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li id="cat_6">
+                        <h3><a href="index.php?act=search&cate_id=9043" title="生活百貨">生活百貨</a></h3>
+                        <div class="cat-menu" id="cat_6_menu">
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9052" title="母嬰親子百貨">母嬰親子百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9080" title="媽媽百貨">媽媽百貨</a>
+                                    <a href="index.php?act=search&cate_id=9081" title="嬰兒百貨">嬰兒百貨</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9111" title="玩具百貨">玩具百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9112" title="玩具">玩具</a>
+                                    <a href="index.php?act=search&cate_id=9113" title="兒童玩具">兒童玩具</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9060" title="文具百貨">文具百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9092" title="文具百貨">文具百貨</a>
+                                    <a href="index.php?act=search&cate_id=9093" title="藝術百貨">藝術百貨</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9050" title="寵物百貨">寵物百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9078" title="貓咪百貨">貓咪百貨</a>
+                                    <a href="index.php?act=search&cate_id=9079" title="狗狗百貨">狗狗百貨</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9054" title="寢具家具百貨">寢具家具百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9084" title="寢具百貨">寢具百貨</a>
+                                    <a href="index.php?act=search&cate_id=9085" title="家具百貨">家具百貨</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9053" title="居家收納百貨">居家收納百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9082" title="居家百貨">居家百貨</a>
+                                    <a href="index.php?act=search&cate_id=9083" title="收納百貨">收納百貨</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9055" title="餐廚用具百貨">餐廚用具百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9086" title="餐廳百貨">餐廳百貨</a>
+                                    <a href="index.php?act=search&cate_id=9087" title="廚房百貨">廚房百貨</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9056" title="浴室用具百貨">浴室用具百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9088" title="浴室百貨">浴室百貨</a>
+                                    <a href="index.php?act=search&cate_id=9089" title="清潔百貨">清潔百貨</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9058" title="運動休閒百貨">運動休閒百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9091" title="休閒百貨">休閒百貨</a>
+                                    <a href="index.php?act=search&cate_id=9090" title="運動百貨">運動百貨</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9051" title="汽機車百貨">汽機車百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9076" title="汽車百貨">汽車百貨</a>
+                                    <a href="index.php?act=search&cate_id=9077" title="機車百貨">機車百貨</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li id="cat_7">
+                        <h3><a href="index.php?act=search&cate_id=7894" title="3C家電百貨">3C家電百貨</a></h3>
+                        <div class="cat-menu" id="cat_7_menu">
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8840" title="3C百貨">3C百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9103" title="相機/相機配件">相機/相機配件</a>
+                                    <a href="index.php?act=search&cate_id=9105" title="充電周邊">充電周邊</a>
+                                    <a href="index.php?act=search&cate_id=9106" title="資訊周邊">資訊周邊</a>
+                                    <a href="index.php?act=search&cate_id=9107" title="電腦/筆電">電腦/筆電</a>
+                                    <a href="index.php?act=search&cate_id=9108" title="電競/遊戲">電競/遊戲</a>
+                                    <a href="index.php?act=search&cate_id=9109" title="電腦組件">電腦組件</a>
+                                    <a href="index.php?act=search&cate_id=9104" title="數位週邊">數位週邊</a>
+                                    <a href="index.php?act=search&cate_id=9101" title="手機/平板">手機/平板</a>
+                                    <a href="index.php?act=search&cate_id=9102" title="手機/平板配件">手機/平板配件</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8843" title="家電百貨">家電百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9098" title="廚房家電">廚房家電</a>
+                                    <a href="index.php?act=search&cate_id=9099" title="生活家電">生活家電</a>
+                                    <a href="index.php?act=search&cate_id=9100" title="視覺家電">視覺家電</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li id="cat_8">
+                        <h3><a href="index.php?act=search&cate_id=9046" title="收藏百貨">收藏百貨</a></h3>
+                        <div class="cat-menu" id="cat_8_menu">
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9061" title="古董百貨">古董百貨</a></dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9059" title="愛好收藏百貨">愛好收藏百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9167" title="免費漫畫">免費漫畫</a>
+                                    <a href="index.php?act=search&cate_id=9168" title="影片">影片</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9048" title="宗教收藏百貨">宗教收藏百貨</a></dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <div class="clear"></div>
+                    <li class="more"><a href="index.php?act=category" title="查看更多分類">查看更多分類</a></li>
+                </ul>
+            </div>
+        </div>
+        <ul class="nc-nav-menu">
+            <li class="link"><a href="https://www.lineshop.tw"><span>首頁</span></a></li>
+            <!--
+    <li class="link"><a href="https://www.lineshop.tw/index.php?act=brand"><span>品牌</span></a></li>
+    <li class="link"><a href="https://www.lineshop.tw/index.php?act=coupon"><span>優惠券</span></a></li> -->
+            <li class="link"><a href="https://www.lineshop.tw/index.php?act=search&cate_id=5607"><span>好康爆報</span></a>
+            </li>
+            <li class="link"><a target="_blank"
+                    href="https://www.facebook.com/lineshoptw/?__tn__=kC-R&eid=ARBQgSWgH2Q9u_Cl_1muUQ0Kr3Ic7UCnVHoY1AYQ_kd8pasd9jSiA-IlWmiAEDDAAxEpqSV75bx5_HAj&hc_ref=ARSu1XmJGkPkoLy3HhXJyD2wfgf-y48_9ySc-i3U79wg8VwvhqjW7uTVO1M-3u04wCg&fref=nf"><span>商城FB</span></a>
+            </li>
+        </ul>
+    </div>
+    <div class="keyword">
+        <h4>當前位置：</h4>
+        <a href="index.php">首頁</a><span>&nbsp;</span>
+        <a href="index.php?act=article&ac_id=90">會員資訊</a><span>&nbsp;</span>
+        文章內容
+    </div>
+    <div class="content">
+        <div class="left">
+            <div class="module_sidebar">
+                <h2><b>文章分類</b></h2>
+                <div class="wrap">
+                    <div class="classify_list">
+                        <ul>
+                            <li><a href="index.php?act=article&ac_id=90">會員資訊</a></li>
+                            <li><a href="index.php?act=article&ac_id=91">店家資訊</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h2><b>最新文章</b></h2>
+                <div class="wrap">
+                    <div class="side_textlist">
+                        <ul>
+                            <li><a href="index.php?act=article&article_id=535">積分兌現</a></li>
+                            <li><a href="index.php?act=article&article_id=534">贈送積分</a></li>
+                            <li><a href="index.php?act=article&article_id=503">違規停復權說明規則</a></li>
+                            <li><a href="index.php?act=article&article_id=491">不受歡迎出價</a></li>
+                            <li><a href="index.php?act=article&article_id=490">不可干擾交易</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="article_wrap">
+                <div class="article_con">
+                    <h1>違規停復權說明規則</h1>
+                    <h2>2022-05-23 00:05</h2>
+                    <div class="default">
+                        <p>
+                        <p style="text-align:center;">
+                            <img src="https://www.lineshop.tw/upload/article/1c2fd20073162b5e03880c9436e371ce.png"
+                                alt="https://www.lineshop.tw/upload/article/1c2fd20073162b5e03880c9436e371ce.png" />
+                        </p>
+                        <p style="text-align:center;">
+                            <br />
+                        </p>
+                        <p align="center" style="text-align:center;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">違規停復權說明規則<span></span></span>
+                        </p>
+                        <p style="text-align:left;">
+                            <span
+                                style="font-size:18.0pt;font-family:標楷體;">校友會商城為維護平台秩序與公平，因此制訂商城政策與停復權機制，讓無心違規的會員能有改善的機會，連續違反刊登規則的會員則會被暫時停權並限制使用權利。<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:center;">
+                            <span style="font-size:18.0pt;font-family:標楷體;"></span>
+                        </p>
+                        <p style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">【違反刊登規則】注意事項：<span></span></span>
+                        </p>
+                        <p style="text-align:left;">
+                            <span
+                                style="font-size:18.0pt;font-family:標楷體;">對於會員違規的刊登行為，系統將先行下架商品並予以警告提醒，連續違規者除了下架該違規賣場外，同時也會對該累犯帳號暫時停權，以維護平台之秩序，<span>(</span>除嚴重違規外，每次違規成立後，下次同一行為違規計算時間將與前次違規計算時間至少間隔<span>48</span>小時。<span>)</span></span>
+                        </p>
+                        <p style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;"><span><br />
+                                </span></span>
+                        </p>
+                        <p>
+                            <br />
+                        </p>
+                        <p>
+                            <img src="https://www.lineshop.tw/upload/article/fa39e842568627d2555c5c9afbe3c6d5.png"
+                                alt="https://www.lineshop.tw/upload/article/fa39e842568627d2555c5c9afbe3c6d5.png" />
+                        </p>
+                        <p>
+                            <br />
+                        </p>
+                        <p class="MsoNormal">
+                            <span style="font-family:標楷體;"><span style="font-size:24px;">違反法令禁止限制規範：</span><span
+                                    lang="EN-US">
+                                    <o:p></o:p>
+                                </span></span>
+                        </p>
+                        <p class="MsoNormal">
+                            <span style="font-family:標楷體;"><span style="font-size:24px;"><br />
+                                </span></span>
+                        </p>
+                        <p>
+                            <br />
+                        </p>
+                        <p>
+                            <img src="https://www.lineshop.tw/upload/article/e4dddd805ad312761b0caa78bd5f2087.png"
+                                alt="https://www.lineshop.tw/upload/article/e4dddd805ad312761b0caa78bd5f2087.png" />
+                        </p>
+                        <p>
+                            <br />
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">【違規停復權】注意事項：<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:center;">
+                            <span style="font-size:18.0pt;font-family:標楷體;"></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span
+                                style="font-size:18.0pt;font-family:標楷體;">會員因違規造成賣場被系統下架時，系統會先發出警告通知信告知原因，並請會員確認違規原因後避免再犯。若發生連續違規狀況，經警告後仍未改善，系統就會進行暫時停權處置，同時發出通知信給會員，告知停權的期限與時間。當停權期限結束後，系統會自動恢復會員帳號使用權利。<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;"> </span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">停權處理方式如下：</span>
+                        </p>
+                        <p>
+                            <br />
+                        </p>
+                        <p>
+                            <img src="https://www.lineshop.tw/upload/article/55ad680d2b5f2d3b5fd2880a6d722853.png"
+                                alt="https://www.lineshop.tw/upload/article/55ad680d2b5f2d3b5fd2880a6d722853.png" />
+                        </p>
+                        <p>
+                        <p align="center" style="text-align:left;">
+                            <span
+                                style="font-size:18.0pt;font-family:標楷體;">商城會員若有違反法令規範、商城會員合約條款、校友會商城政策因而產生之違規次數紀錄，同一會員帳號之違規次數紀錄將於當年度最末日之<span>24</span>時<span>(</span>即<span>12</span>月<span>31</span>日的<span>24</span>時<span>)</span>統一歸零，並於次年度重新起算違規次數。<span>(</span>棄標次數、評價負分、超商未取不再此規範內<span>)</span></span>
+                        </p>
+                        <p align="center" style="text-align:center;">
+                            <span style="font-size:18.0pt;font-family:標楷體;"></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">【暫時停權】注意事項：<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span
+                                style="font-size:18.0pt;font-family:標楷體;">因累計多次違規紀錄而遭到系統暫時停權時，會員帳號功能將受到下列限制：<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:center;">
+                            <span style="font-size:18.0pt;font-family:標楷體;"></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">無法刊登商品<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">商品無法被購買<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">無法購買商品<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">無法修改商品資訊、賣場資訊<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">無法購買付費廣告<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">不能主動發出問與答<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">【重大違規】注意事項：<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span
+                                style="font-size:18.0pt;font-family:標楷體;">經系統發現會員帳號有下列重大違規行為時，為確保平台交易安全及秩序，避免影響到其他會員權益，系統將在發現時給予帳號永久停權處置。<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">重大違規行為如下：<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:center;">
+                            <span style="font-size:18.0pt;font-family:標楷體;"></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">賣家出售假冒、盜版商品<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span
+                                style="font-size:18.0pt;font-family:標楷體;">盜<span>/</span>使用他人會員帳號、個人資料<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">進行詐騙或影響交易安全之行為<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">多次棄單<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">評價負分<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span style="font-size:18.0pt;font-family:標楷體;">惡劣手段騷擾他人，妨害他人合法權益的行為<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span
+                                style="font-size:18.0pt;font-family:標楷體;">會員在使用商城前，務必先熟悉校友會商城網站政策及法令禁止限制規範，以避免不小心違反商城政策而遭到受罰。<span></span></span>
+                        </p>
+                        <p align="center" style="text-align:left;">
+                            <span
+                                style="font-size:18.0pt;font-family:標楷體;">校友會商城與您共創雙贏的局面，感謝您的支持與愛護。<span></span></span>
+                        </p>
+                        </p>
+                        </p>
+                    </div>
+                    <div class="more_article">
+                        <h3>上一篇:
+                            <a href="index.php?act=article&article_id=534">贈送積分</a> <span>2022-05-26 23:03</span>
+                        </h3>
+                        <h3>下一篇:
+                            <a href="index.php?act=article&article_id=491">不受歡迎出價</a> <span>2022-05-22 20:37</span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clear">&nbsp;</div>
+    <div id="footer">
+        <p><a href="https://www.lineshop.tw">首頁</a>
+            | <a href="https://www.lineshop.tw/index.php?act=article&article_id=468">關於商城</a>
+        </p>
+        <a href="http://www.6393.tw" target="_blank" style="color:#FFF;">愛格室內設計</a>
+        <br />
+    </div>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.cookie.js"></script>
+    <script language="javascript">
+        var searchTxt = ' 搜尋其實很容易！';
+        function searchFocus(e) {
+            if (e.value == searchTxt) {
+                e.value = '';
+                $('#keyword').css("color", "");
+            }
+        }
+        function searchBlur(e) {
+            if (e.value == '') {
+                e.value = searchTxt;
+                $('#keyword').css("color", "#999999");
+            }
+        }
+        function searchInput() {
+            if ($('#keyword').val() == searchTxt)
+                $('#keyword').attr("value", "");
+            return true;
+        }
+        $('#keyword').css("color", "#999999");
+        // 加载购物车信息
+        function load_cart_information() {
+            $.getJSON('index.php?act=cart&op=ajaxcart', function (result) {
+                if (result) {
+                    var result = result;
+                    $('.goods_num').html(result.goods_all_num);
+                    var html = '';
+                    if (result.goods_all_num > 0) {
+                        html += "<div class='order'><table border='0' cellpadding='0' cellspacing='0'>";
+                        var i = 0;
+                        var data = result['goodslist'];
+                        for (i = 0; i < data.length; i++) {
+                            html += "<tr id='cart_item_" + data[i]['specid'] + "' count='" + data[i]['num'] + "'>";
+                            html += "<td class='picture'><span class='thumb size40'><i></i><img src='" + data[i]['images'] + "' title='" + data[i]['gname'] + "' onload='javascript:DrawImage(this,40,40);' ></span></td>";
+                            html += "<td class='name'><a href='https://www.lineshop.tw/index.php?act=goods&goods_id=" + data[i]['goodsid'] + "' title='" + data[i]['gname'] + "' target='_top'>" + data[i]['gname'] + "</a></td>";
+                            html += "<td class='price'><p>NT$" + data[i]['price'] + "×" + data[i]['num'] + "</p><p><a href='javascript:void(0)' onClick='drop_topcart_item(" + data[i]['storeid'] + "," + data[i]['specid'] + ");' style='color: #999;'>刪除</a></p></td>";
+                            html += "</tr>";
+                        }
+                        html += "<tr><td colspan='3' class='no-border'><span class='all'>共<strong class='goods_num'>" + result.goods_all_num + "</strong>種商品   金額總計：<strong id='cart_amount'>NT$" + result.goods_all_price + "</strong></span><span class='button' ><a href='https://www.lineshop.tw/index.php?act=cart' target='_top' title='結算商品' style='color: #FFF;' >結算商品</a></span></td></tr>";
+                    } else {
+                        html = "<div class='no-order'><span>您的購物車中暫無商品，趕快選擇心愛的商品吧！</span><a href='https://www.lineshop.tw/index.php?act=cart' class='button' target='_top' title='查看購物車' style=' color: #FFF;' >查看購物車</a></div>";
+                    }
+                    $("#top_cartlist").html(html);
+                }
+            });
+        }
+
+        //头部删除购物车信息
+        function drop_topcart_item(store_id, spec_id) {
+            var tr = $('#cart_item_' + spec_id);
+            var amount_span = $('#cart_amount');
+            var cart_goods_kinds = $('.goods_num');
+            $.getJSON('index.php?act=cart&op=drop&specid=' + spec_id + '&storeid=' + store_id, function (result) {
+                if (result.done) {
+                    //删除成功
+                    if (result.quantity == 0) {
+                        $('.goods_num').html('0');
+                        var html = '';
+                        html = "<div class='no-order'><span>您的購物車中暫無商品，趕快選擇心愛的商品吧！</span><a href='https://www.lineshop.tw/index.php?act=cart' class='button' target='_top' title='查看購物車' style=' color: #FFF;' >查看購物車</a></div>";
+                        $("#top_cartlist").html(html);
+                    }
+                    else {
+                        tr.remove();        //移除
+                        amount_span.html(price_format(result.amount));  //刷新总费用
+                        cart_goods_kinds.html(result.quantity);       //刷新商品种类
+                    }
+                } else {
+                    alert(result.msg);
+                }
+            });
+        }
+
+        $(function () {
+            $('#topNav').find('li[class="cart"]').mouseover(function () {
+                // 运行加载购物车
+                load_cart_information();
+                $(this).unbind();
+            });
+        });
+    </script>
+</body>
+
+</html>

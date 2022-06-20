@@ -1,0 +1,41 @@
+@media (max-width:1000px) {
+    .shop_text_list {
+        width: 98% !important;
+        margin: auto;
+
+    }
+
+    .shop_text_list tr {
+        position: relative;
+    }
+
+    .shop_text_list .w150 {
+        position: absolute;
+        right: -40px;
+        top: 10px;
+    }
+
+    .left .module_sidebar {
+        width: 120px !important;
+    }
+
+    .content .right {
+        width: 100% !important;
+    }
+
+    .content .right .article_wrap {
+        width: 80% !important;
+    }
+
+    .default p,
+    .default p span {
+        font-size: 1.2em !important;
+    }
+
+
+
+    .default img {
+        width: 80% !important;
+        height: unset !important;
+    }
+}

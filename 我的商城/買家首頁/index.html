@@ -1,0 +1,678 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>校友會商城</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="ShopNC">
+    <meta name="copyright" content="ShopNC Inc. All Rights Reserved">
+    <link href="https://www.lineshop.tw/templates/default/css/base.css" rel="stylesheet" type="text/css">
+    <link href="https://www.lineshop.tw/templates/default/css/member.css" rel="stylesheet" type="text/css">
+    <link href="https://www.lineshop.tw/templates/default/css/member_user.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../我的商城rwd/我的商城rwd.css">
+    <link rel="stylesheet" href="./rwd.css">
+    <!--[if IE 6]><style type="text/css">
+body {_behavior: url(https://www.lineshop.tw/templates/default/css/csshover.htc);}
+</style>
+<![endif]-->
+    <script>
+        COOKIE_PRE = '3E41_'; _CHARSET = 'utf-8'; SITEURL = 'https://www.lineshop.tw';
+    </script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery-ui/jquery.ui.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.validation.min.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/common.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/member.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/nc-sideMenu.js" charset="utf-8"></script>
+    <!--[if IE]>
+<script src="https://www.lineshop.tw/resource/js/html5.js"></script>
+<![endif]-->
+    <!--[if IE 6]>
+<script src="https://www.lineshop.tw/resource/js/IE6_PNG.js"></script>
+<script>
+DD_belatedPNG.fix('.pngFix');
+</script>
+<script> 
+// <![CDATA[ 
+if((window.navigator.appName.toUpperCase().indexOf("MICROSOFT")>=0)&&(document.execCommand)) 
+try{ 
+document.execCommand("BackgroundImageCache", false, true); 
+   } 
+catch(e){} 
+// ]]> 
+</script> 
+<![endif]-->
+
+</head>
+
+<body>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/common2.2.js" charset="utf-8"></script>
+    <link href="https://www.lineshop.tw/templates/default/css/dialog2.2.css" rel="stylesheet" type="text/css">
+    <div id="append_parent"></div>
+    <div id="ajaxwaitid"></div>
+    <div id="page">
+        <div id="topNav" class="warp-all">
+
+            <dl class="user-entry">
+                <dt>
+                    您好<span><a href="https://www.lineshop.tw/index.php?act=member_snsindex">林志忠</a></span>，歡迎來到<a
+                        href="https://www.lineshop.tw" title="首頁" alt="首頁"><span>校友會商城</span></a>
+                    [<a href="https://www.lineshop.tw/index.php?act=login&op=logout">退出</a>]
+                </dt>
+                <dd>(FB：林志忠)</dd>
+                <dd><a href="https://www.lineshop.tw/index.php?cancel_fb=1">[解除綁定Facebook]</a></dd>
+                <!--
+          <dd>[<a href="https://www.lineshop.tw/index.php?act=login&op=logout">退出</a>]</dd>
+                      <dd>[<a href="https://www.lineshop.tw/index.php?act=login&op=logout">FB:林志忠，登出商城</a>]</dd>
+            -->
+            </dl>
+            <ul class="quick-menu">
+                <li class="user-center">
+                    <div class="menu"><a class="menu-hd" href="https://www.lineshop.tw/index.php?act=member_snsindex"
+                            target="_top" title="我的商城">我的商城<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member&op=order" target="_top"
+                                        title="已買到的商品">已買到的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_snshome" target="_top"
+                                        title="個人主頁">個人主頁</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_snsfriend&op=find"
+                                        target="_top" title="我的好友">我的好友</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="seller-center">
+                    <div class="menu"><a class="menu-hd" href="https://www.lineshop.tw/index.php?act=store"
+                            target="_top" title="賣家中心">賣家中心<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=store&op=store_order" target="_top"
+                                        title="已售出的商品">已售出的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=store_goods&op=goods_list"
+                                        target="_top" title="銷售中的商品">銷售中的商品</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="cart">
+                    <div class="menu"><span class="menu-hd"><s></s>購物車<strong
+                                class="goods_num">0</strong>種商品<i></i></span>
+                        <div class="menu-bd" id="top_cartlist"><img class="loading"
+                                src="https://www.lineshop.tw/templates/default/images/loading.gif" /></div>
+                    </div>
+                </li>
+                <!-- 收藏夹 -->
+                <li class="favorite">
+                    <div class="menu"><a class="menu-hd"
+                            href="https://www.lineshop.tw/index.php?act=member_favorites&op=fglist" title="我的收藏"
+                            target="_top">我的收藏<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_favorites&op=fglist"
+                                        target="_top" title="收藏的商品">收藏的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_favorites&op=fslist"
+                                        target="_top" title="收藏的店舖">收藏的店舖</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- 站内信 -->
+                <li class="pm"><a href="https://www.lineshop.tw/index.php?act=home&op=message" title="站內消息"
+                        target="_top"> 站內消息 (<span style="color: #FE5400;">8</span>) </a></li>
+
+                <!--google多語系翻譯 start -->
+                <div id="google_translate_element"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'zh-TW', includedLanguages: 'zh-CN,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <!--google多語系翻譯 end -->
+                <!--臉書登入
+        [<a href="FB_Login2/fbconfig.php">FBLogin(test)</a>]
+      -->
+
+            </ul>
+
+        </div>
+        <script language="javascript">
+            $(function () {
+            });
+        </script>
+    </div>
+    <header id="header" class="pngFix">
+        <div class="wrapper">
+            <h1 id="logo" title="校友會商城"><a href="https://www.lineshop.tw"><img
+                        src="upload/common/68f5071b8d888162fcdc3b1a67e365d8.png" alt="校友會商城" class="pngFix"></a></h1>
+            <nav>
+                <ul>
+                    <li class="frist"><a class='active' href="index.php?act=member_snsindex" title="買家首頁">買家首頁</a></li>
+                    <li><a class='normal' href="index.php?act=member_snshome" title="個人主頁">個人主頁</a></li>
+                    <li><a class='normal' href="index.php?act=member_snsfriend&op=find" title="好友">好友</a></li>
+                    <li><a class='normal' href="index.php?act=home&op=message" title="站內信">站內信 <i
+                                class="new-message">8</i>
+                        </a></li>
+                    <li><a class='normal' href="index.php?act=home&op=member" title="設置">設置</a></li>
+                </ul>
+                <div class="search-box">
+                    <form method="get" action="index.php" onSubmit="return searchInput();">
+                        <input name="act" id="search_act" value="search" type="hidden">
+                        <input name="keyword" id="keyword" type="text" class="text" placeholder=" 搜尋其實很容易！"
+                            maxlength="200" />
+                        <input name="" type="submit" value="" class="submit pngFix">
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div id="container" class="wrapper">
+        <div class="layout">
+            <div class="sidebar">
+                <dl class="ncu-user">
+                    <dt class="username"><a href="index.php?act=home&op=member" title="編輯用戶信息">林志忠</a></dt>
+                    <dd class="userface">
+                        <div class="pic"><span class="thumb size100"><i></i><img
+                                    src="upload/common/1b5cfe7f1c0aa04a250018002799f440.jpg"
+                                    onload="javascript:DrawImage(this,100,100);" alt="林志忠" /></span>
+                            <p><a href="index.php?act=home&op=avatar" title="上傳新頭像">上傳新頭像</a><i></i></p>
+                        </div>
+                    </dd>
+                    <dd class="info">
+                        <ul>
+                            <li>
+                                買家信用：0 </li>
+                            <li>積分數：0</li>
+                            <li>預存款：<span class="price">0.00</span>元</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <div class="business-intro">
+                    <h3>交易信息</h3>
+                    <ul>
+                        <li><span><a href="index.php?act=member&op=order&state_type=order_pay">待付款訂單</a></span> <i
+                                class='no'>0</i></li>
+                        <li><span><a href="index.php?act=member&op=order&state_type=order_shipping">待確認收貨</a></span> <i
+                                class='no'>0</i></li>
+                        <li><span><a href="index.php?act=member&op=order&state_type=noeval">待評價交易</a></span> <i
+                                class='no'>0</i></li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    // <![CDATA[
+                    var myMenu;
+                    window.onload = function () {
+                        myMenu = new SDMenu("my_menu");
+                        myMenu.init();
+                    };
+	// ]]>
+                </script>
+                <div class="business-handle" id="my_menu">
+                    <h3>交易操作</h3>
+                    <div class='normal'><em class="i2"></em><a href="index.php?act=member&op=order">已買到的商品</a></div>
+                    <!--        <div><em class="i3"></em><a href="javascript:void(0)">购买过的店铺</a> </div>-->
+                    <dl class="collapsed">
+                        <dt><em class="i4"></em><a href="javascript:void(0)">我的收藏</a><i></i></dt>
+                        <dd class='normal'><a href="index.php?act=member_favorites&op=fglist">收藏商品</a></dd>
+                        <dd class='normal'><a href="index.php?act=member_favorites&op=fslist">收藏店舖</a></dd>
+                    </dl>
+                    <dl class="collapsed">
+                        <dt><em class="i5"></em><a href="javascript:void(0)">我的積分</a><i></i></dt>
+                        <dd class='normal'><a href="index.php?act=member_points">積分明細</a></dd>
+                    </dl>
+                    <div class='normal'><em class="i7"></em><a href="index.php?act=member_evaluate&op=list">評價管理</a>
+                    </div>
+                    <dl class="collapsed">
+                        <dt><em class="i8"></em><a href="javascript:void(0)">諮詢與維權</a><i></i></dt>
+                        <dd class='normal'><a href="index.php?act=member_inform">我的舉報</a></dd>
+                        <dd class='normal'><a href="index.php?act=member_consult&op=my_consult">我的諮詢</a></dd>
+                        <dd class='normal'><a href="index.php?act=member_complain">投訴管理</a></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="path">
+                    <div><a href="index.php?act=member_snsindex">我的商城</a><span>&raquo;</span>
+                    </div>
+                </div>
+                <div class="main">
+                    <link type="text/css" href="https://www.lineshop.tw/resource/js/jcarousel/skins/tango/skin.css"
+                        rel="stylesheet">
+                    <style type="text/css">
+                        .path {
+                            display: none;
+                        }
+
+                        .fd-media .goodsinfo dt {
+                            width: 300px;
+                        }
+                    </style>
+                    <!--20170725-->
+                    <link rel="stylesheet" href="colorbox/colorbox.css" />
+                    <script src="colorbox/jquery.colorbox.js"></script>
+                    <script>
+                        $(document).ready(function () {
+
+                            $(".buyer_gold").colorbox({ inline: true, width: "50%" });
+                            $(".buyer_gold_to_point").colorbox({ inline: true, width: "50%" });
+
+
+                        });
+
+
+                    </script>
+                    <div class="wrap">
+                        <div class="layout-l">
+                            <div class="member-intro">
+                                <dl>
+                                    <dt class="nc-member-name"><a href="index.php?act=home&op=member"
+                                            title="編輯用戶信息">林志忠</a>&nbsp;(林志忠)</dt>
+                                    <dd>
+                                        買家信用0 </dd>
+                                    <dd><a class='buyer_gold' href="#buyer_gold">(購買)</a>
+                                        <span>個人金幣&nbsp;<strong>0</strong></span>
+                                        <a class='buyer_gold_to_point' href="#buyer_gold_to_point">(兌換積分)</a>
+                                        <div style='display:none;'>
+                                            <div id='buyer_gold'
+                                                style='padding:10px; background:#fff;line-height:20px;'>
+                                                <form method="POST" action="index.php?buyer_gold=1">
+                                                    <div align="center">
+
+                                                        <span style="font-size:16pt;">購買金幣</span>
+                                                        <br /><br />
+                                                        <h3>金幣：
+
+                                                            <input autocomplete="off" class="w200" id="buyer_goldnum"
+                                                                maxlength="20" name="buyer_goldnum"
+                                                                placeholder="請輸入購買金幣的數量" tabindex="8" type="text"
+                                                                value="">
+
+                                                        </h3>
+                                                        <div style="margin-top:10px;">
+                                                            <span>*注意：【 1 】金幣 = 【 100 】新台幣</span>
+                                                        </div>
+
+                                                        <button type="submit" style="margin-top:10px;">立即購買</button>
+
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div style='display:none;'>
+                                            <div id='buyer_gold_to_point'
+                                                style='padding:10px; background:#fff;line-height:20px;' align="center">
+                                                <form method="POST" action="index.php?buyer_gold_to_point=1">
+                                                    <div>
+                                                        <span style="font-size:16pt;">金幣兌換積分</span>
+
+                                                        <br />
+
+                                                        <span style="color:blue;font-size:14pt;margin-top:10px;">
+                                                            (您目前有<span style="color:red">【0】</span>枚金幣可以進行兌換)
+                                                        </span>
+
+                                                        <!--
+                    <span> 
+                    <span style="color:red"> 1 </span>金幣可兌換<span style="color:red"> 100 </span>積分 
+                    </span>
+                  -->
+                                                        <h3 style="margin-top:10px;">
+                                                            <!--金幣：-->
+                                                            <input autocomplete="off" id="changegold" maxlength="5"
+                                                                name="changegold" placeholder="1金幣可兌換100積分" tabindex="5"
+                                                                type="text" value="">
+                                                            金幣
+                                                            <span> => <span id="cpoint" name="cpoint"
+                                                                    style='color:red;'> 0 </span> 積分</span>
+                                                        </h3>
+
+                                                        <script type="text/javascript">
+                                                            $("#changegold").keyup(function () {
+                                                                var gold = $("#changegold").val();
+                                                                var points = gold * 100;
+
+                                                                $("#cpoint").text(points);
+
+                                                                if (gold > 0) {
+                                                                    $("#changegold").val("");
+                                                                    $("#cpoint").text(" 0 ");
+                                                                    alert("已超過您現有的金幣數!!!");
+                                                                }
+                                                            });
+                                                        </script>
+                                                        <br />
+                                                        <button type="submit" style="margin-top:5px;">確定兌換</button>
+
+                                                    </div>
+                                                </form>
+
+
+                                            </div>
+                                        </div>
+                                    </dd>
+
+                                    <dd class="predeposit"><a href="javascript:void(0)">預存款<span
+                                                class="price ml5 mr5">0.00</span>元<i></i></a>
+                                        <div class="down-menu">
+                                            <p><a href="index.php?act=predeposit">預存款充值</a></p>
+                                            <p><a href="index.php?act=predeposit&op=predepositcash">預存款提現</a></p>
+                                            <p><a href="index.php?act=predeposit&op=predepositlog">預存款明細</a></p>
+
+                                        </div>
+                                    </dd>
+
+                                    <br />
+                                    <dd><span style="font-size:12px;">個人積分 : </span><strong>0</strong></dd>
+                                    <dd><span style="font-size:12px;">店鋪積分 : </span><strong>0</strong></dd>
+
+                                    <br />
+                                    <dd>當月【會員】變動積分：0</dd>
+                                    <dd>當月【店鋪】變動積分：0</dd>
+
+                                </dl>
+                                <ul>
+                                    <li class='no'><a
+                                            href="index.php?act=member&op=order&state_type=order_pay">待付款訂單&nbsp;(<strong>0</strong>)</a>
+                                    </li>
+                                    <li class='no'><a
+                                            href="index.php?act=member&op=order&state_type=order_shipping">待確認收貨&nbsp;(<strong>0</strong>)</a>
+                                    </li>
+                                    <li class='no'><a
+                                            href="index.php?act=member&op=order&state_type=noeval">待評價交易&nbsp;(<strong>0</strong>)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 分享心情和宝贝 -->
+                            <ul class="release-tab">
+                                <li class="sharemood"><em></em><a href="javascript:void(0)">分享心情</a><i></i></li>
+                                <li class="sharegoods" id="snssharegoods"><em></em><a
+                                        href="javascript:void(0)">分享商品</a><i></i></li>
+                                <li class="sharestore" id="snssharestore"><em></em><a href="javascript:void(0)">分享店舖</a>
+                                </li>
+                            </ul>
+                            <div class="release-content"><span class="arrow"></span>
+                                <form id="weiboform" method="post" action="index.php?act=member_snsindex&op=addtrace">
+                                    <textarea name="content" id="content_weibo" nc_type="contenttxt" class="textarea"
+                                        resize="none"></textarea>
+                                    <span class="error"></span>
+                                    <div class="smile"><em></em><a href="javascript:void(0)" nc_type="smiliesbtn"
+                                            data-param='{"txtid":"weibo"}'>表情</a></div>
+                                    <div id="weibocharcount" class="weibocharcount"></div>
+                                    <div id="weiboseccode" class="weiboseccode">
+                                        <label for="captcha" class="ml5 fl"><strong>驗證碼：</strong></label>
+                                        <input name="captcha" class="w40 fl text" type="text" id="captcha" size="4"
+                                            maxlength="4" />
+                                        <a href="javascript:void(0)" class="ml5 fl"><img src="" title="點擊更換驗證碼"
+                                                name="codeimage" border="0" id="codeimage"
+                                                onclick="this.src='index.php?act=seccode&op=makecode&nchash=7d9c8974&t=' + Math.random()" /></a>
+                                        <input type="hidden" name="nchash" value="7d9c8974" />
+                                    </div>
+                                    <div class="handle">
+                                        <div nc_type="formprivacydiv" class="privacy-module"><span class="privacybtn"
+                                                style="width:55px;" nc_type="formprivacybtn"><i></i>所有人</span>
+                                            <div class="privacytab" nc_type="formprivacytab" style="display:none;">
+                                                <ul class="menu-bd">
+                                                    <li nc_type="formprivacyoption" data-param='{"v":"0"}'><span
+                                                            class="selected">所有人可見</span></li>
+                                                    <li nc_type="formprivacyoption" data-param='{"v":"1"}'>
+                                                        <span>好友可見</span>
+                                                    </li>
+                                                    <li nc_type="formprivacyoption" data-param='{"v":"2"}'>
+                                                        <span>僅自己可見</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="privacy" id="privacy" value="0" />
+                                    </div>
+                                    <input type="text" class="text" style="display:none;" />
+                                    <!-- 防止点击Enter键提交 -->
+                                    <input name="分享" type="button" class="button" value="分享" id="weibobtn" />
+                                </form>
+                                <!-- 表情弹出层 -->
+                                <div id="smilies_div" class="smilies-module"></div>
+                            </div>
+
+                            <!-- 动态列表 -->
+                            <div class="tabmenu" style="z-index:0;">
+                                <ul class="tab pngFix">
+                                    <li class="active" nctype="friendtrace"><a id="tabGoodsIntro"
+                                            href="javascript:void(0)"><span>好友動態</span></a></li>
+                                    <li class="normal" nctype="storetrace"><a
+                                            href="javascript:void(0)"><span>店舖動態</span></a></li>
+                                </ul>
+                            </div>
+                            <div id="friendtrace" class="mt20"></div>
+                            <div id="storetrace" class="mt20" style="display:none;"></div>
+                        </div>
+                        <div class="layout-r">
+                            <div class="visitors pngFix">
+                                <h4><span class="active" nc_type="visitmodule"
+                                        data-param='{"name":"visit_me"}'>誰來看過我</span><span class="line">|</span><span
+                                        class="normal" nc_type="visitmodule"
+                                        data-param='{"name":"visit_other"}'>我訪問過的人</span></h4>
+                                <ul id="visit_me" nc_type="visitlist">
+                                    最近沒有人訪問過您的空間，多關注些<a href="index.php?act=member_snsfriend&op=find">好友</a>互動吧~ </ul>
+                                <ul id="visit_other" nc_type="visitlist" style="display: none;">
+                                    最近您沒有瀏覽過好友的空間，趕快去看看<a
+                                        href="index.php?act=member_snsfriend&op=follow">好友</a>最近蒐羅了哪些寶貝 </ul>
+                            </div>
+                            <script type="text/javascript"
+                                src="https://www.lineshop.tw/index.php?act=adv&op=advshow&ap_id=372"></script>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/dialog/dialog.js"
+                        id="dialog_js" charset="utf-8"></script>
+                    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/smilies/smilies_data.js"
+                        charset="utf-8"></script>
+                    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/smilies/smilies.js"
+                        charset="utf-8"></script>
+                    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.caretInsert.js"
+                        charset="utf-8"></script>
+                    <script type="text/javascript"
+                        src="https://www.lineshop.tw/resource/js/jcarousel/jquery.jcarousel.min.js"
+                        charset="utf-8"></script>
+                    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.ajaxdatalazy.js"
+                        charset="utf-8"></script>
+                    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.charCount.js"
+                        charset="utf-8"></script>
+                    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.cookie.js"
+                        charset="utf-8"></script>
+                    <script type="text/javascript">
+                        var max_recordnum = '20';
+                        document.onclick = function () { $("#smilies_div").html(''); $("#smilies_div").hide(); };
+                        $(function () {
+                            //提交分享心情表单
+                            $("#weibobtn").bind('click', function () {
+                                if ($("#weiboform").valid()) {
+                                    var cookienum = $.cookie(COOKIE_PRE + 'weibonum');
+                                    cookienum = parseInt(cookienum);
+                                    if (cookienum >= max_recordnum && $("#weiboseccode").css('display') == 'none') {
+                                        //显示验证码
+                                        $("#weiboseccode").show();
+                                        $("#weiboseccode").find("#codeimage").attr('src', 'index.php?act=seccode&op=makecode&nchash=7d9c8974&t=' + Math.random());
+                                    } else if (cookienum >= max_recordnum && $("#captcha").val() == '') {
+                                        showDialog('請填寫驗證碼');
+                                    } else {
+                                        ajaxpost('weiboform', '', '', 'onerror');
+                                        //隐藏验证码
+                                        $("#weiboseccode").hide();
+                                        $("#weiboseccode").find("#codeimage").attr('src', '');
+                                        $("#captcha").val('');
+                                    }
+                                }
+                                return false;
+                            });
+                            $('#weiboform').validate({
+                                errorPlacement: function (error, element) {
+                                    element.next('.error').append(error);
+                                },
+                                rules: {
+                                    content: {
+                                        required: true,
+                                        maxlength: 140
+                                    }
+                                },
+                                messages: {
+                                    content: {
+                                        required: '請填寫心情',
+                                        maxlength: '不能超過140字'
+                                    }
+                                }
+                            });
+                            //显示分享商品页面
+                            $('#snssharegoods').click(function () {
+                                ajax_form("sharegoods", '分享已買到和收藏的寶貝', 'https://www.lineshop.tw/index.php?act=member_snsindex&op=sharegoods&irefresh=1', 500);
+                                return false;
+                            });
+                            //显示分享店铺页面
+                            $('#snssharestore').click(function () {
+                                ajax_form("sharestore", '分享店舖', 'https://www.lineshop.tw/index.php?act=member_snsindex&op=sharestore&irefresh=1', 500);
+                                return false;
+                            });
+                            //加载好友动态分页
+                            $('#friendtrace').lazyinit();
+                            $('#friendtrace').lazyshow({ url: "index.php?act=member_snsindex&op=tracelist&curpage=1", 'iIntervalId': true });
+                            //心情字符个数动态计算
+                            $("#content_weibo").charCount({
+                                allowed: 140,
+                                warning: 10,
+                                counterContainerID: 'weibocharcount',
+                                firstCounterText: '還可以輸入',
+                                endCounterText: '字',
+                                errorCounterText: '已經超出'
+                            });
+                            $("[nc_type='visitmodule']").bind('click', function () {
+                                var data_str = $(this).attr('data-param');
+                                eval("data_str = " + data_str);
+                                $("[nc_type='visitmodule']").removeClass('active');
+                                $("[nc_type='visitmodule']").addClass('normal');
+                                $(this).removeClass('normal');
+                                $(this).addClass('active');
+                                $("[nc_type='visitlist']").hide();
+                                $("#" + data_str.name).show();
+                            });
+
+                            // 标签切换
+                            $('.tab').children('li').click(function () {
+                                $('.tab').children('li').removeClass().addClass('normal');
+                                $(this).removeClass().addClass('active');
+
+                                var trace_sign = $(this).attr('nctype');
+                                var friendtrace_url = 'index.php?act=member_snsindex&op=tracelist&curpage=1';
+                                var storetrace_url = '';
+                                var url_friendtrace = 'index.php?act=member_snsindex&op=tracelist&curpage=1'
+                                var url_storetrace = 'index.php?act=store_snshome&op=stracelist';
+                                $('#friendtrace,#storetrace').html('').hide();
+                                $('#' + trace_sign).show('fast', function () {
+                                    $('#' + trace_sign).lazyinit();
+                                    $('#' + trace_sign).lazyshow({ url: eval('url_' + trace_sign), 'iIntervalId': true });
+                                });
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clear">&nbsp;</div>
+    <div id="footer">
+        <p><a href="https://www.lineshop.tw">首頁</a>
+            | <a href="https://www.lineshop.tw/index.php?act=article&article_id=468">關於商城</a>
+        </p>
+        <a href="http://www.6393.tw" target="_blank" style="color:#FFF;">愛格室內設計</a>
+        <br />
+    </div>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.cookie.js"></script>
+    <script language="javascript">
+        var searchTxt = ' 搜尋其實很容易！';
+        function searchFocus(e) {
+            if (e.value == searchTxt) {
+                e.value = '';
+                $('#keyword').css("color", "");
+            }
+        }
+        function searchBlur(e) {
+            if (e.value == '') {
+                e.value = searchTxt;
+                $('#keyword').css("color", "#999999");
+            }
+        }
+        function searchInput() {
+            if ($('#keyword').val() == searchTxt)
+                $('#keyword').attr("value", "");
+            return true;
+        }
+        $('#keyword').css("color", "#999999");
+        // 加载购物车信息
+        function load_cart_information() {
+            $.getJSON('index.php?act=cart&op=ajaxcart', function (result) {
+                if (result) {
+                    var result = result;
+                    $('.goods_num').html(result.goods_all_num);
+                    var html = '';
+                    if (result.goods_all_num > 0) {
+                        html += "<div class='order'><table border='0' cellpadding='0' cellspacing='0'>";
+                        var i = 0;
+                        var data = result['goodslist'];
+                        for (i = 0; i < data.length; i++) {
+                            html += "<tr id='cart_item_" + data[i]['specid'] + "' count='" + data[i]['num'] + "'>";
+                            html += "<td class='picture'><span class='thumb size40'><i></i><img src='" + data[i]['images'] + "' title='" + data[i]['gname'] + "' onload='javascript:DrawImage(this,40,40);' ></span></td>";
+                            html += "<td class='name'><a href='https://www.lineshop.tw/index.php?act=goods&goods_id=" + data[i]['goodsid'] + "' title='" + data[i]['gname'] + "' target='_top'>" + data[i]['gname'] + "</a></td>";
+                            html += "<td class='price'><p>NT$" + data[i]['price'] + "×" + data[i]['num'] + "</p><p><a href='javascript:void(0)' onClick='drop_topcart_item(" + data[i]['storeid'] + "," + data[i]['specid'] + ");' style='color: #999;'>刪除</a></p></td>";
+                            html += "</tr>";
+                        }
+                        html += "<tr><td colspan='3' class='no-border'><span class='all'>共<strong class='goods_num'>" + result.goods_all_num + "</strong>種商品   金額總計：<strong id='cart_amount'>NT$" + result.goods_all_price + "</strong></span><span class='button' ><a href='https://www.lineshop.tw/index.php?act=cart' target='_top' title='結算商品' style='color: #FFF;' >結算商品</a></span></td></tr>";
+                    } else {
+                        html = "<div class='no-order'><span>您的購物車中暫無商品，趕快選擇心愛的商品吧！</span><a href='https://www.lineshop.tw/index.php?act=cart' class='button' target='_top' title='查看購物車' style=' color: #FFF;' >查看購物車</a></div>";
+                    }
+                    $("#top_cartlist").html(html);
+                }
+            });
+        }
+
+        //头部删除购物车信息
+        function drop_topcart_item(store_id, spec_id) {
+            var tr = $('#cart_item_' + spec_id);
+            var amount_span = $('#cart_amount');
+            var cart_goods_kinds = $('.goods_num');
+            $.getJSON('index.php?act=cart&op=drop&specid=' + spec_id + '&storeid=' + store_id, function (result) {
+                if (result.done) {
+                    //删除成功
+                    if (result.quantity == 0) {
+                        $('.goods_num').html('0');
+                        var html = '';
+                        html = "<div class='no-order'><span>您的購物車中暫無商品，趕快選擇心愛的商品吧！</span><a href='https://www.lineshop.tw/index.php?act=cart' class='button' target='_top' title='查看購物車' style=' color: #FFF;' >查看購物車</a></div>";
+                        $("#top_cartlist").html(html);
+                    }
+                    else {
+                        tr.remove();        //移除
+                        amount_span.html(price_format(result.amount));  //刷新总费用
+                        cart_goods_kinds.html(result.quantity);       //刷新商品种类
+                    }
+                } else {
+                    alert(result.msg);
+                }
+            });
+        }
+
+        $(function () {
+            $('#topNav').find('li[class="cart"]').mouseover(function () {
+                // 运行加载购物车
+                load_cart_information();
+                $(this).unbind();
+            });
+        });
+    </script>
+</body>
+
+</html>

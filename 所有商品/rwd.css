@@ -1,0 +1,11 @@
+@media (max-width :1000px) {
+    .recommend .shop_assort dd {
+        width: 100% !important;
+    }
+}
+
+@media (max-width :780px) {
+    .module_sidebar {
+        width: 100% !important;
+    }
+}

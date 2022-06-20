@@ -1,0 +1,67 @@
+@media (max-width:820px) {
+    .layout .right-content {
+        height: unset !important;
+    }
+}
+
+@media (max-width:645px) {
+    .layout {
+        overflow: visible !important;
+    }
+
+
+    .layout .right-content .ncu-table-style tbody>.bd-line {
+        border-bottom: solid 1px #EEE;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100% !important;
+        margin: auto !important;
+        position: relative;
+    }
+
+    .layout .right-content .ncu-table-style .bd-line td {
+        border: none !important;
+    }
+
+    .layout .right-content .ncu-table-style .bd-line td:last-child {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .layout .right-content .ncu-table-style thead {
+        display: none;
+    }
+
+    .layout .right-content .ncu-table-style tfoot {
+        display: flex;
+        position: relative;
+    }
+
+
+    .layout .right-content .ncu-table-style tfoot .tc {
+        position: absolute;
+        top: 3px;
+        right: 114px;
+
+        border: none;
+    }
+
+    .layout .right-content .ncu-table-style tfoot td[colspan="22"] label {
+        position: absolute;
+        right: 72px;
+    }
+
+    .layout .right-content .ncu-table-style tfoot td[colspan="22"] a {
+        position: absolute;
+        right: 0px;
+    }
+
+    .layout .right-content .ncu-table-style tfoot td[colspan="22"] .pagination {
+        position: absolute;
+        top: 44px;
+        width: 250px;
+        right: 0;
+    }
+
+}

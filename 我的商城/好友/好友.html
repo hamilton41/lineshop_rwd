@@ -1,0 +1,1373 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/templates/default/css/我的商城rwd.css">
+    <link rel="stylesheet" href="../我的商城rwd/我的商城rwd.css">
+    <link rel="stylesheet" href="./好友.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>好友_校友會商城</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="ShopNC">
+    <meta name="copyright" content="ShopNC Inc. All Rights Reserved">
+    <link href="https://www.lineshop.tw/templates/default/css/base.css" rel="stylesheet" type="text/css">
+    <link href="https://www.lineshop.tw/templates/default/css/member.css" rel="stylesheet" type="text/css">
+    <link href="https://www.lineshop.tw/templates/default/css/member_user.css" rel="stylesheet" type="text/css">
+    <!--[if IE 6]><style type="text/css">
+body {_behavior: url(https://www.lineshop.tw/templates/default/css/csshover.htc);}
+</style>
+<![endif]-->
+    <script>
+        COOKIE_PRE = '3E41_'; _CHARSET = 'utf-8'; SITEURL = 'https://www.lineshop.tw';
+    </script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery-ui/jquery.ui.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.validation.min.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/common.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/member.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/nc-sideMenu.js" charset="utf-8"></script>
+    <!--[if IE]>
+<script src="https://www.lineshop.tw/resource/js/html5.js"></script>
+<![endif]-->
+    <!--[if IE 6]>
+<script src="https://www.lineshop.tw/resource/js/IE6_PNG.js"></script>
+<script>
+DD_belatedPNG.fix('.pngFix');
+</script>
+<script> 
+// <![CDATA[ 
+if((window.navigator.appName.toUpperCase().indexOf("MICROSOFT")>=0)&&(document.execCommand)) 
+try{ 
+document.execCommand("BackgroundImageCache", false, true); 
+   } 
+catch(e){} 
+// ]]> 
+</script> 
+<![endif]-->
+
+</head>
+
+<body>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/common2.2.js" charset="utf-8"></script>
+    <link href="https://www.lineshop.tw/templates/default/css/dialog2.2.css" rel="stylesheet" type="text/css">
+    <div id="append_parent"></div>
+    <div id="ajaxwaitid"></div>
+    <div id="page">
+        <div id="topNav" class="warp-all">
+
+            <dl class="user-entry">
+                <dt>
+                    您好<span><a href="https://www.lineshop.tw/index.php?act=member_snsindex">林志忠</a></span>，歡迎來到<a
+                        href="https://www.lineshop.tw" title="首頁" alt="首頁"><span>校友會商城</span></a>
+                    [<a href="https://www.lineshop.tw/index.php?act=login&op=logout">退出</a>]
+                </dt>
+                <dd>(FB：林志忠)</dd>
+                <dd><a href="https://www.lineshop.tw/index.php?cancel_fb=1">[解除綁定Facebook]</a></dd>
+                <!--
+          <dd>[<a href="https://www.lineshop.tw/index.php?act=login&op=logout">退出</a>]</dd>
+                      <dd>[<a href="https://www.lineshop.tw/index.php?act=login&op=logout">FB:林志忠，登出商城</a>]</dd>
+            -->
+            </dl>
+            <ul class="quick-menu">
+                <li class="user-center">
+                    <div class="menu"><a class="menu-hd" href="https://www.lineshop.tw/index.php?act=member_snsindex"
+                            target="_top" title="我的商城">我的商城<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member&op=order" target="_top"
+                                        title="已買到的商品">已買到的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_snshome" target="_top"
+                                        title="個人主頁">個人主頁</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_snsfriend&op=find"
+                                        target="_top" title="我的好友">我的好友</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="seller-center">
+                    <div class="menu"><a class="menu-hd" href="https://www.lineshop.tw/index.php?act=store"
+                            target="_top" title="賣家中心">賣家中心<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=store&op=store_order" target="_top"
+                                        title="已售出的商品">已售出的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=store_goods&op=goods_list"
+                                        target="_top" title="銷售中的商品">銷售中的商品</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="cart">
+                    <div class="menu"><span class="menu-hd"><s></s>購物車<strong
+                                class="goods_num">0</strong>種商品<i></i></span>
+                        <div class="menu-bd" id="top_cartlist"><img class="loading"
+                                src="https://www.lineshop.tw/templates/default/images/loading.gif" /></div>
+                    </div>
+                </li>
+                <!-- 收藏夹 -->
+                <li class="favorite">
+                    <div class="menu"><a class="menu-hd"
+                            href="https://www.lineshop.tw/index.php?act=member_favorites&op=fglist" title="我的收藏"
+                            target="_top">我的收藏<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_favorites&op=fglist"
+                                        target="_top" title="收藏的商品">收藏的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_favorites&op=fslist"
+                                        target="_top" title="收藏的店舖">收藏的店舖</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- 站内信 -->
+                <li class="pm"><a href="https://www.lineshop.tw/index.php?act=home&op=message" title="站內消息"
+                        target="_top"> 站內消息 (<span style="color: #FE5400;">8</span>) </a></li>
+
+                <!--google多語系翻譯 start -->
+                <div id="google_translate_element"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'zh-TW', includedLanguages: 'zh-CN,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <!--google多語系翻譯 end -->
+                <!--臉書登入
+        [<a href="FB_Login2/fbconfig.php">FBLogin(test)</a>]
+      -->
+
+            </ul>
+
+        </div>
+        <script language="javascript">
+            $(function () {
+            });
+        </script>
+    </div>
+    <header id="header" class="pngFix">
+        <div class="wrapper">
+            <h1 id="logo" title="校友會商城"><a href="https://www.lineshop.tw"><img
+                        src="upload/common/68f5071b8d888162fcdc3b1a67e365d8.png" alt="校友會商城" class="pngFix"></a></h1>
+            <nav>
+                <ul>
+                    <li class="frist"><a class='normal' href="index.php?act=member_snsindex" title="買家首頁">買家首頁</a></li>
+                    <li><a class='normal' href="index.php?act=member_snshome" title="個人主頁">個人主頁</a></li>
+                    <li><a class='active' href="index.php?act=member_snsfriend&op=find" title="好友">好友</a></li>
+                    <li><a class='normal' href="index.php?act=home&op=message" title="站內信">站內信 <i
+                                class="new-message">8</i>
+                        </a></li>
+                    <li><a class='normal' href="index.php?act=home&op=member" title="設置">設置</a></li>
+                </ul>
+                <div class="search-box">
+                    <form method="get" action="index.php" onSubmit="return searchInput();">
+                        <input name="act" id="search_act" value="search" type="hidden">
+                        <input name="keyword" id="keyword" type="text" class="text" placeholder=" 搜尋其實很容易！"
+                            maxlength="200" />
+                        <input name="" type="submit" value="" class="submit pngFix">
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div id="container" class="wrapper">
+        <div class="layout">
+            <div class="sidebar">
+                <dl class="ncu-user">
+                    <dt class="username"><a href="index.php?act=home&op=member" title="編輯用戶信息">林志忠</a></dt>
+                    <dd class="userface">
+                        <div class="pic"><span class="thumb size100"><i></i><img
+                                    src="upload/common/1b5cfe7f1c0aa04a250018002799f440.jpg"
+                                    onload="javascript:DrawImage(this,100,100);" alt="林志忠" /></span>
+                            <p><a href="index.php?act=home&op=avatar" title="上傳新頭像">上傳新頭像</a><i></i></p>
+                        </div>
+                    </dd>
+                    <dd class="info">
+                        <ul>
+                            <li>
+                                買家信用：0 </li>
+                            <li>積分數：0</li>
+                            <li>預存款：<span class="price">0.00</span>元</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <div class="business-intro">
+                    <h3>交易信息</h3>
+                    <ul>
+                        <li><span><a href="index.php?act=member&op=order&state_type=order_pay">待付款訂單</a></span> <i
+                                class='no'>0</i></li>
+                        <li><span><a href="index.php?act=member&op=order&state_type=order_shipping">待確認收貨</a></span> <i
+                                class='no'>0</i></li>
+                        <li><span><a href="index.php?act=member&op=order&state_type=noeval">待評價交易</a></span> <i
+                                class='no'>0</i></li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    // <![CDATA[
+                    var myMenu;
+                    window.onload = function () {
+                        myMenu = new SDMenu("my_menu");
+                        myMenu.init();
+                    };
+	// ]]>
+                </script>
+                <div class="business-handle" id="my_menu">
+                    <h3>交易操作</h3>
+                    <div class='normal'><em class="i2"></em><a href="index.php?act=member&op=order">已買到的商品</a></div>
+                    <!--        <div><em class="i3"></em><a href="javascript:void(0)">购买过的店铺</a> </div>-->
+                    <dl class="collapsed">
+                        <dt><em class="i4"></em><a href="javascript:void(0)">我的收藏</a><i></i></dt>
+                        <dd class='normal'><a href="index.php?act=member_favorites&op=fglist">收藏商品</a></dd>
+                        <dd class='normal'><a href="index.php?act=member_favorites&op=fslist">收藏店舖</a></dd>
+                    </dl>
+                    <dl class="collapsed">
+                        <dt><em class="i5"></em><a href="javascript:void(0)">我的積分</a><i></i></dt>
+                        <dd class='normal'><a href="index.php?act=member_points">積分明細</a></dd>
+                    </dl>
+                    <div class='normal'><em class="i7"></em><a href="index.php?act=member_evaluate&op=list">評價管理</a>
+                    </div>
+                    <dl class="collapsed">
+                        <dt><em class="i8"></em><a href="javascript:void(0)">諮詢與維權</a><i></i></dt>
+                        <dd class='normal'><a href="index.php?act=member_inform">我的舉報</a></dd>
+                        <dd class='normal'><a href="index.php?act=member_consult&op=my_consult">我的諮詢</a></dd>
+                        <dd class='normal'><a href="index.php?act=member_complain">投訴管理</a></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="path">
+                    <div><a href="index.php?act=member_snsindex">我的商城</a><span>&raquo;</span>
+                        好友 </div>
+                </div>
+                <div class="main">
+
+                    <div class="wrap">
+                        <div class="tabmenu">
+                            <ul class="tab pngFix">
+                                <li class="active"><a href="index.php?act=member_snsfriend&op=find">查找好友</a></li>
+                                <li class="normal"><a href="index.php?act=member_snsfriend&op=follow">我關注的</a></li>
+                                <li class="normal"><a href="index.php?act=member_snsfriend&op=fan">關注我的</a></li>
+                            </ul>
+                        </div>
+                        <div class="friendfind">
+                            <!-- 搜索好友start -->
+                            <form id="search_form" method="post" action="index.php?act=member_snsfriend&op=findlist">
+                                <div class="search-form p15">
+                                    <div>
+                                        <input type="text" class="text" style="width:340px;" name="searchname"
+                                            id="searchname" value="" placeholder="請輸入查找人的會員名">
+                                        <a class="submit" nctype="search_submit">搜尋"</a> <a href="javascript:void(0);"
+                                            nctype="advanced_search" class="ml10 vm">高級搜尋</a>
+                                    </div>
+                                    <div style="display:none;" nctype="advanced_search" class="mt10">
+                                        <select nctype="area" name="provinceid" id="provinceid">
+                                        </select>
+                                        <select nctype="area" name="cityid" id="cityid">
+                                            <option>城市</option>
+                                        </select>
+                                        <select nctype="area" name="areaid" id="areaid">
+                                            <option>縣(區)</option>
+                                        </select>
+                                        <select name="age" id="age">
+                                            <option value="0">年齡</option>
+                                            <option value="1">18歲以下</option>
+                                            <option value="2">18-24</option>
+                                            <option value="3">25-30</option>
+                                            <option value="4">31-35</option>
+                                            <option value="5">35歲以上</option>
+                                        </select>
+                                        <select name="sex" id="sex">
+                                            <option value="">性別</option>
+                                            <option value="0">男</option>
+                                            <option value="1">女</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- 推荐标签列表start -->
+                            <div class="recommend-tag mt10 mb20">
+                                <dl>
+                                    <dt><i></i>校友小編</dt>
+                                    <dd>
+                                        <div class="picture"><span class="thumb size100"><i></i><img title="校友小編"
+                                                    src="https://www.lineshop.tw/upload/membertag/9a9edf4a1e0b46ead5427ce4fd6adf58.jpg"
+                                                    onload="javascript:DrawImage(this,120,120);" /></span></div>
+                                        <div class="arrow"></div>
+                                        <div class="content" nctype="content3">
+                                            <p>關注小編，即時收到最新優惠活動訊息</p>
+                                            <div class="friends">
+                                                <h5>這裡有<strong>15</strong>個同樣興趣的用戶：</h5>
+                                                <div>
+                                                    <p class="F-prev"><a href="javascript:void(0);">左翻</a></p>
+                                                    <div class="list" nctype="slider_div">
+                                                        <ul class="F-center">
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="sielian"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title=""
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="華麗批發"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="健康快樂e起購"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="jutebag"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="wonderfulone"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="energyhan"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="maxine"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="sunnywhole"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title=""
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="巧吉佳cheng"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="太谷生技TGBIO"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="劉婷婷"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="三四一巷果物"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="yawa588"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <p class="F-next"><a href="javascript:void(0);">右翻</a></p>
+                                                    <a href="javascript:void(0);" class="care" nctype="batchFollow"
+                                                        data-param="{ids:'599,610,753,851,929,937,1023,1039,1139,1186,1816,1821,1950,2009,2022'}">+關注TA們</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <script>$(function () { $('div[nctype="content3"]').F_slider({ len: 2, axis: 'x' }); })</script>
+                                <dl>
+                                    <dt><i></i>美食</dt>
+                                    <dd>
+                                        <div class="picture"><span class="thumb size100"><i></i><img title="美食"
+                                                    src="https://www.lineshop.tw/upload/membertag/default_tag.gif"
+                                                    onload="javascript:DrawImage(this,120,120);" /></span></div>
+                                        <div class="arrow"></div>
+                                        <div class="content" nctype="content13">
+                                            <p></p>
+                                            <div class="friends">
+                                                <h5>這裡有<strong>13</strong>個同樣興趣的用戶：</h5>
+                                                <div>
+                                                    <p class="F-prev"><a href="javascript:void(0);">左翻</a></p>
+                                                    <div class="list" nctype="slider_div">
+                                                        <ul class="F-center">
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="hitaka"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title=""
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="HundongFood"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="魚蝶ㄦWEDEAR"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="Wanyi1954"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="甄品油舖"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="巧吉佳cheng"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="yf61941665"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="劉婷婷"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="Tingna"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="ka3354857"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="余竝帆"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="三四一巷果物"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <p class="F-next"><a href="javascript:void(0);">右翻</a></p>
+                                                    <a href="javascript:void(0);" class="care" nctype="batchFollow"
+                                                        data-param="{ids:'1305,1306,1493,1523,1526,1561,1816,1819,1950,1960,1964,1966,2009'}">+關注TA們</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <script>$(function () { $('div[nctype="content13"]').F_slider({ len: 2, axis: 'x' }); })</script>
+                                <dl>
+                                    <dt><i></i>術後保養</dt>
+                                    <dd>
+                                        <div class="picture"><span class="thumb size100"><i></i><img title="術後保養"
+                                                    src="https://www.lineshop.tw/upload/membertag/default_tag.gif"
+                                                    onload="javascript:DrawImage(this,120,120);" /></span></div>
+                                        <div class="arrow"></div>
+                                        <div class="content" nctype="content5">
+                                            <p></p>
+                                            <div class="friends">
+                                                <h5>這裡有<strong>5</strong>個同樣興趣的用戶：</h5>
+                                                <div>
+                                                    <p class="F-prev"><a href="javascript:void(0);">左翻</a></p>
+                                                    <div class="list" nctype="slider_div">
+                                                        <ul class="F-center">
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="林啟明"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="太谷生技TGBIO"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="42784145"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="劉婷婷"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="yawa588"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <p class="F-next"><a href="javascript:void(0);">右翻</a></p>
+                                                    <a href="javascript:void(0);" class="care" nctype="batchFollow"
+                                                        data-param="{ids:'1487,1821,1870,1950,2022'}">+關注TA們</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <script>$(function () { $('div[nctype="content5"]').F_slider({ len: 1, axis: 'x' }); })</script>
+                                <dl>
+                                    <dt><i></i>醫美保養</dt>
+                                    <dd>
+                                        <div class="picture"><span class="thumb size100"><i></i><img title="醫美保養"
+                                                    src="https://www.lineshop.tw/upload/membertag/default_tag.gif"
+                                                    onload="javascript:DrawImage(this,120,120);" /></span></div>
+                                        <div class="arrow"></div>
+                                        <div class="content" nctype="content6">
+                                            <p></p>
+                                            <div class="friends">
+                                                <h5>這裡有<strong>9</strong>個同樣興趣的用戶：</h5>
+                                                <div>
+                                                    <p class="F-prev"><a href="javascript:void(0);">左翻</a></p>
+                                                    <div class="list" nctype="slider_div">
+                                                        <ul class="F-center">
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title=""
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="林啟明"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="e趣購"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="太谷生技TGBIO"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="劉婷婷"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="ex0477"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="ka3354857"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="三四一巷果物"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="yawa588"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <p class="F-next"><a href="javascript:void(0);">右翻</a></p>
+                                                    <a href="javascript:void(0);" class="care" nctype="batchFollow"
+                                                        data-param="{ids:'1306,1487,1797,1821,1950,1961,1964,2009,2022'}">+關注TA們</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <script>$(function () { $('div[nctype="content6"]').F_slider({ len: 1, axis: 'x' }); })</script>
+                                <dl>
+                                    <dt><i></i>保健食品</dt>
+                                    <dd>
+                                        <div class="picture"><span class="thumb size100"><i></i><img title="保健食品"
+                                                    src="https://www.lineshop.tw/upload/membertag/default_tag.gif"
+                                                    onload="javascript:DrawImage(this,120,120);" /></span></div>
+                                        <div class="arrow"></div>
+                                        <div class="content" nctype="content7">
+                                            <p></p>
+                                            <div class="friends">
+                                                <h5>這裡有<strong>11</strong>個同樣興趣的用戶：</h5>
+                                                <div>
+                                                    <p class="F-prev"><a href="javascript:void(0);">左翻</a></p>
+                                                    <div class="list" nctype="slider_div">
+                                                        <ul class="F-center">
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="HundongFood"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="魚蝶ㄦWEDEAR"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="Wanyi1954"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="甄品油舖"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="easyshop"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="太谷生技TGBIO"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="柏德購物"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="劉婷婷"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="ka3354857"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="三四一巷果物"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="yawa588"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <p class="F-next"><a href="javascript:void(0);">右翻</a></p>
+                                                    <a href="javascript:void(0);" class="care" nctype="batchFollow"
+                                                        data-param="{ids:'1493,1523,1526,1561,1689,1821,1896,1950,1964,2009,2022'}">+關注TA們</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <script>$(function () { $('div[nctype="content7"]').F_slider({ len: 2, axis: 'x' }); })</script>
+                                <dl>
+                                    <dt><i></i>生活日用</dt>
+                                    <dd>
+                                        <div class="picture"><span class="thumb size100"><i></i><img title="生活日用"
+                                                    src="https://www.lineshop.tw/upload/membertag/default_tag.gif"
+                                                    onload="javascript:DrawImage(this,120,120);" /></span></div>
+                                        <div class="arrow"></div>
+                                        <div class="content" nctype="content8">
+                                            <p></p>
+                                            <div class="friends">
+                                                <h5>這裡有<strong>20</strong>個同樣興趣的用戶：</h5>
+                                                <div>
+                                                    <p class="F-prev"><a href="javascript:void(0);">左翻</a></p>
+                                                    <div class="list" nctype="slider_div">
+                                                        <ul class="F-center">
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title=""
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="aa0326888"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="54007607"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title=""
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="HundongFood"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="Wanyi1954"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="甄品油舖"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="easyshop"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="dash2014y"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="e趣購"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="蕙聯興業"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="巧吉佳cheng"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="太谷生技TGBIO"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="42784145"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="柏德購物"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="亞新制服"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="劉婷婷"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="Tingna"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="ex0477"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="三四一巷果物"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <p class="F-next"><a href="javascript:void(0);">右翻</a></p>
+                                                    <a href="javascript:void(0);" class="care" nctype="batchFollow"
+                                                        data-param="{ids:'1277,1297,1298,1306,1493,1526,1561,1689,1785,1797,1801,1816,1821,1870,1896,1949,1950,1960,1961,2009'}">+關注TA們</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <script>$(function () { $('div[nctype="content8"]').F_slider({ len: 2, axis: 'x' }); })</script>
+                                <dl>
+                                    <dt><i></i>派對專用</dt>
+                                    <dd>
+                                        <div class="picture"><span class="thumb size100"><i></i><img title="派對專用"
+                                                    src="https://www.lineshop.tw/upload/membertag/default_tag.gif"
+                                                    onload="javascript:DrawImage(this,120,120);" /></span></div>
+                                        <div class="arrow"></div>
+                                        <div class="content" nctype="content9">
+                                            <p></p>
+                                            <div class="friends">
+                                                <h5>這裡有<strong>4</strong>個同樣興趣的用戶：</h5>
+                                                <div>
+                                                    <p class="F-prev"><a href="javascript:void(0);">左翻</a></p>
+                                                    <div class="list" nctype="slider_div">
+                                                        <ul class="F-center">
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="Wanyi1954"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="yf61941665"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="劉婷婷"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="yawa588"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <p class="F-next"><a href="javascript:void(0);">右翻</a></p>
+                                                    <a href="javascript:void(0);" class="care" nctype="batchFollow"
+                                                        data-param="{ids:'1526,1819,1950,2022'}">+關注TA們</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <script>$(function () { $('div[nctype="content9"]').F_slider({ len: 1, axis: 'x' }); })</script>
+                                <dl>
+                                    <dt><i></i>孕婦可食用</dt>
+                                    <dd>
+                                        <div class="picture"><span class="thumb size100"><i></i><img title="孕婦可食用"
+                                                    src="https://www.lineshop.tw/upload/membertag/default_tag.gif"
+                                                    onload="javascript:DrawImage(this,120,120);" /></span></div>
+                                        <div class="arrow"></div>
+                                        <div class="content" nctype="content11">
+                                            <p></p>
+                                            <div class="friends">
+                                                <h5>這裡有<strong>4</strong>個同樣興趣的用戶：</h5>
+                                                <div>
+                                                    <p class="F-prev"><a href="javascript:void(0);">左翻</a></p>
+                                                    <div class="list" nctype="slider_div">
+                                                        <ul class="F-center">
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="Wanyi1954"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="太谷生技TGBIO"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="劉婷婷"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="ka3354857"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <p class="F-next"><a href="javascript:void(0);">右翻</a></p>
+                                                    <a href="javascript:void(0);" class="care" nctype="batchFollow"
+                                                        data-param="{ids:'1526,1821,1950,1964'}">+關注TA們</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <script>$(function () { $('div[nctype="content11"]').F_slider({ len: 1, axis: 'x' }); })</script>
+                                <dl>
+                                    <dt><i></i>孕婦可使用</dt>
+                                    <dd>
+                                        <div class="picture"><span class="thumb size100"><i></i><img title="孕婦可使用"
+                                                    src="https://www.lineshop.tw/upload/membertag/default_tag.gif"
+                                                    onload="javascript:DrawImage(this,120,120);" /></span></div>
+                                        <div class="arrow"></div>
+                                        <div class="content" nctype="content12">
+                                            <p></p>
+                                            <div class="friends">
+                                                <h5>這裡有<strong>8</strong>個同樣興趣的用戶：</h5>
+                                                <div>
+                                                    <p class="F-prev"><a href="javascript:void(0);">左翻</a></p>
+                                                    <div class="list" nctype="slider_div">
+                                                        <ul class="F-center">
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title=""
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="林啟明"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="easyshop"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="e趣購"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="蕙聯興業"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="42784145"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="劉婷婷"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="ka3354857"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <p class="F-next"><a href="javascript:void(0);">右翻</a></p>
+                                                    <a href="javascript:void(0);" class="care" nctype="batchFollow"
+                                                        data-param="{ids:'1277,1487,1689,1797,1801,1870,1950,1964'}">+關注TA們</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <script>$(function () { $('div[nctype="content12"]').F_slider({ len: 1, axis: 'x' }); })</script>
+                                <dl>
+                                    <dt><i></i>男性專用</dt>
+                                    <dd>
+                                        <div class="picture"><span class="thumb size100"><i></i><img title="男性專用"
+                                                    src="https://www.lineshop.tw/upload/membertag/default_tag.gif"
+                                                    onload="javascript:DrawImage(this,120,120);" /></span></div>
+                                        <div class="arrow"></div>
+                                        <div class="content" nctype="content15">
+                                            <p></p>
+                                            <div class="friends">
+                                                <h5>這裡有<strong>13</strong>個同樣興趣的用戶：</h5>
+                                                <div>
+                                                    <p class="F-prev"><a href="javascript:void(0);">左翻</a></p>
+                                                    <div class="list" nctype="slider_div">
+                                                        <ul class="F-center">
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title=""
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="aa0326888"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="Wanyi1954"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="dash2014y"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="e趣購"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="蕙聯興業"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="太谷生技TGBIO"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="42784145"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="柏德購物"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="亞新制服"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="劉婷婷"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="ka3354857"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="三四一巷果物"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <p class="F-next"><a href="javascript:void(0);">右翻</a></p>
+                                                    <a href="javascript:void(0);" class="care" nctype="batchFollow"
+                                                        data-param="{ids:'1277,1297,1526,1785,1797,1801,1821,1870,1896,1949,1950,1964,2009'}">+關注TA們</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <script>$(function () { $('div[nctype="content15"]').F_slider({ len: 2, axis: 'x' }); })</script>
+                                <dl>
+                                    <dt><i></i>女性專用</dt>
+                                    <dd>
+                                        <div class="picture"><span class="thumb size100"><i></i><img title="女性專用"
+                                                    src="https://www.lineshop.tw/upload/membertag/default_tag.gif"
+                                                    onload="javascript:DrawImage(this,120,120);" /></span></div>
+                                        <div class="arrow"></div>
+                                        <div class="content" nctype="content16">
+                                            <p></p>
+                                            <div class="friends">
+                                                <h5>這裡有<strong>13</strong>個同樣興趣的用戶：</h5>
+                                                <div>
+                                                    <p class="F-prev"><a href="javascript:void(0);">左翻</a></p>
+                                                    <div class="list" nctype="slider_div">
+                                                        <ul class="F-center">
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title=""
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="aa0326888"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="林啟明"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="Wanyi1954"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="easyshop"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="dash2014y"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="e趣購"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="蕙聯興業"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="太谷生技TGBIO"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="42784145"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="亞新制服"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="劉婷婷"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="ka3354857"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <p class="F-next"><a href="javascript:void(0);">右翻</a></p>
+                                                    <a href="javascript:void(0);" class="care" nctype="batchFollow"
+                                                        data-param="{ids:'1277,1297,1487,1526,1689,1785,1797,1801,1821,1870,1949,1950,1964'}">+關注TA們</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <script>$(function () { $('div[nctype="content16"]').F_slider({ len: 2, axis: 'x' }); })</script>
+                                <dl>
+                                    <dt><i></i>毛小孩專用</dt>
+                                    <dd>
+                                        <div class="picture"><span class="thumb size100"><i></i><img title="毛小孩專用"
+                                                    src="https://www.lineshop.tw/upload/membertag/default_tag.gif"
+                                                    onload="javascript:DrawImage(this,120,120);" /></span></div>
+                                        <div class="arrow"></div>
+                                        <div class="content" nctype="content17">
+                                            <p></p>
+                                            <div class="friends">
+                                                <h5>這裡有<strong>4</strong>個同樣興趣的用戶：</h5>
+                                                <div>
+                                                    <p class="F-prev"><a href="javascript:void(0);">左翻</a></p>
+                                                    <div class="list" nctype="slider_div">
+                                                        <ul class="F-center">
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title=""
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="甄品油舖"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img
+                                                                            title="太谷生技TGBIO"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                            <li><span class="thumb size40"><i></i><a
+                                                                        href="javascript:void(0);"><img title="劉婷婷"
+                                                                            src="templates/default/images/default_user_portrait.gif"
+                                                                            onload="javascript:DrawImage(this,40,40);" /></a></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <p class="F-next"><a href="javascript:void(0);">右翻</a></p>
+                                                    <a href="javascript:void(0);" class="care" nctype="batchFollow"
+                                                        data-param="{ids:'1277,1561,1821,1950'}">+關注TA們</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <script>$(function () { $('div[nctype="content17"]').F_slider({ len: 1, axis: 'x' }); })</script>
+                            </div>
+                            <!-- 推荐标签列表end -->
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/common_select.js"
+                        charset="utf-8"></script>
+                    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/sns_friend.js"
+                        charset="utf-8"></script>
+                    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.F_slider.js"
+                        charset="utf-8"></script>
+                    <script type="text/javascript">
+                        $(function () {
+                            $('a[nctype="search_submit"]').click(function () {
+                                // 验证用户名是否为空
+                                if ($('#searchname').val() != '') {
+                                    $('#search_form').submit();
+                                } else {
+                                    $('#searchname').addClass('error').focus();
+                                }
+                            });
+
+
+                            // 高级搜索显示与隐藏
+                            $('a[nctype="advanced_search"]').click(function () {
+                                $('div[nctype="advanced_search"]').toggle('slow');
+                            });
+
+                            // 地区
+                            areaInit($('select[nctype="area"]:first'), 0);
+                            $('select[nctype="area"]').change(function () {
+                                $(this).nextAll('select[nctype="area"]').html('');
+                                if ($(this).next().attr('nctype') == 'area' && !isNaN(parseInt($(this).val()))) {
+                                    $('#area_ids').val($(this).val());
+                                    areaInit($(this).next(), $(this).val());
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clear">&nbsp;</div>
+    <div id="footer">
+        <p><a href="https://www.lineshop.tw">首頁</a>
+            | <a href="https://www.lineshop.tw/index.php?act=article&article_id=468">關於商城</a>
+        </p>
+        <a href="http://www.6393.tw" target="_blank" style="color:#FFF;">愛格室內設計</a>
+        <br />
+    </div>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.cookie.js"></script>
+    <script language="javascript">
+        var searchTxt = ' 搜尋其實很容易！';
+        function searchFocus(e) {
+            if (e.value == searchTxt) {
+                e.value = '';
+                $('#keyword').css("color", "");
+            }
+        }
+        function searchBlur(e) {
+            if (e.value == '') {
+                e.value = searchTxt;
+                $('#keyword').css("color", "#999999");
+            }
+        }
+        function searchInput() {
+            if ($('#keyword').val() == searchTxt)
+                $('#keyword').attr("value", "");
+            return true;
+        }
+        $('#keyword').css("color", "#999999");
+        // 加载购物车信息
+        function load_cart_information() {
+            $.getJSON('index.php?act=cart&op=ajaxcart', function (result) {
+                if (result) {
+                    var result = result;
+                    $('.goods_num').html(result.goods_all_num);
+                    var html = '';
+                    if (result.goods_all_num > 0) {
+                        html += "<div class='order'><table border='0' cellpadding='0' cellspacing='0'>";
+                        var i = 0;
+                        var data = result['goodslist'];
+                        for (i = 0; i < data.length; i++) {
+                            html += "<tr id='cart_item_" + data[i]['specid'] + "' count='" + data[i]['num'] + "'>";
+                            html += "<td class='picture'><span class='thumb size40'><i></i><img src='" + data[i]['images'] + "' title='" + data[i]['gname'] + "' onload='javascript:DrawImage(this,40,40);' ></span></td>";
+                            html += "<td class='name'><a href='https://www.lineshop.tw/index.php?act=goods&goods_id=" + data[i]['goodsid'] + "' title='" + data[i]['gname'] + "' target='_top'>" + data[i]['gname'] + "</a></td>";
+                            html += "<td class='price'><p>NT$" + data[i]['price'] + "×" + data[i]['num'] + "</p><p><a href='javascript:void(0)' onClick='drop_topcart_item(" + data[i]['storeid'] + "," + data[i]['specid'] + ");' style='color: #999;'>刪除</a></p></td>";
+                            html += "</tr>";
+                        }
+                        html += "<tr><td colspan='3' class='no-border'><span class='all'>共<strong class='goods_num'>" + result.goods_all_num + "</strong>種商品   金額總計：<strong id='cart_amount'>NT$" + result.goods_all_price + "</strong></span><span class='button' ><a href='https://www.lineshop.tw/index.php?act=cart' target='_top' title='結算商品' style='color: #FFF;' >結算商品</a></span></td></tr>";
+                    } else {
+                        html = "<div class='no-order'><span>您的購物車中暫無商品，趕快選擇心愛的商品吧！</span><a href='https://www.lineshop.tw/index.php?act=cart' class='button' target='_top' title='查看購物車' style=' color: #FFF;' >查看購物車</a></div>";
+                    }
+                    $("#top_cartlist").html(html);
+                }
+            });
+        }
+
+        //头部删除购物车信息
+        function drop_topcart_item(store_id, spec_id) {
+            var tr = $('#cart_item_' + spec_id);
+            var amount_span = $('#cart_amount');
+            var cart_goods_kinds = $('.goods_num');
+            $.getJSON('index.php?act=cart&op=drop&specid=' + spec_id + '&storeid=' + store_id, function (result) {
+                if (result.done) {
+                    //删除成功
+                    if (result.quantity == 0) {
+                        $('.goods_num').html('0');
+                        var html = '';
+                        html = "<div class='no-order'><span>您的購物車中暫無商品，趕快選擇心愛的商品吧！</span><a href='https://www.lineshop.tw/index.php?act=cart' class='button' target='_top' title='查看購物車' style=' color: #FFF;' >查看購物車</a></div>";
+                        $("#top_cartlist").html(html);
+                    }
+                    else {
+                        tr.remove();        //移除
+                        amount_span.html(price_format(result.amount));  //刷新总费用
+                        cart_goods_kinds.html(result.quantity);       //刷新商品种类
+                    }
+                } else {
+                    alert(result.msg);
+                }
+            });
+        }
+
+        $(function () {
+            $('#topNav').find('li[class="cart"]').mouseover(function () {
+                // 运行加载购物车
+                load_cart_information();
+                $(this).unbind();
+            });
+        });
+    </script>
+</body>
+
+</html>
