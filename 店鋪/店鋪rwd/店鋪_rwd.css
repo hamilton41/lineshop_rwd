@@ -1,0 +1,610 @@
+/*****************最上面(灰色)*****************/
+
+@media (max-width :1000px) {
+
+    body {
+        width: 100%;
+    }
+
+    /*鑽上面*/
+    #topNav {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    #page {
+        height: 58px !important;
+        position: relative;
+    }
+
+    .quick-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        position: unset !important;
+        top: unset !important;
+        right: unset !important;
+        width: 100% !important;
+    }
+
+    #google_translate_element {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+    }
+
+
+
+}
+
+
+@media (max-width: 510px) {
+    #page {
+        height: 80px !important;
+    }
+}
+
+/****************************************************首頁.css******************************************************/
+
+@media (max-width:1000px) {
+    #header {
+        width: 100% !important;
+        margin-top: 1rem;
+    }
+
+    #header #shop-logo {
+        float: none !important;
+        margin: auto !important;
+    }
+
+    #header .shop-wrap {
+        float: none !important;
+        margin: auto !important;
+    }
+
+    .ncsl-nav {
+        margin-top: 2rem !important;
+        width: 100% !important;
+    }
+
+    .ncsl-nav .banner a img {
+        width: 100% !important;
+    }
+
+    .ncsl-nav #nav {
+        width: 100% !important;
+    }
+
+    .ncg-list .content ul {
+        width: 100% !important;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .ncg-list .content ul li {
+        width: 196px !important;
+    }
+
+
+    #content {
+        width: 100% !important;
+
+    }
+
+    #content .layout {
+        grid-template-columns: 1fr 2.5fr;
+
+        display: grid;
+    }
+
+    .expanded .nc-goods-main {
+        grid-column: 2/3;
+        width: 600px !important;
+        float: none !important;
+        grid-row: 1/3;
+    }
+
+    .expanded .nc-sidebar {
+        grid-column: 1/2;
+        float: none !important;
+        grid-row: 1/2;
+
+
+        margin: auto !important;
+    }
+
+    .ncg-list .content {
+        width: 600px !important;
+    }
+
+    .flexslider .slides img {
+        width: 600px !important;
+    }
+
+    .flexslider {
+        width: 100% !important;
+    }
+
+
+
+
+    #footer {
+        width: 100% !important;
+    }
+
+
+}
+
+
+@media (max-width:820px) {
+    .ncg-list .content {
+        width: 500px !important;
+        margin: auto !important;
+    }
+
+    .expanded .nc-goods-main {
+        width: 500px !important;
+    }
+
+    .ncg-list .content ul li {
+        width: 50% !important;
+    }
+
+}
+
+@media (max-width: 736px) {
+    .ncg-list .content {
+        width: 400px !important;
+        margin: auto !important;
+    }
+
+    .expanded .nc-goods-main {
+        width: 400px !important;
+    }
+
+    .ncg-list .content ul li {
+        width: 50% !important;
+    }
+
+    #content .layout {
+        grid-template-columns: 1fr 1.5fr;
+    }
+}
+
+
+@media(max-width:670px) {
+    /*
+    #header .shop-wrap {
+        width: 325px !important;
+        position: relative;
+        left: 25px;
+    }
+
+    .expanded .nc-sidebar {
+        width: 400px !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 0.5fr 0.2fr;
+    }
+
+    .nc-s-c-s1.ncs-top-bar.mt10 {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        position: relative;
+        bottom: 10px;
+    }
+
+    .nc-s-c-s1.ncs-search-bar.mt10 {
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+
+    .nc-s-c-s1.ncs-class-bar.mt10 {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .nc-s-c-s1.ncs-link-bar.mt10 {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        position: relative;
+        bottom: 10px;
+    }
+
+    .nc-s-c-s1.ncs-message-bar {
+        grid-row: 3/4;
+        grid-column: 2/3;
+    }
+
+    #content .layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 5fr;
+        justify-content: center;
+
+    }
+
+    .expanded .nc-sidebar {
+        position: relative !important;
+        grid-row: 1/2;
+    }
+
+    .expanded .nc-goods-main {
+        margin: 0 auto !important;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    */
+
+    #header .shop-wrap {
+        width: 325px !important;
+        position: relative;
+        left: 25px;
+    }
+
+    .ncg-list .content {
+        width: 250px !important;
+        margin: auto !important;
+    }
+
+    .expanded .nc-goods-main {
+        width: 250px !important;
+    }
+
+    .ncg-list .content ul li {
+        width: 100% !important;
+    }
+
+    #content .layout {
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+
+}
+
+@media (max-width:460px) {
+    .expanded .nc-goods-main {
+        width: 75% !important;
+    }
+
+    .ncg-list .content {
+        width: 100% !important;
+    }
+
+}
+
+
+/****************************************************信用評價.css******************************************************/
+
+@media (max-width:1000px) {
+    .nc-s-c-s2.mt10 .ncs-rate {
+        margin: 0 !important;
+    }
+
+    .nc-s-c-s3 .content .ncs-loading .nc-comment {
+        width: 100% !important;
+    }
+
+
+}
+
+@media (max-width:820px) {
+    .nc-s-c-s2 .content {
+        height: 405px;
+    }
+
+    .ncs-evaluation-tb {
+        height: 100%;
+    }
+
+    .nc-s-c-s2.mt10 {
+        position: relative;
+        right: 150px;
+    }
+
+    .nc-s-c-s2.mt10 .content {
+        height: unset !important;
+    }
+}
+
+@media (max-width:736px) {
+
+
+
+    .nc-s-c-s2.mt10 {
+        right: 90px;
+
+    }
+
+    .nc-s-c-s2.mt10 .content {
+        width: 320px !important;
+    }
+
+    .ncs-rate-tab li a {
+        width: 280px !important;
+
+    }
+
+    .nc-s-c-s2.mt10 .ncs-rate {
+        width: 320px !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1.15fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .nc-s-c-s2.mt10 .title {
+        width: 320px !important;
+
+    }
+
+    .ncs-rate-tab {
+        grid-row: 1/2;
+        grid-column: 1/3;
+        width: 320px !important;
+    }
+
+    .ncs-rate-icos {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .ncs-rate-panel {
+        width: 160px !important;
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+
+}
+
+@media (max-width:670px) {
+    .nc-s-c-s2.mt10 {
+        right: 150px;
+    }
+
+    .nc-s-c-s2 {
+        width: 80% !important;
+    }
+
+
+
+}
+
+/*************************************************店內詳情.css********************************************************/
+
+@media (max-width:1000px) {
+    .nc-goods-main {
+        width: 100% !important;
+        grid-column: 1/3;
+
+    }
+
+    .nc-s-c-s3 .content .content.pt10.pb20 {
+        width: 100% !important;
+
+    }
+
+    .module_special.ncs-map {
+        width: 80% !important;
+        height: 300px !important;
+    }
+
+
+}
+
+@media (max-width:790px) {
+
+    .ncu-intro .top {
+        width: 600px !important;
+    }
+
+    .nc-s-c-s3 .content .ncu-intro {
+        width: 500px !important;
+    }
+
+    .ncu-intro .content {
+        width: 450px !important;
+    }
+
+    dl.ncu-shop-info {
+        width: 500px !important;
+    }
+
+    dl.ncu-shop-info dd.qrcode {
+        float: none !important;
+        position: absolute;
+        right: 4rem;
+    }
+}
+
+@media(max-width:630px) {
+    .ncu-intro .top {
+        width: 400px !important;
+    }
+
+    .nc-s-c-s3 .content .ncu-intro {
+        width: 300px !important;
+    }
+
+    .ncu-intro .content {
+        width: 250px !important;
+    }
+
+    dl.ncu-shop-info {
+        width: 300px !important;
+    }
+
+    dl.ncu-shop-info dd.base {
+        margin: 20px 0 5px 41px;
+    }
+
+    dl.ncu-shop-info dd.qrcode {}
+}
+
+@media(max-width:430px) {
+    .ncu-intro .top {
+        width: 350px !important;
+    }
+
+    .nc-s-c-s3 .content .ncu-intro {
+        width: 250px !important;
+    }
+
+    .ncu-intro .content {
+        width: 200px !important;
+    }
+
+    dl.ncu-shop-info {
+        width: 250px !important;
+    }
+
+    dl.nus-contact {
+        width: 165px !important;
+    }
+
+    dl.ncu-shop-info dt {
+        position: relative;
+        right: 30px;
+    }
+
+}
+
+
+/****************************************************商品.css******************************************************/
+
+@media (max-width:1000px) {
+    #content .nc-detail-bd .ncs-info {
+        float: none !important;
+        width: 600px !important;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 5rem auto;
+    }
+
+    .ncsl-nav .banner a.img {
+        width: 100% !important;
+    }
+
+    .ncs-default-banner {
+        width: 100% !important;
+    }
+
+    .nc-detail-hd {
+        width: 100% !important;
+    }
+
+
+    .nc-s-c-s4.ncg-intro .default p img {
+        width: 100% !important;
+        height: unset !important;
+    }
+
+    .nc-s-c-s4.ncg-intro .default {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    #main-nav {
+        width: 100% !important;
+    }
+
+    .ncsl-nav #nav ul {
+        width: 100% !important;
+    }
+
+    .nc-detail-hd h3 {
+        width: 100% !important;
+    }
+}
+
+@media (max-width:800px) {
+    .nc-gallery {
+        margin: auto !important;
+        float: none !important;
+    }
+
+    .nc-wrap {
+        margin: auto !important;
+        float: none !important;
+    }
+
+    .ncg-com-list .content ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nc-s-c-s2 .content {
+        width: 100% !important;
+    }
+
+    .ncg-com-list .content ul li {
+        width: 200px !important;
+    }
+
+    .nc-s-c-s2.ncg-com-list .content {
+        height: unset !important;
+    }
+
+    .nc-s-c-s4 .content table tbody tr {
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+
+}
+
+
+@media (max-width:750px) {
+    .expanded.sticky .switch-bar {
+        position: fixed;
+        left: 202px !important;
+        z-index: 1;
+    }
+
+    .layout.expanded.sticky .nc-sidebar {
+        position: fixed !important;
+        left: 0;
+        top: 3rem;
+        z-index: 10;
+    }
+}
+
+
+
+
+@media (max-width :530px) {
+
+
+    .nc-g-r th dl {
+        width: 100% !important;
+    }
+
+    #content .nc-detail-bd .ncs-info {
+        width: 100% !important;
+    }
+
+    .nc-s-c-s4 .content table {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    .nc-wrap {
+        width: 300px !important;
+    }
+
+    .nc-meta dl dd,
+    .nc-key dl dd,
+    .nc-pay dl dd {
+        width: 100% !important;
+    }
+
+    .nc-inform span {
+        top: -11px !important;
+    }
+}

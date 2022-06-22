@@ -1,0 +1,619 @@
+<!doctype html>
+<html xmlns:og='http://ogp.me/ns#'>
+
+<head>
+    <link rel="stylesheet" href="/templates/default/css/店鋪_rwd.css">
+    <link rel="stylesheet" href="./店鋪rwd/店鋪_rwd.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IE=9" http-equiv="X-UA-Compatible">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>喵好康 - 信用評價</title>
+    <meta name="keywords" content="ShopNC,校友會商城," />
+    <meta name="description" content="ShopNC,校友會商城," />
+    <meta name="author" content="ShopNC">
+    <meta name="copyright" content="ShopNC Inc. All Rights Reserved">
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="video.movie" />
+    <meta property="og:url" content="https://www.lineshop.tw/index.php?act=goods&goods_id=" />
+    <meta property="og:image" content="https://www.lineshop.tw/upload/store/goods//" />
+
+
+    <link href="https://www.lineshop.tw/templates/default/css/base.css" rel="stylesheet" type="text/css">
+    <link href="https://www.lineshop.tw/templates/default/css/shop.css" rel="stylesheet" type="text/css">
+    <link href="https://www.lineshop.tw/templates/default/css/home_login.css" rel="stylesheet" type="text/css">
+    <link href="https://www.lineshop.tw/templates/default/store/style/style7/style.css" rel="stylesheet"
+        type="text/css">
+    <!--[if IE 6]><style type="text/css">
+body {_behavior: url(https://www.lineshop.tw/templates/default/css/csshover.htc);}
+</style>
+<![endif]-->
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery-ui/jquery.ui.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.validation.min.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/html5.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/common.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/member.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/shop.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/dialog/dialog.js" id="dialog_js"
+        charset="utf-8"></script>
+    <!--[if IE 6]>
+<script src="https://www.lineshop.tw/resource/js/IE6_PNG.js"></script>
+<script>
+DD_belatedPNG.fix('.pngFix,.pngFix:hover');
+</script>
+<script> 
+// <![CDATA[ 
+if((window.navigator.appName.toUpperCase().indexOf("MICROSOFT")>=0)&&(document.execCommand)) 
+try{ 
+document.execCommand("BackgroundImageCache", false, true); 
+   } 
+catch(e){} 
+// ]]> 
+</script> 
+<script type="text/javascript" src="https://www.lineshop.tw/resource/js/IE6_MAXMIX.js"></script> 
+<![endif]-->
+    <script>
+        COOKIE_PRE = '3E41_'; _CHARSET = 'utf-8'; SITEURL = 'https://www.lineshop.tw';
+    </script>
+
+
+</head>
+
+<body>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/common2.2.js" charset="utf-8"></script>
+    <link href="https://www.lineshop.tw/templates/default/css/dialog2.2.css" rel="stylesheet" type="text/css">
+    <div id="append_parent"></div>
+    <div id="ajaxwaitid"></div>
+    <div id="page">
+        <div id="topNav" class="warp-all">
+
+            <dl class="user-entry">
+                <dt>您好，歡迎來到<span><a href="https://www.lineshop.tw" title="首頁" alt="首頁">校友會商城</a></span></dt>
+                <dd>[<a href="https://www.lineshop.tw/index.php?act=login">登錄</a>]</dd>
+                <dd>[<a href="https://www.lineshop.tw/index.php?act=login&op=register">註冊</a>]</dd>
+
+            </dl>
+            <ul class="quick-menu">
+                <li class="user-center">
+                    <div class="menu"><a class="menu-hd" href="https://www.lineshop.tw/index.php?act=member_snsindex"
+                            target="_top" title="我的商城">我的商城<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member&op=order" target="_top"
+                                        title="已買到的商品">已買到的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_snshome" target="_top"
+                                        title="個人主頁">個人主頁</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_snsfriend&op=find"
+                                        target="_top" title="我的好友">我的好友</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="seller-center">
+                    <div class="menu"><a class="menu-hd" href="https://www.lineshop.tw/index.php?act=store"
+                            target="_top" title="賣家中心">賣家中心<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=store&op=store_order" target="_top"
+                                        title="已售出的商品">已售出的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=store_goods&op=goods_list"
+                                        target="_top" title="銷售中的商品">銷售中的商品</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="cart">
+                    <div class="menu"><span class="menu-hd"><s></s>購物車<strong
+                                class="goods_num">0</strong>種商品<i></i></span>
+                        <div class="menu-bd" id="top_cartlist"><img class="loading"
+                                src="https://www.lineshop.tw/templates/default/images/loading.gif" /></div>
+                    </div>
+                </li>
+                <!-- 收藏夹 -->
+                <li class="favorite">
+                    <div class="menu"><a class="menu-hd"
+                            href="https://www.lineshop.tw/index.php?act=member_favorites&op=fglist" title="我的收藏"
+                            target="_top">我的收藏<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_favorites&op=fglist"
+                                        target="_top" title="收藏的商品">收藏的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_favorites&op=fslist"
+                                        target="_top" title="收藏的店舖">收藏的店舖</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- 站内信 -->
+                <li class="pm"><a href="https://www.lineshop.tw/index.php?act=home&op=message" title="站內消息"
+                        target="_top"> 站內消息 </a></li>
+
+                <!--google多語系翻譯 start -->
+                <div id="google_translate_element"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'zh-TW', includedLanguages: 'zh-CN,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <!--google多語系翻譯 end -->
+                <!--臉書登入
+        [<a href="FB_Login2/fbconfig.php">FBLogin(test)</a>]
+      -->
+
+            </ul>
+
+        </div>
+        <script language="javascript">
+            $(function () {
+            });
+        </script>
+    </div>
+    <header id="header" class="bc">
+        <h1 id="shop-logo">
+            <a class="mall-home" href="https://www.lineshop.tw" title="首頁"><img
+                    src="upload/common/9e0e7c5bccbac2ed9e6c800edc5ca9f5.png" alt="校友會商城" title="校友會商城"
+                    class="pngFix"></a><em>店舖</em>
+        </h1>
+        <div class="shop-wrap">
+            <div id="shop-search">
+                <form method="get" action="https://www.lineshop.tw/index.php" onSubmit="return searchInput();"
+                    name="formSearch" id="formSearch">
+                    <input name="act" id="search_act" value="search" type="hidden" />
+                    <input name="keyword" id="keyword" type="text" class="ncs-search-input-text" value="搜尋其實很容易！"
+                        onFocus="searchFocus(this)" onBlur="searchBlur(this)" x-webkit-speech lang="zh-CN"
+                        onwebkitspeechchange="foo()" x-webkit-grammar="builtin:search" />
+                    <a href="javascript:void(0)" class="ncs-search-btn-mall"
+                        nctype="search_in_shop"><span>全站搜</span></a><a href="javascript:void(0)"
+                        class="ncs-search-btn-shop" nctype="search_in_store"><span>店內搜</span></a>
+                </form>
+            </div>
+            <div id="shop-info">
+                <div class="shop-info-simple">
+                    <p><span class="shop-level" title="店舖等級：頂級VIP店家">頂級VIP店家</span><a
+                            href="index.php?act=show_store&id=673" class="shop-name">喵好康</a></p>
+                    <div class="shop-credit">
+                        <h5>賣家信用：</h5>
+                        <span> <em class="seller-heart level-1"></em>
+                        </span>
+                    </div>
+                    <span class="more">更多<i class="pngFix"></i></span>
+                    </p>
+                </div>
+                <div class="shop-info-details">
+                    <dl class="rate">
+                        <dt>描述相符：</dt>
+                        <dd class="rate-star"><em><i style="width: 100%;"></i></em><span>5分</span></dd>
+                        <dt>服務態度：</dt>
+                        <dd class="rate-star"><em><i style="width: 100%;"></i></em><span>5分</span></dd>
+                        <dt>發貨速度：</dt>
+                        <dd class="rate-star"><em><i style="width: 100%;"></i></em><span>5分</span></dd>
+                    </dl>
+                    <dl class="basic">
+                        <dt>店主：</dt>
+                        <dd><a href="index.php?act=show_store&op=credit&id=673" class="shopkeeper">喵喵</a> <a
+                                href="index.php?act=home&op=sendmsg&member_id=1980" class="message text-hidden"
+                                title="發站內信">發站內信</a></dd>
+                        <dt>創店時間：</dt>
+                        <dd class="gray">2022-04-24</dd>
+                        <dt>所&nbsp;在&nbsp;地：</dt>
+                        <dd class="gray">台灣省 台南市</dd>
+                    </dl>
+                    <dl class="other">
+                        <dt>商品數量：</dt>
+                        <dd><a href="index.php?act=show_store&id=673" class="btn">逛逛店舖</a><strong>45</strong>件商品</dd>
+                        <dt>店舖收藏：</dt>
+                        <dd><a href="javascript:collect_store('673','count','store_collect')"
+                                class="btn">我要收藏</a><strong nctype="store_collect">0</strong>人收藏</dd>
+                        <dt>聯繫方式：</dt>
+                        <dd>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script type="text/javascript">
+        $(function () {
+            $('a[nctype="search_in_store"]').click(function () {
+                $('#search_act').val('show_store');
+                $('<input type="hidden" value="673" name="id" /> <input type="hidden" name="op" value="goods_all" />').appendTo("#formSearch");
+                $('#formSearch').submit();
+            });
+            $('a[nctype="search_in_shop"]').click(function () {
+                $('#formSearch').submit();
+            });
+            var store_id = "673";
+            var goods_id = "";
+            var act = "show_store";
+            var op = "credit";
+            $.getJSON("index.php?act=show_store&op=ajax_flowstat_record", { id: store_id, goods_id: goods_id, act_param: act, op_param: op }, function (result) {
+            });
+        });
+    </script>
+    <div class="background clearfix">
+        <div class="ncsl-nav">
+            <div class="banner">
+                <a href="index.php?act=show_store&id=673" class="img">
+                    <img src="upload/store/eef391a4d938cba2398cca47453f42d6.png" alt="喵好康" title="喵好康" class="pngFix">
+                </a>
+            </div>
+            <nav id="nav" class="pngFix">
+                <ul class="pngFix">
+                    <li class="normal"><a href="index.php?act=show_store&id=673"><span>店舖首頁<i></i></span></a></li>
+                    <li class="active"><a href="index.php?act=show_store&op=credit&id=673"><span>信用評價<i></i></span></a>
+                    </li>
+                    <li class="normal pngFix"><a
+                            href="index.php?act=show_store&op=store_info&id=673"><span>店舖詳情<i></i></span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <article id="content">
+            <section class="layout expanded mt10">
+                <article class="nc-goods-main">
+                    <!-- 商品评分统计信息S -->
+                    <div class="nc-s-c-s2">
+                        <div class="title">
+                            <h4>好評率 ( 100 % )</h4>
+                        </div>
+                        <div class="content">
+                            <table class="ncs-evaluation-tb">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <td class="ncse-good"><span class="ico pngFix"></span>好評</td>
+                                        <td class="ncse-normal"><span class="ico pngFix"></span>中評</td>
+                                        <td class="ncse-bad"><span class="ico pngFix"></span>差評</td>
+                                        <td class="ncse-sum">總計</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>最近1周</th>
+                                        <td class="ncse-good">2</td>
+                                        <td class="ncse-normal">0</td>
+                                        <td class="ncse-bad">0</td>
+                                        <td class="ncse-sum">2</td>
+                                    </tr>
+                                    <tr>
+                                        <th>最近1個月</th>
+                                        <td class="ncse-good">5</td>
+                                        <td class="ncse-normal">0</td>
+                                        <td class="ncse-bad">0</td>
+                                        <td class="ncse-sum">5</td>
+                                    </tr>
+                                    <tr>
+                                        <th>最近6個月</th>
+                                        <td class="ncse-good">9</td>
+                                        <td class="ncse-normal">0</td>
+                                        <td class="ncse-bad">0</td>
+                                        <td class="ncse-sum">9</td>
+                                    </tr>
+                                    <tr>
+                                        <th>6個月前</th>
+                                        <td class="ncse-good">0</td>
+                                        <td class="ncse-normal">0</td>
+                                        <td class="ncse-bad">0</td>
+                                        <td class="ncse-sum">0</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>總計</th>
+                                        <td>9</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>9</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- 商品评分统计信息E -->
+                    <div class="nc-s-c-s2 mt10">
+                        <div class="title">
+                            <h4>店舖半年內動態評分</h4>
+                        </div>
+                        <div class="content">
+                            <div class="ncs-rate clearfix">
+                                <ul class="ncs-rate-tab">
+                                    <li class="current"><a
+                                            href="javascript:void(0);">寶貝與描述相符：&nbsp;&nbsp;<em>5</em>分</a></li>
+                                    <li><a href="javascript:void(0);">賣家的服務態度：&nbsp;&nbsp;<em>5</em>分</a></li>
+                                    <li><a href="javascript:void(0);">賣家的發貨速度：&nbsp;&nbsp;<em>5</em>分</a></li>
+                                </ul>
+                                <dl class="ncs-rate-icos">
+                                    <dd class="rate-star"><em><i style="width: 100%"></i></em><span>5分</span></dd>
+                                    <dd class="rate-star"><em><i style="width: 80%"></i></em><span>4分</span></dd>
+                                    <dd class="rate-star"><em><i style="width: 60%"></i></em><span>3分</span></dd>
+                                    <dd class="rate-star"><em><i style="width: 40%"></i></em><span>2分</span></dd>
+                                    <dd class="rate-star"><em><i style="width: 20%"></i></em><span>1分</span></dd>
+                                </dl>
+                                <ul class="ncs-rate-panel ">
+                                    <li>
+                                        <em style="width:100px;"></em><i>100%</i>
+                                    </li>
+                                    <li>
+                                        暫無人打分 </li>
+                                    <li>
+                                        暫無人打分 </li>
+                                    <li>
+                                        暫無人打分 </li>
+                                    <li>
+                                        暫無人打分 </li>
+                                </ul>
+                                <ul class="ncs-rate-panel hide">
+                                    <li>
+                                        <em style="width:100px;"></em><i>100%</i>
+                                    </li>
+                                    <li>
+                                        暫無人打分 </li>
+                                    <li>
+                                        暫無人打分 </li>
+                                    <li>
+                                        暫無人打分 </li>
+                                    <li>
+                                        暫無人打分 </li>
+                                </ul>
+                                <ul class="ncs-rate-panel hide">
+                                    <li>
+                                        <em style="width:100px;"></em><i>100%</i>
+                                    </li>
+                                    <li>
+                                        暫無人打分 </li>
+                                    <li>
+                                        暫無人打分 </li>
+                                    <li>
+                                        暫無人打分 </li>
+                                    <li>
+                                        暫無人打分 </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <aside class="nc-sidebar">
+                    <!--店铺基本信息 S-->
+
+                    <div class="ncs-info clearfix">
+                        <div class="shop-card">
+                            <h4>喵好康</h4>
+                            <dl>
+                                <dt><span class="thumb size60"><i></i><a href="index.php?act=show_store&id=673"><img
+                                                src="https://www.lineshop.tw/upload/store/8f6a39ae9f2724f8a104abf63994f4ab.png_small.png"
+                                                onload="javascript:DrawImage(this,60,60);" title="喵好康"
+                                                alt="喵好康" /></a></span></dt>
+                                <dd><a href="index.php?act=show_store&op=credit&id=673" class="shopkeeper">喵喵</a> <a
+                                        href="index.php?act=home&op=sendmsg&member_id=1980" class="message text-hidden"
+                                        title="發站內信">發站內信</a></dd>
+                                <dd class="ncs-level">
+                                    <span class="seller-heart level-1"></span>
+                                </dd>
+                                <dd><span>好評率：</span>100%</dd>
+                            </dl>
+                        </div>
+                        <div class="shop-rate">
+                            <h4>動態評價</h4>
+                            <!-- 动态评价 -->
+                            <dl class="rate">
+                                <dt>描述相符：</dt>
+                                <dd class="rate-star"><em><i style=" width: 100%;"></i></em><span>5分</span></dd>
+                                <dt>服務態度：</dt>
+                                <dd class="rate-star"><em><i style=" width: 100%;"></i></em><span>5分</span></dd>
+                                <dt>發貨速度：</dt>
+                                <dd class="rate-star"><em><i style=" width: 100%;"></i></em><span>5分</span></dd>
+                            </dl>
+                        </div>
+                        <div class="shop-detail">
+                            <h4>店舖信息</h4>
+                            <!-- 店铺信息 -->
+                            <dl>
+                                <dt>創店時間：</dt>
+                                <dd>2022-04-24</dd>
+                                <dt>所&nbsp;在&nbsp;地：</dt>
+                                <dd>台灣省 台南市</dd>
+                                <dt>商品數量：</dt>
+                                <dd><strong>45</strong>件商品</dd>
+                                <dt>店舖收藏：</dt>
+                                <dd><strong nctype="store_collect">0</strong>人收藏</dd>
+                                <dt>認證信息：</dt>
+                                <dd>
+                                    <span id="certAutonym" class="text-hidden fl" title="實名認證">實名認證</span>
+                                    <span id="certMaterial" class="text-hidden fl ml5" title="實體店舖認證">實體店舖認證</span>
+                                </dd>
+                                <!--详细地址       <dt>詳細地址：</dt>
+      <dd>公園南路370巷6號</dd>
+      -->
+                                <!--联系电话       <dt>聯繫電話：</dt>
+      <dd>0921265072</dd>
+      -->
+                            </dl>
+                        </div>
+                        <div class="shop-im">
+                            <h4>聯繫方式</h4>
+                            <p>
+                            </p>
+                        </div>
+                        <div class="shop-other" id="shop-other">
+                            <ul>
+                                <li class="ncs-info-btn-map"><a href="javascript:void(0)"
+                                        class="pngFix"><span>店舖地圖</span><b></b> <!-- 店铺地图 -->
+                                        <div class="ncs-info-map" id="map_container" style="width:188px;height:320px;">
+                                            地圖加載中... </div>
+                                    </a></li>
+                                <li class="ncs-info-btn-qrcode"><a href="javascript:void(0)"
+                                        class="pngFix"><span>店舖二維碼</span><b></b> <!-- 店铺二维码 -->
+                                        <p class="ncs-info-qrcode"><img
+                                                src="https://www.lineshop.tw/upload/store/testc96a4b7c1228dbc766a4b487b09b6e3d.png"
+                                                onerror="this.src='https://www.lineshop.tw/upload/store/default_qrcode.png'"
+                                                title="店舖地址:https://www.lineshop.tw/index.php?act=show_store&id=673"
+                                                onload="javascript:DrawImage(this,150,150);"><em>手機掃瞄二維碼<br />快速收藏店舖</em>
+                                        </p>
+                                    </a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <!--店铺基本信息 E-->
+                    <script type="text/javascript">
+                        var cityName = "台南市";
+                        var address = "公園南路370巷6號";
+                        var store_name = "喵好康";
+                        var map = "";
+                        var localCity = "";
+                        function initialize() {
+                            map = new BMap.Map("map_container");
+                            localCity = new BMap.LocalCity();
+
+                            map.enableScrollWheelZoom();
+                            localCity.get(function (cityResult) {
+                                if (cityResult) {
+                                    var level = cityResult.level;
+                                    if (level < 13) level = 13;
+                                    map.centerAndZoom(cityResult.center, level);
+                                    cityResultName = cityResult.name;
+                                    if (cityResultName.indexOf(cityName) >= 0) cityName = cityResult.name;
+                                    getPoint();
+                                }
+                            });
+                        }
+
+                        function loadScript() {
+                            var script = document.createElement("script");
+                            script.src = "http://api.map.baidu.com/api?v=1.2&callback=initialize";
+                            document.body.appendChild(script);
+                        }
+                        function getPoint() {
+                            var myGeo = new BMap.Geocoder();
+                            myGeo.getPoint(address, function (point) {
+                                if (point) {
+                                    setPoint(point);
+                                }
+                            }, cityName);
+                        }
+                        function setPoint(point) {
+                            if (point) {
+                                map.centerAndZoom(point, 16);
+                                var marker = new BMap.Marker(point);
+                                map.addOverlay(marker);
+                            }
+                        }
+
+                        // 当鼠标放在店铺地图上再加载百度地图。
+                        $(function () {
+                            $('.ncs-info-btn-map').one('mouseover', function () {
+                                loadScript();
+                            });
+                        });
+                    </script>
+                </aside>
+            </section>
+            <div class="clear"></div>
+            <!-- 商品评价列表S -->
+            <div class="nc-s-c-s3 ncs-comment mt10">
+                <div class="title">
+                    <h4>評價</h4>
+                </div>
+                <div class="content">
+                    <div id="goodseval" class="ncs-loading"></div>
+                    <script type="text/javascript">
+                        $("#goodseval").load('index.php?act=show_store&op=comments&id=673');
+                    </script>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <div class="clear">&nbsp;</div>
+    <div id="footer">
+        <p><a href="https://www.lineshop.tw">首頁</a>
+            | <a href="https://www.lineshop.tw/index.php?act=article&article_id=468">關於商城</a>
+        </p>
+        <a href="http://www.6393.tw" target="_blank" style="color:#FFF;">愛格室內設計</a>
+        <br />
+    </div>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.cookie.js"></script>
+    <script language="javascript">
+        var searchTxt = '搜尋其實很容易！';
+        function searchFocus(e) {
+            if (e.value == searchTxt) {
+                e.value = '';
+                $('#keyword').css("color", "");
+            }
+        }
+        function searchBlur(e) {
+            if (e.value == '') {
+                e.value = searchTxt;
+                $('#keyword').css("color", "#999999");
+            }
+        }
+        function searchInput() {
+            if ($('#keyword').val() == searchTxt)
+                $('#keyword').attr("value", "");
+            return true;
+        }
+        $('#keyword').css("color", "#999999");
+        // 加载购物车信息
+        function load_cart_information() {
+            $.getJSON('index.php?act=cart&op=ajaxcart', function (result) {
+                if (result) {
+                    var result = result;
+                    $('.goods_num').html(result.goods_all_num);
+                    var html = '';
+                    if (result.goods_all_num > 0) {
+                        html += "<div class='order'><table border='0' cellpadding='0' cellspacing='0'>";
+                        var i = 0;
+                        var data = result['goodslist'];
+                        for (i = 0; i < data.length; i++) {
+                            html += "<tr id='cart_item_" + data[i]['specid'] + "' count='" + data[i]['num'] + "'>";
+                            html += "<td class='picture'><span class='thumb size40'><i></i><img src='" + data[i]['images'] + "' title='" + data[i]['gname'] + "' onload='javascript:DrawImage(this,40,40);' ></span></td>";
+                            html += "<td class='name'><a href='https://www.lineshop.tw/index.php?act=goods&goods_id=" + data[i]['goodsid'] + "' title='" + data[i]['gname'] + "' target='_top'>" + data[i]['gname'] + "</a></td>";
+                            html += "<td class='price'><p>NT$" + data[i]['price'] + "×" + data[i]['num'] + "</p><p><a href='javascript:void(0)' onClick='drop_topcart_item(" + data[i]['storeid'] + "," + data[i]['specid'] + ");' style='color: #999;'>刪除</a></p></td>";
+                            html += "</tr>";
+                        }
+                        html += "<tr><td colspan='3' class='no-border'><span class='all'>共<strong class='goods_num'>" + result.goods_all_num + "</strong>種商品   金額總計：<strong id='cart_amount'>NT$" + result.goods_all_price + "</strong></span><span class='button' ><a href='https://www.lineshop.tw/index.php?act=cart' target='_top' title='結算商品' style='color: #FFF;' >結算商品</a></span></td></tr>";
+                    } else {
+                        html = "<div class='no-order'><span>您的購物車中暫無商品，趕快選擇心愛的商品吧！</span><a href='https://www.lineshop.tw/index.php?act=cart' class='button' target='_top' title='查看購物車' style=' color: #FFF;' >查看購物車</a></div>";
+                    }
+                    $("#top_cartlist").html(html);
+                }
+            });
+        }
+
+        //头部删除购物车信息
+        function drop_topcart_item(store_id, spec_id) {
+            var tr = $('#cart_item_' + spec_id);
+            var amount_span = $('#cart_amount');
+            var cart_goods_kinds = $('.goods_num');
+            $.getJSON('index.php?act=cart&op=drop&specid=' + spec_id + '&storeid=' + store_id, function (result) {
+                if (result.done) {
+                    //删除成功
+                    if (result.quantity == 0) {
+                        $('.goods_num').html('0');
+                        var html = '';
+                        html = "<div class='no-order'><span>您的購物車中暫無商品，趕快選擇心愛的商品吧！</span><a href='https://www.lineshop.tw/index.php?act=cart' class='button' target='_top' title='查看購物車' style=' color: #FFF;' >查看購物車</a></div>";
+                        $("#top_cartlist").html(html);
+                    }
+                    else {
+                        tr.remove();        //移除
+                        amount_span.html(price_format(result.amount));  //刷新总费用
+                        cart_goods_kinds.html(result.quantity);       //刷新商品种类
+                    }
+                } else {
+                    alert(result.msg);
+                }
+            });
+        }
+
+        $(function () {
+            $('#topNav').find('li[class="cart"]').mouseover(function () {
+                // 运行加载购物车
+                load_cart_information();
+                $(this).unbind();
+            });
+        });
+    </script>
+    <script src="https://www.lineshop.tw/resource/js/jquery.ajaxContent.pack.js" type="text/javascript"></script>
