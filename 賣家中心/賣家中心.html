@@ -1,0 +1,486 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./賣家中心rwd.css">
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>賬戶概覽_校友會商城</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="ShopNC">
+    <meta name="copyright" content="ShopNC Inc. All Rights Reserved">
+    <link href="https://www.lineshop.tw/templates/default/css/base.css" rel="stylesheet" type="text/css">
+    <link href="https://www.lineshop.tw/templates/default/css/member.css" rel="stylesheet" type="text/css">
+    <link href="https://www.lineshop.tw/templates/default/css/member_store.css" rel="stylesheet" type="text/css">
+    <!--[if IE 6]><style type="text/css">
+body {_behavior: url(https://www.lineshop.tw/templates/default/css/csshover.htc);}
+</style>
+<![endif]-->
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery-ui/jquery.ui.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.validation.min.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/common.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/member.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/dialog/dialog.js" id="dialog_js"
+        charset="utf-8"></script>
+    <!--[if IE]>
+<script src="https://www.lineshop.tw/resource/js/html5.js"></script>
+<![endif]-->
+    <!--[if IE 6]>
+<script src="https://www.lineshop.tw/resource/js/IE6_PNG.js"></script>
+<script>
+DD_belatedPNG.fix('.pngFix');
+</script>
+<script> 
+// <![CDATA[ 
+if((window.navigator.appName.toUpperCase().indexOf("MICROSOFT")>=0)&&(document.execCommand)) 
+try{ 
+document.execCommand("BackgroundImageCache", false, true); 
+   } 
+catch(e){} 
+// ]]> 
+</script> 
+<![endif]-->
+    <script type="text/javascript">
+        COOKIE_PRE = '3E41_'; _CHARSET = 'utf-8'; SITEURL = 'https://www.lineshop.tw';
+        var PRICE_FORMAT = 'NT$%s';
+        $(function () {
+            //search
+            $("#details").children('ul').children('li').click(function () {
+                $(this).parent().children('li').removeClass("current");
+                $(this).addClass("current");
+                $('#search_act').attr("value", $(this).attr("act"));
+            });
+            var search_act = $("#details").find("li[class='current']").attr("act");
+            $('#search_act').attr("value", search_act);
+            $("#keyword").blur();
+        });
+        function show_store(store_id) {
+            var store_url = "https://www.lineshop.tw/index.php?act=show_store&id=";
+            var s_id = store_id;
+            $.get("api.php?act=get_session&key=store_id", function (data) {
+                if (data != '') s_id = data;
+            });
+            if (s_id > 0) window.open(store_url + s_id, '', '');
+        }
+        function store_reapply() {
+            ajaxget('index.php?act=home&op=store_reapply');
+        }
+    </script>
+
+    <!--20170712-->
+    <link rel="stylesheet" href="colorbox/colorbox.css" />
+    <script src="colorbox/jquery.colorbox.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $(".allpay_apply").colorbox({ inline: true, width: "50%" });
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/common2.2.js" charset="utf-8"></script>
+    <link href="https://www.lineshop.tw/templates/default/css/dialog2.2.css" rel="stylesheet" type="text/css">
+    <div id="append_parent"></div>
+    <div id="ajaxwaitid"></div>
+    <div id="page">
+        <div id="topNav" class="warp-all">
+
+            <dl class="user-entry">
+                <dt>
+                    您好<span><a
+                            href="https://www.lineshop.tw/index.php?act=member_snsindex">hamilton_41</a></span>，歡迎來到<a
+                        href="https://www.lineshop.tw" title="首頁" alt="首頁"><span>校友會商城</span></a>
+                    [<a href="https://www.lineshop.tw/index.php?act=login&op=logout">退出</a>]
+                </dt>
+                <dd><a href="FB_Login2/fbconfig.php">[立即綁定Facebook]</a></dd>
+                <!--
+          <dd>[<a href="https://www.lineshop.tw/index.php?act=login&op=logout">退出</a>]</dd>
+                      <dd><a href="FB_Login2/fbconfig.php">[FB登入]</a></dd>
+          -->
+            </dl>
+            <ul class="quick-menu">
+                <li class="user-center">
+                    <div class="menu"><a class="menu-hd" href="https://www.lineshop.tw/index.php?act=member_snsindex"
+                            target="_top" title="我的商城">我的商城<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member&op=order" target="_top"
+                                        title="已買到的商品">已買到的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_snshome" target="_top"
+                                        title="個人主頁">個人主頁</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_snsfriend&op=find"
+                                        target="_top" title="我的好友">我的好友</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="seller-center">
+                    <div class="menu"><a class="menu-hd" href="https://www.lineshop.tw/index.php?act=store"
+                            target="_top" title="賣家中心">賣家中心<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=store&op=store_order" target="_top"
+                                        title="已售出的商品">已售出的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=store_goods&op=goods_list"
+                                        target="_top" title="銷售中的商品">銷售中的商品</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="cart">
+                    <div class="menu"><span class="menu-hd"><s></s>購物車<strong
+                                class="goods_num">0</strong>種商品<i></i></span>
+                        <div class="menu-bd" id="top_cartlist"><img class="loading"
+                                src="https://www.lineshop.tw/templates/default/images/loading.gif" /></div>
+                    </div>
+                </li>
+                <!-- 收藏夹 -->
+                <li class="favorite">
+                    <div class="menu"><a class="menu-hd"
+                            href="https://www.lineshop.tw/index.php?act=member_favorites&op=fglist" title="我的收藏"
+                            target="_top">我的收藏<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_favorites&op=fglist"
+                                        target="_top" title="收藏的商品">收藏的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_favorites&op=fslist"
+                                        target="_top" title="收藏的店舖">收藏的店舖</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- 站内信 -->
+                <li class="pm"><a href="https://www.lineshop.tw/index.php?act=home&op=message" title="站內消息"
+                        target="_top"> 站內消息 (<span style="color: #FE5400;">8</span>) </a></li>
+
+                <!--google多語系翻譯 start -->
+                <div id="google_translate_element"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'zh-TW', includedLanguages: 'zh-CN,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <!--google多語系翻譯 end -->
+                <!--臉書登入
+        [<a href="FB_Login2/fbconfig.php">FBLogin(test)</a>]
+      -->
+
+            </ul>
+
+        </div>
+        <script language="javascript">
+            $(function () {
+            });
+        </script>
+    </div>
+    <div id="header">
+        <h1 title="校友會商城"><a href="https://www.lineshop.tw"><img
+                    src="upload/common/68f5071b8d888162fcdc3b1a67e365d8.png" alt="校友會商城" class="pngFix"></a><i>賣家中心</i>
+        </h1>
+        <div id="search" class="search">
+            <div class="details" id="details">
+                <ul class="tab">
+                    <li class="current" act="search"><span>商品</span></li>
+                    <li act="shop_search"><span>店舖</span></li>
+                </ul>
+                <div id="a1" class="form">
+                    <form method="get" action="index.php" onSubmit="return searchInput();">
+                        <input name="act" id="search_act" value="search" type="hidden">
+                        <div class="formstyle">
+                            <input name="keyword" id="keyword" type="text" class="textinput" value=" 搜尋其實很容易！"
+                                onFocus="searchFocus(this)" onBlur="searchBlur(this)" maxlength="200" />
+                            <input name="" type="submit" class="search-button" value="">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navmenu pngFix"><span class="left-side pngFix"></span><span class="right-side pngFix"></span>
+        <ul>
+            <li><a href="index.php?act=store" class="selected"><span>賣家中心</span></a></li>
+            <li><a class="" href="index.php?act=member_snsindex"><span>買家中心</span></a></li>
+            <li><a class="" href="index.php?act=home&op=member"><span>賬戶設置</span></a></li>
+        </ul>
+
+    </nav>
+    <script type="text/javascript">
+        // 收缩展开效果
+        $(document).ready(function () {
+            $(".sidebar dl dt").click(function () {
+                $(this).toggleClass("hou");
+                var sidebar_id = $(this).attr("id");
+                var sidebar_dd = $(this).next("dd");
+                sidebar_dd.slideToggle("slow", function () {
+                    $.cookie(COOKIE_PRE + sidebar_id, sidebar_dd.css("display"), { expires: 7, path: '/' });
+                });
+            });
+            $('.sidebar').find('dd').css('display', 'none');
+            $(".sidebar dl dt").addClass("hou");
+        });
+    </script>
+    <div class="layout">
+        <div class="sidebar">
+            <dl>
+                <dt id="sidebar_goods_manage"><i class="pngFix"></i>商品管理</dt>
+                <dd style="display: block;">
+                    <ul>
+                        <li><a class='normal' href="index.php?act=store_goods&op=add_goods&step=one"
+                                target="_blank">商品發佈</a></li>
+                        <li><a class='normal' href="index.php?act=store_goods&op=goods_list">出售中的商品</a></li>
+                        <li><a class='normal' href="index.php?act=store_goods&op=goods_storage">倉庫中的商品</a></li>
+                        <li><a class='normal' href="index.php?act=store_goods&op=brand_list">品牌列表</a></li>
+                        <!-- <li><a class='normal' href="index.php?act=store_goods&op=taobao_import">淘寶導入</a></li>  -->
+                        <li><a class='normal' href="index.php?act=store&op=store_goods_class">分類管理</a></li>
+
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt id="sidebar_order_manage"><i class="pngFix"></i>交易管理</dt>
+                <dd style="display: block;">
+                    <ul>
+                        <li><a class='normal' href="index.php?act=store&op=store_order">訂單管理</a></li>
+                        <li><a class='normal' href="index.php?act=deliver&op=index">發貨</a></li>
+                        <li><a class='normal' href="index.php?act=deliver&op=daddress">發貨設置</a></li>
+                        <li><a class='normal' href="index.php?act=store&op=payment">支付方式</a></li>
+                        <li><a class='normal' href="index.php?act=transport">物流工具</a></li>
+                        <li><a class='normal' href="index.php?act=store_evaluate&op=list">評價管理</a></li>
+                        <!--20170710-->
+                        <li><a class='allpay_apply' href="#allpay_apply">申請金流</a></li>
+                    </ul>
+            </dl>
+            <dl>
+                <dt id="sidebar_promotion_manage"><i class="pngFix"></i>促銷管理</dt>
+                <dd style="display: ;">
+                    <ul>
+
+                        <!--
+		  <li><a class='normal' href="index.php?act=store_promotion_xianshi&op=xianshi_list">限時折扣</a></li>
+          <li><a class='normal' href="index.php?act=store_promotion_mansong&op=mansong_list">滿即送</a></li>
+          <li><a class='normal' href="index.php?act=store_promotion_bundling&op=bundling_list">組合銷售</a></li>
+		  -->
+                        <li><a class='normal'
+                                href="index.php?act=store_promotion_lesspoint&op=lesspoint_quota_list">購買抵扣積分</a></li>
+                        <!--<li><a class='normal' href="index.php?act=store_promotion_activitylink&op=activitylink_quota_list">商品活動連結</a></li>-->
+                        <li><a class='normal'
+                                href="index.php?act=store_promotion_goodssendpoint&op=goodssendpoint_quota_list">購買贈送積分</a>
+                        </li>
+
+                        <!--
+          <li><a class='normal' href="index.php?act=store&op=store_coupon">優惠券管理</a></li>
+                    <li><a class='normal' href="index.php?act=store&op=store_activity">活動管理</a></li>
+                    <li><a class='normal' href="index.php?act=store_ztc&op=ztc_list">直通車管理</a></li>
+          		  -->
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt id="sidebar_store_manage"><i class="pngFix"></i>店舖設置</dt>
+                <dd style="display: ;">
+                    <ul>
+                        <li><a class='normal' href="JavaScript:void(0);" onClick="show_store('');">我的店舖</a></li>
+                        <li><a class='normal' href="index.php?act=store&op=store_setting">店舖設置</a></li>
+                        <li><a class='normal' href="index.php?act=store&op=theme">主題設置</a></li>
+
+                        <li><a class='normal' href="index.php?act=store&op=store_navigation">導航管理</a></li>
+                        <li><a class='normal' href="index.php?act=store&op=store_partner">合作夥伴管理</a></li>
+                        <li><a clas='normal' href="index.php?act=store_sns">店舖動態</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt id="sidebar_consult_manage"><i class="pngFix"></i>客服管理</dt>
+                <dd style="display: ;">
+                    <ul>
+                        <li><a class='normal' href="index.php?act=store_consult&op=consult_list">諮詢管理</a></li>
+                        <li><a class='normal' href="index.php?act=refund">退款記錄</a></li>
+                        <li><a class='normal' href="index.php?act=return">退貨記錄</a></li>
+                        <li><a class='normal' href="index.php?act=store_complain&op=list">投訴管理</a></li>
+                        <li><a class='normal' href="index.php?act=store_inform">被舉報禁售</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt id="sidebar_other_manage"><i class="pngFix"></i>其他設置</dt>
+                <dd style="display: ;">
+                    <ul>
+                        <li><a class='normal' href="index.php?act=store_gbuy">金幣管理</a></li>
+                        <!--<li><a class='normal' href="index.php?act=store_adv&op=adv_manage">廣告管理</a></li>-->
+                        <li><a class='normal' href="index.php?act=store_album&op=album_cate">圖片空間</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt id="sidebar_store_statistics"><i class="pngFix"></i>店舖統計</dt>
+                <dd style="display: ;">
+                    <ul>
+                        <li><a class='normal' href="index.php?act=statistics&op=flow_statistics">流量統計</a></li>
+                        <li><a class='normal' href="index.php?act=statistics&op=sale_statistics">銷售統計</a></li>
+                        <li><a class='normal' href="index.php?act=statistics&op=probability_statistics">購買率統計</a></li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+        <div class="right-content">
+            <div class="main">
+
+                <div class="wrap">
+                    <div class="open-store">
+                        <h1>歡迎來到校友會商城賣家中心</h1>
+                        <h3>您現在還沒有店舖，無法對賣家中心功能進行操作，您可以：</h3>
+                        <div><em></em>
+                            <dl>
+                                <dt><a href="index.php?act=member_store&op=create">馬上開店&nbsp;&#8250;</a></dt>
+                                <dd>選擇店舖等級並填寫相關信息，即可開設您的店舖。</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="clear">&nbsp;</div>
+    <div id="footer">
+        <p><a href="https://www.lineshop.tw">首頁</a>
+            | <a href="https://www.lineshop.tw/index.php?act=article&article_id=468">關於商城</a>
+        </p>
+        <a href="http://www.6393.tw" target="_blank" style="color:#FFF;">愛格室內設計</a>
+        <br />
+    </div>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.cookie.js"></script>
+    <script language="javascript">
+        var searchTxt = ' 搜尋其實很容易！';
+        function searchFocus(e) {
+            if (e.value == searchTxt) {
+                e.value = '';
+                $('#keyword').css("color", "");
+            }
+        }
+        function searchBlur(e) {
+            if (e.value == '') {
+                e.value = searchTxt;
+                $('#keyword').css("color", "#999999");
+            }
+        }
+        function searchInput() {
+            if ($('#keyword').val() == searchTxt)
+                $('#keyword').attr("value", "");
+            return true;
+        }
+        $('#keyword').css("color", "#999999");
+        // 加载购物车信息
+        function load_cart_information() {
+            $.getJSON('index.php?act=cart&op=ajaxcart', function (result) {
+                if (result) {
+                    var result = result;
+                    $('.goods_num').html(result.goods_all_num);
+                    var html = '';
+                    if (result.goods_all_num > 0) {
+                        html += "<div class='order'><table border='0' cellpadding='0' cellspacing='0'>";
+                        var i = 0;
+                        var data = result['goodslist'];
+                        for (i = 0; i < data.length; i++) {
+                            html += "<tr id='cart_item_" + data[i]['specid'] + "' count='" + data[i]['num'] + "'>";
+                            html += "<td class='picture'><span class='thumb size40'><i></i><img src='" + data[i]['images'] + "' title='" + data[i]['gname'] + "' onload='javascript:DrawImage(this,40,40);' ></span></td>";
+                            html += "<td class='name'><a href='https://www.lineshop.tw/index.php?act=goods&goods_id=" + data[i]['goodsid'] + "' title='" + data[i]['gname'] + "' target='_top'>" + data[i]['gname'] + "</a></td>";
+                            html += "<td class='price'><p>NT$" + data[i]['price'] + "×" + data[i]['num'] + "</p><p><a href='javascript:void(0)' onClick='drop_topcart_item(" + data[i]['storeid'] + "," + data[i]['specid'] + ");' style='color: #999;'>刪除</a></p></td>";
+                            html += "</tr>";
+                        }
+                        html += "<tr><td colspan='3' class='no-border'><span class='all'>共<strong class='goods_num'>" + result.goods_all_num + "</strong>種商品   金額總計：<strong id='cart_amount'>NT$" + result.goods_all_price + "</strong></span><span class='button' ><a href='https://www.lineshop.tw/index.php?act=cart' target='_top' title='結算商品' style='color: #FFF;' >結算商品</a></span></td></tr>";
+                    } else {
+                        html = "<div class='no-order'><span>您的購物車中暫無商品，趕快選擇心愛的商品吧！</span><a href='https://www.lineshop.tw/index.php?act=cart' class='button' target='_top' title='查看購物車' style=' color: #FFF;' >查看購物車</a></div>";
+                    }
+                    $("#top_cartlist").html(html);
+                }
+            });
+        }
+
+        //头部删除购物车信息
+        function drop_topcart_item(store_id, spec_id) {
+            var tr = $('#cart_item_' + spec_id);
+            var amount_span = $('#cart_amount');
+            var cart_goods_kinds = $('.goods_num');
+            $.getJSON('index.php?act=cart&op=drop&specid=' + spec_id + '&storeid=' + store_id, function (result) {
+                if (result.done) {
+                    //删除成功
+                    if (result.quantity == 0) {
+                        $('.goods_num').html('0');
+                        var html = '';
+                        html = "<div class='no-order'><span>您的購物車中暫無商品，趕快選擇心愛的商品吧！</span><a href='https://www.lineshop.tw/index.php?act=cart' class='button' target='_top' title='查看購物車' style=' color: #FFF;' >查看購物車</a></div>";
+                        $("#top_cartlist").html(html);
+                    }
+                    else {
+                        tr.remove();        //移除
+                        amount_span.html(price_format(result.amount));  //刷新总费用
+                        cart_goods_kinds.html(result.quantity);       //刷新商品种类
+                    }
+                } else {
+                    alert(result.msg);
+                }
+            });
+        }
+
+        $(function () {
+            $('#topNav').find('li[class="cart"]').mouseover(function () {
+                // 运行加载购物车
+                load_cart_information();
+                $(this).unbind();
+            });
+        });
+    </script>
+    <div style='display:none;'>
+        <div id='allpay_apply' style='padding:10px; background:#fff;line-height:20px;'>
+            <form method="POST" action="index.php?allpay_apply=1">
+                <div align="center">
+                    <img src="allpay/ecpay.png" style="margin-bottom:20px;">
+                    <br />
+                    <h3>會員帳號：
+                        <input autocomplete="off" class="w200" id="RegistUserCode" maxlength="20" name="RegistUserCode"
+                            placeholder="請輸入6-20位英/數字混合帳號" tabindex="8" type="text" value="">
+                    </h3>
+                    <br />
+                    <h3>聯絡手機：
+                        <input autocomplete="off" class="w200" data-val="true"
+                            data-val-cellphone="請輸入正確的手機號碼格式, 09XXXXXXXX." data-val-required="缺少必填資料." id="CellPhone"
+                            maxlength="20" name="CellPhone" placeholder="請輸入09開頭之手機號碼" tabindex="8" type="text"
+                            value="">
+                    </h3>
+                    <br />
+                    <button type="submit" style="margin-top:10px;">前往註冊</button>
+                </div>
+            </form>
+
+            <div style="margin-top:10px;margin-left:25%;color:red;">
+                <span style="color:black;margin-top:10px;">
+                    ※ 附檔：<a href="allpay/申請綠界特約商店操作步驟說明.docx">申請綠界特約商店操作步驟說明(下載查看)</a>
+                </span>
+                <br />
+                <span style="color:blue;">>> 註冊時請完成手機，email認證，公司上傳資料圖檔如下：</span><br />
+                <span style=""> 1. 負責人身份證（正反面）</span><br />
+                <span style=""> 2. 公司設立登記表（完整張數）</span><br />
+                <span style=""> 3. 公司戶名銀行帳號</span><br />
+                <span style="color:blue;">>> 個人上傳資料如下：</span><br />
+                <span style=""> 1. 身分證</span><br />
+                <span style=""> 2. 健保卡</span><br />
+                <span style=""> 3. 銀行帳戶</span><br />
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
