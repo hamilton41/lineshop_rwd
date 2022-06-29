@@ -607,6 +607,12 @@
     
 }
 
+@media (max-width:530px) {
+    .expanded .nc-goods-main {
+        
+    }
+}
+
 
 
 @media (max-width :530px) {
