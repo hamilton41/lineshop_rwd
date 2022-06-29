@@ -160,7 +160,7 @@
     }
 
     .expanded .nc-goods-main {
-        width: 400px !important;
+        width: 450px !important;
     }
 
     .ncg-list .content ul li {
@@ -248,7 +248,7 @@
     }
 
     .expanded .nc-goods-main {
-        width: 250px !important;
+        width: 96% !important;
     }
 
     .ncg-list .content ul li {
@@ -573,8 +573,39 @@
         top: 3rem;
         z-index: 10;
     }
+
+
+    .expanded .nc-sidebar {
+        width: 180px !important;
+    }
 }
 
+
+@media (max-width:670px) {
+    .tabbar ul li a {
+        padding: 5px 12px !important;
+    }
+     
+
+}
+
+@media (max-width:635px) {
+    .expanded.sticky .switch-bar {
+        display: none;
+    }
+
+    .expanded .switch-bar {
+        display: none !important;
+    }
+}
+
+@media (max-width:590px) {
+    .layout.expanded.sticky .nc-sidebar {
+        position: relative !important;
+    }
+
+    
+}
 
 
 
