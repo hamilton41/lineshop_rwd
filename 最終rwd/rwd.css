@@ -169,7 +169,7 @@
 
     .fr.w780 {
         display: grid !important;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         position: relative;
         width: 100% !important;
 
@@ -264,7 +264,9 @@
     .nc-home-pattern.style-pink .rightbar,
     .nc-home-pattern.style-orange .rightbar,
     .nc-home-pattern.style-purple .rightbar,
-    .nc-home-pattern.style-brown .rightbar {
+    .nc-home-pattern.style-brown .rightbar,
+    .nc-home-pattern.style-green .rightbar,
+    .nc-home-pattern .rightbar {
         grid-row: 2/3;
         width: 100%;
         height: unset;
@@ -294,7 +296,8 @@
     .nc-home-pattern.style-pink .leftbar,
     .nc-home-pattern.style-orange .leftbar,
     .nc-home-pattern.style-purple .leftbar,
-    .nc-home-pattern.style-brown .leftbar {
+    .nc-home-pattern.style-brown .leftbar,
+    .nc-home-pattern.style-green .leftbar {
         display: none;
     }
 
@@ -460,10 +463,7 @@
 
     /*fr w780*/
 
-    .fl.w530 {
 
-        display: none !important;
-    }
 
     .fr.w240 {
         grid-row: 2/3;
@@ -486,7 +486,8 @@
     .nc-home-pattern.style-pink,
     .nc-home-pattern.style-orange,
     .nc-home-pattern.style-purple,
-    .nc-home-pattern.style-brown {
+    .nc-home-pattern.style-brown,
+    .nc-home-pattern {
         width: 90% !important;
         margin: 50px auto;
 
@@ -820,5 +821,81 @@
     .default img {
         width: 80% !important;
         height: unset !important;
+    }
+}
+
+
+
+/*****************首頁輪播*****************/
+
+@media (max-width:780px) {
+    .fl.w530 {
+        grid-row: 3/4;
+        left: 0px !important;
+        right: 0px;
+    }
+}
+
+@media (max-width:600px) {
+    .fl.w530 {
+        width: 490px !important;
+    }
+
+    .fl.w530 #KinSlideshow,
+    .fl.w530 #KSS_moveBox,
+    .fl.w530 img {
+        transform: scale(0.87);
+
+    }
+
+    .fl.w530 .KSS_btnBox {
+        right: 0px !important;
+        left: 0px !important;
+        margin: auto !important;
+        width: 50px;
+    }
+
+
+}
+
+
+@media (max-width:500px) {
+    .fl.w530 {
+        transform: scale(0.8);
+        right: unset;
+        left: -70px !important;
+
+    }
+
+    .fl.w530 #KinSlideshow,
+    .fl.w530 #KSS_moveBox,
+    .fl.w530 img {
+        transform: scale(0.9);
+
+    }
+
+    .fl.w530 .KSS_btnBox {
+        right: 0px !important;
+        left: 0px !important;
+        margin: auto !important;
+        width: 50px;
+    }
+
+
+}
+
+
+@media (max-width:440px) {
+
+    #quickLink.module-sidebar-style1.mb10,
+    .module-sidebar-style1.mb10.nc-home-news {
+        width: 90% !important;
+
+    }
+
+    .fr.w240 {
+        position: relative;
+        right: 24px !important;
+        width: 70% !important;
     }
 }

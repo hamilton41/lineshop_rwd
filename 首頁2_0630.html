@@ -1,0 +1,2948 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./最終rwd/rwd.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校友會商城</title>
+    <meta name="keywords" content="校友會商城" />
+    <meta name="description" content="校友會商城" />
+    <meta name="author" content="ShopNC">
+    <meta name="copyright" content="ShopNC Inc. All Rights Reserved">
+    <style type="text/css">
+        body {
+            _behavior: url(https://www.lineshop.tw/templates/default/css/csshover.htc);
+        }
+    </style>
+    <link href="https://www.lineshop.tw/templates/default/css/layout.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/templates/default/css/rwd.css">
+    <!--[if IE]>
+<script src="https://www.lineshop.tw/resource/js/html5.js"></script>
+<![endif]-->
+    <!--[if IE 6]>
+<script src="https://www.lineshop.tw/resource/js/IE6_PNG.js"></script>
+<script>
+DD_belatedPNG.fix('.pngFix');
+</script>
+<script> 
+// <![CDATA[ 
+if((window.navigator.appName.toUpperCase().indexOf("MICROSOFT")>=0)&&(document.execCommand)) 
+try{ 
+document.execCommand("BackgroundImageCache", false, true); 
+   } 
+catch(e){} 
+// ]]> 
+</script> 
+<![endif]-->
+    <script>
+        COOKIE_PRE = '3E41_'; _CHARSET = 'utf-8'; SITEURL = 'https://www.lineshop.tw';
+    </script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery-ui/jquery.ui.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.validation.min.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/common.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        var PRICE_FORMAT = 'NT$%s';
+        $(function () {
+            //search
+            $("#details").children('ul').children('li').click(function () {
+                $(this).parent().children('li').removeClass("current");
+                $(this).addClass("current");
+                $('#search_act').attr("value", $(this).attr("act"));
+            });
+            var search_act = $("#details").find("li[class='current']").attr("act");
+            $('#search_act').attr("value", search_act);
+            $("#keyword").blur();
+        });
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/common2.2.js" charset="utf-8"></script>
+    <link href="https://www.lineshop.tw/templates/default/css/dialog2.2.css" rel="stylesheet" type="text/css">
+    <div id="append_parent"></div>
+    <div id="ajaxwaitid"></div>
+    <div id="page">
+        <div id="topNav" class="warp-all">
+
+            <dl class="user-entry">
+                <dt>您好，歡迎來到<span><a href="https://www.lineshop.tw" title="首頁" alt="首頁">校友會商城</a></span></dt>
+                <dd>[<a href="https://www.lineshop.tw/index.php?act=login">登錄</a>]</dd>
+                <dd>[<a href="https://www.lineshop.tw/index.php?act=login&op=register">註冊</a>]</dd>
+
+            </dl>
+            <ul class="quick-menu">
+                <li class="user-center">
+                    <div class="menu"><a class="menu-hd" href="https://www.lineshop.tw/index.php?act=member_snsindex"
+                            target="_top" title="我的商城">我的商城<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member&op=order" target="_top"
+                                        title="已買到的商品">已買到的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_snshome" target="_top"
+                                        title="個人主頁">個人主頁</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_snsfriend&op=find"
+                                        target="_top" title="我的好友">我的好友</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="seller-center">
+                    <div class="menu"><a class="menu-hd" href="https://www.lineshop.tw/index.php?act=store"
+                            target="_top" title="賣家中心">賣家中心<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=store&op=store_order" target="_top"
+                                        title="已售出的商品">已售出的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=store_goods&op=goods_list"
+                                        target="_top" title="銷售中的商品">銷售中的商品</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="cart">
+                    <div class="menu"><span class="menu-hd"><s></s>購物車<strong
+                                class="goods_num">0</strong>種商品<i></i></span>
+                        <div class="menu-bd" id="top_cartlist"><img class="loading"
+                                src="https://www.lineshop.tw/templates/default/images/loading.gif" /></div>
+                    </div>
+                </li>
+                <!-- 收藏夹 -->
+                <li class="favorite">
+                    <div class="menu"><a class="menu-hd"
+                            href="https://www.lineshop.tw/index.php?act=member_favorites&op=fglist" title="我的收藏"
+                            target="_top">我的收藏<i></i></a>
+                        <div class="menu-bd">
+                            <ul>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_favorites&op=fglist"
+                                        target="_top" title="收藏的商品">收藏的商品</a></li>
+                                <li><a href="https://www.lineshop.tw/index.php?act=member_favorites&op=fslist"
+                                        target="_top" title="收藏的店舖">收藏的店舖</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- 站内信 -->
+                <li class="pm"><a href="https://www.lineshop.tw/index.php?act=home&op=message" title="站內消息"
+                        target="_top"> 站內消息 (<span style="color: #FE5400;">2874</span>) </a></li>
+
+                <!--google多語系翻譯 start -->
+                <div id="google_translate_element"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'zh-TW', includedLanguages: 'zh-CN,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <!--google多語系翻譯 end -->
+                <!--臉書登入
+        [<a href="FB_Login2/fbconfig.php">FBLogin(test)</a>]
+      -->
+
+            </ul>
+
+        </div>
+        <script language="javascript">
+            $(function () {
+            });
+        </script>
+    </div>
+    <header id="topHeader">
+        <div class="site-logo"><a href="https://www.lineshop.tw"><img
+                    src="upload/common/9e0e7c5bccbac2ed9e6c800edc5ca9f5.png" class="pngFix"></a></div>
+        <div id="search" class="search" style="left:260px;width:500px;">
+            <div class="details" id="details">
+                <ul class="tab">
+                    <li class="current" act="search">商品</li>
+                    <li act="shop_search">店舖</li>
+                </ul>
+                <div id="a1" class="form">
+                    <form action="index.php" onSubmit="return searchInput();" method="get">
+                        <input name="act" id="search_act" value="search" type="hidden">
+                        <div class="formstyle">
+                            <input name="keyword" id="keyword" type="text" class="textinput" value=" 搜尋其實很容易！"
+                                onFocus="searchFocus(this)" onBlur="searchBlur(this)" maxlength="60" x-webkit-speech
+                                lang="zh-CN" onwebkitspeechchange="foo()" x-webkit-grammar="builtin:search" />
+                            <input name="" type="submit" class="search-button" value="">
+                        </div>
+                    </form>
+                </div>
+                <div class="tag">
+                    <a href="index.php?act=search&keyword=%E5%A4%8F%E5%AD%A3+">夏季 </a>
+                    <a href="index.php?act=search&keyword=%E5%86%B7%E6%B0%A3">冷氣</a>
+                </div>
+            </div>
+        </div>
+        <!--20170617 加入當月交易總金額及總積分-->
+
+        <div style="display: block;position: absolute;left: 820px;margin-top: 20px;width: 200px;line-height:20px;">
+
+            <!--
+	<span>當月總交易金額：</span>
+	<br/>
+	
+	 <span>當月商城總積分：</span>
+	<br/> 
+	
+	<a href="#">查看分潤說明</a>
+	-->
+        </div>
+
+    </header>
+    <div id="navBar" class="mb10">
+        <div id="all-category">
+            <div class="title">
+                <h2 title="所有商品分類"><a href="javascript:void(0)">所有商品分類</a></h2>
+                <i></i>
+            </div>
+            <div id="category" class="category pngFix">
+                <ul class="menu">
+                    <li id="cat_1">
+                        <h3><a href="index.php?act=search&cate_id=5607" title="好康爆報">好康爆報</a></h3>
+                        <div class="cat-menu" id="cat_1_menu">
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8820" title="免費好文分享">免費好文分享</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=8979" title="美食分享">美食分享</a>
+                                    <a href="index.php?act=search&cate_id=8983" title="電影文章">電影文章</a>
+                                    <a href="index.php?act=search&cate_id=8982" title="親子分享">親子分享</a>
+                                    <a href="index.php?act=search&cate_id=8981" title="3c資訊">3c資訊</a>
+                                    <a href="index.php?act=search&cate_id=8995" title="小說分享">小說分享</a>
+                                    <a href="index.php?act=search&cate_id=8997" title="新聞分享">新聞分享</a>
+                                    <a href="index.php?act=search&cate_id=8998" title="漫畫分享">漫畫分享</a>
+                                    <a href="index.php?act=search&cate_id=9001" title="動物資訊文章分享">動物資訊文章分享</a>
+                                    <a href="index.php?act=search&cate_id=9002" title="公司資訊分享(黃頁)">公司資訊分享(黃頁)</a>
+                                    <a href="index.php?act=search&cate_id=9041" title="運動">運動</a>
+                                    <a href="index.php?act=search&cate_id=9042" title="娛樂">娛樂</a>
+                                    <a href="index.php?act=search&cate_id=8986" title="職場分享">職場分享</a>
+                                    <a href="index.php?act=search&cate_id=8987" title="宗教文章">宗教文章</a>
+                                    <a href="index.php?act=search&cate_id=8984" title="健康文">健康文</a>
+                                    <a href="index.php?act=search&cate_id=8996" title="知識文章分享">知識文章分享</a>
+                                    <a href="index.php?act=search&cate_id=8980" title="旅行分享">旅行分享</a>
+                                    <a href="index.php?act=search&cate_id=8985" title="流行時尚">流行時尚</a>
+                                    <a href="index.php?act=search&cate_id=8988" title="居家文章">居家文章</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8940" title="免費影音分享">免費影音分享</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9013" title="有趣影音">有趣影音</a>
+                                    <a href="index.php?act=search&cate_id=8999" title="有聲書分享">有聲書分享</a>
+                                    <a href="index.php?act=search&cate_id=9000" title="動物頻道">動物頻道</a>
+                                    <a href="index.php?act=search&cate_id=8989" title="電視劇">電視劇</a>
+                                    <a href="index.php?act=search&cate_id=8990" title="動漫">動漫</a>
+                                    <a href="index.php?act=search&cate_id=8991" title="綜藝">綜藝</a>
+                                    <a href="index.php?act=search&cate_id=8992" title="電影">電影</a>
+                                    <a href="index.php?act=search&cate_id=8993" title="音樂">音樂</a>
+                                    <a href="index.php?act=search&cate_id=8994" title="獨創影音">獨創影音</a>
+                                    <a href="index.php?act=search&cate_id=8942" title="知識影片">知識影片</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=6202" title="服裝百貨">服裝百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=6213" title="配飾精品">配飾精品</a>
+                                    <a href="index.php?act=search&cate_id=6212" title="包包">包包</a>
+                                    <a href="index.php?act=search&cate_id=6211" title="鞋子">鞋子</a>
+                                    <a href="index.php?act=search&cate_id=6210" title="服裝">服裝</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=6204" title="美妝百貨">美妝百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9226" title="保健用品">保健用品</a>
+                                    <a href="index.php?act=search&cate_id=9224" title="保養品">保養品</a>
+                                    <a href="index.php?act=search&cate_id=9225" title="洗護品">洗護品</a>
+                                    <a href="index.php?act=search&cate_id=9223" title="彩妝">彩妝</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=6203" title="美食百貨">美食百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9216" title="麵食百貨">麵食百貨</a>
+                                    <a href="index.php?act=search&cate_id=9219" title="食材百貨">食材百貨</a>
+                                    <a href="index.php?act=search&cate_id=9218" title="飲品百貨">飲品百貨</a>
+                                    <a href="index.php?act=search&cate_id=9222" title="保健食品百貨">保健食品百貨</a>
+                                    <a href="index.php?act=search&cate_id=9220" title="熟食百貨">熟食百貨</a>
+                                    <a href="index.php?act=search&cate_id=9217" title="烘焙百貨">烘焙百貨</a>
+                                    <a href="index.php?act=search&cate_id=9221" title="零食百貨">零食百貨</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=6207" title="生活百貨">生活百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9232" title="居家收納百貨">居家收納百貨</a>
+                                    <a href="index.php?act=search&cate_id=9233" title="餐廳用具百貨">餐廳用具百貨</a>
+                                    <a href="index.php?act=search&cate_id=9230" title="寵物百貨">寵物百貨</a>
+                                    <a href="index.php?act=search&cate_id=9231" title="寢具家具百貨">寢具家具百貨</a>
+                                    <a href="index.php?act=search&cate_id=9234" title="浴室用具百貨">浴室用具百貨</a>
+                                    <a href="index.php?act=search&cate_id=9235" title="運動休閒百貨">運動休閒百貨</a>
+                                    <a href="index.php?act=search&cate_id=9236" title="汽機車百貨">汽機車百貨</a>
+                                    <a href="index.php?act=search&cate_id=9227" title="母嬰親子百貨">母嬰親子百貨</a>
+                                    <a href="index.php?act=search&cate_id=9229" title="文具百貨">文具百貨</a>
+                                    <a href="index.php?act=search&cate_id=9228" title="玩具百貨">玩具百貨</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=6205" title="3C家電百貨">3C家電百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=8960" title="家電百貨">家電百貨</a>
+                                    <a href="index.php?act=search&cate_id=8961" title="3C百貨">3C百貨</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li id="cat_2">
+                        <h3><a href="index.php?act=search&cate_id=8777" title="服裝百貨">服裝百貨</a></h3>
+                        <div class="cat-menu" id="cat_2_menu">
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8779" title="服裝">服裝</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=8827" title="女裝">女裝</a>
+                                    <a href="index.php?act=search&cate_id=9246" title="男裝">男裝</a>
+                                    <a href="index.php?act=search&cate_id=9245" title="童裝">童裝</a>
+                                    <a href="index.php?act=search&cate_id=8826" title="女內衣">女內衣</a>
+                                    <a href="index.php?act=search&cate_id=9247" title="男內衣">男內衣</a>
+                                    <a href="index.php?act=search&cate_id=9248" title="襪子">襪子</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8780" title="鞋子">鞋子</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9239" title="童鞋">童鞋</a>
+                                    <a href="index.php?act=search&cate_id=8832" title="女鞋">女鞋</a>
+                                    <a href="index.php?act=search&cate_id=8831" title="男鞋">男鞋</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8781" title="包包">包包</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=8825" title="女包">女包</a>
+                                    <a href="index.php?act=search&cate_id=8824" title="男包">男包</a>
+                                    <a href="index.php?act=search&cate_id=9238" title="行李箱">行李箱</a>
+                                    <a href="index.php?act=search&cate_id=9240" title="皮夾">皮夾</a>
+                                    <a href="index.php?act=search&cate_id=9249" title="後背包">後背包</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8783" title="配飾精品">配飾精品</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9063" title="男性配飾">男性配飾</a>
+                                    <a href="index.php?act=search&cate_id=9062" title="女性配飾">女性配飾</a>
+                                    <a href="index.php?act=search&cate_id=9244" title="珠寶飾品">珠寶飾品</a>
+                                    <a href="index.php?act=search&cate_id=9241" title="帽子">帽子</a>
+                                    <a href="index.php?act=search&cate_id=9242" title="飾品">飾品</a>
+                                    <a href="index.php?act=search&cate_id=9243" title="手錶">手錶</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li id="cat_3">
+                        <h3><a href="index.php?act=search&cate_id=8778" title="美妝百貨">美妝百貨</a></h3>
+                        <div class="cat-menu" id="cat_3_menu">
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9069" title="洗護品">洗護品</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9074" title="專櫃洗護品">專櫃洗護品</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9067" title="彩妝">彩妝</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9070" title="專櫃彩妝">專櫃彩妝</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9068" title="保養品">保養品</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9199" title="面膜">面膜</a>
+                                    <a href="index.php?act=search&cate_id=9200" title="眼霜">眼霜</a>
+                                    <a href="index.php?act=search&cate_id=9201" title="清潔/去角質">清潔/去角質</a>
+                                    <a href="index.php?act=search&cate_id=9196" title="化妝水">化妝水</a>
+                                    <a href="index.php?act=search&cate_id=9197" title="乳液/乳霜">乳液/乳霜</a>
+                                    <a href="index.php?act=search&cate_id=9198" title="精華液">精華液</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9170" title="保健用品">保健用品</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9191" title="體脂計">體脂計</a>
+                                    <a href="index.php?act=search&cate_id=9192" title="體溫計">體溫計</a>
+                                    <a href="index.php?act=search&cate_id=9193" title="額溫槍">額溫槍</a>
+                                    <a href="index.php?act=search&cate_id=9190" title="體重機">體重機</a>
+                                    <a href="index.php?act=search&cate_id=9194" title="耳溫槍">耳溫槍</a>
+                                    <a href="index.php?act=search&cate_id=9195" title="檢測試紙">檢測試紙</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li id="cat_4">
+                        <h3><a href="index.php?act=search&cate_id=8426" title="美食百貨">美食百貨</a></h3>
+                        <div class="cat-menu" id="cat_4_menu">
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8905" title="熟食百貨">熟食百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9189" title="冷凍調理包">冷凍調理包</a>
+                                    <a href="index.php?act=search&cate_id=9188" title="蔬菜">蔬菜</a>
+                                    <a href="index.php?act=search&cate_id=9187" title="肉品">肉品</a>
+                                    <a href="index.php?act=search&cate_id=9186" title="水產">水產</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8901" title="麵食百貨">麵食百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9181" title="米麵">米麵</a>
+                                    <a href="index.php?act=search&cate_id=9182" title="泡麵">泡麵</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8902" title="烘焙百貨">烘焙百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9207" title="西式糕點">西式糕點</a>
+                                    <a href="index.php?act=search&cate_id=9208" title="中式糕點">中式糕點</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8903" title="飲品百貨">飲品百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9175" title="氣泡水">氣泡水</a>
+                                    <a href="index.php?act=search&cate_id=9174" title="飲料">飲料</a>
+                                    <a href="index.php?act=search&cate_id=9177" title="沖泡咖啡">沖泡咖啡</a>
+                                    <a href="index.php?act=search&cate_id=9176" title="礦泉水">礦泉水</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9110" title="保健百貨">保健百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9202" title="維他命">維他命</a>
+                                    <a href="index.php?act=search&cate_id=9203" title="葉黃素">葉黃素</a>
+                                    <a href="index.php?act=search&cate_id=9205" title="兒童保健食品">兒童保健食品</a>
+                                    <a href="index.php?act=search&cate_id=9204" title="成人保健食品">成人保健食品</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8907" title="零食百貨">零食百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9183" title="休閒零食">休閒零食</a>
+                                    <a href="index.php?act=search&cate_id=9185" title="糕點甜點">糕點甜點</a>
+                                    <a href="index.php?act=search&cate_id=9184" title="餅乾">餅乾</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8904" title="食材百貨">食材百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9178" title="油調味">油調味</a>
+                                    <a href="index.php?act=search&cate_id=9180" title="罐頭">罐頭</a>
+                                    <a href="index.php?act=search&cate_id=9179" title="有機食品">有機食品</a>
+                                    <a href="index.php?act=search&cate_id=9209" title="調味料">調味料</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li id="cat_5">
+                        <h3><a href="index.php?act=search&cate_id=9043" title="生活百貨">生活百貨</a></h3>
+                        <div class="cat-menu" id="cat_5_menu">
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9052" title="母嬰親子百貨">母嬰親子百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9080" title="媽媽百貨">媽媽百貨</a>
+                                    <a href="index.php?act=search&cate_id=9081" title="嬰兒百貨">嬰兒百貨</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9111" title="玩具百貨">玩具百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9112" title="玩具">玩具</a>
+                                    <a href="index.php?act=search&cate_id=9113" title="兒童玩具">兒童玩具</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9060" title="文具百貨">文具百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9092" title="文具百貨">文具百貨</a>
+                                    <a href="index.php?act=search&cate_id=9093" title="藝術百貨">藝術百貨</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9050" title="寵物百貨">寵物百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9078" title="貓咪百貨">貓咪百貨</a>
+                                    <a href="index.php?act=search&cate_id=9079" title="狗狗百貨">狗狗百貨</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9054" title="寢具家具百貨">寢具家具百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9084" title="床墊">床墊</a>
+                                    <a href="index.php?act=search&cate_id=9085" title="床頭櫃">床頭櫃</a>
+                                    <a href="index.php?act=search&cate_id=9237" title="枕頭|床被套">枕頭|床被套</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9053" title="居家收納百貨">居家收納百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9082" title="居家百貨">居家百貨</a>
+                                    <a href="index.php?act=search&cate_id=9083" title="收納百貨">收納百貨</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9055" title="餐廚用具百貨">餐廚用具百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9086" title="餐廳百貨">餐廳百貨</a>
+                                    <a href="index.php?act=search&cate_id=9087" title="廚房百貨">廚房百貨</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9056" title="浴室用具百貨">浴室用具百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9088" title="浴室百貨">浴室百貨</a>
+                                    <a href="index.php?act=search&cate_id=9089" title="清潔百貨">清潔百貨</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9058" title="運動休閒百貨">運動休閒百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9091" title="休閒百貨">休閒百貨</a>
+                                    <a href="index.php?act=search&cate_id=9090" title="運動百貨">運動百貨</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9051" title="汽機車百貨">汽機車百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9076" title="汽車百貨">汽車百貨</a>
+                                    <a href="index.php?act=search&cate_id=9077" title="機車百貨">機車百貨</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li id="cat_6">
+                        <h3><a href="index.php?act=search&cate_id=7894" title="3C家電百貨">3C家電百貨</a></h3>
+                        <div class="cat-menu" id="cat_6_menu">
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8840" title="3C百貨">3C百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9103" title="相機/相機配件">相機/相機配件</a>
+                                    <a href="index.php?act=search&cate_id=9105" title="充電周邊">充電周邊</a>
+                                    <a href="index.php?act=search&cate_id=9106" title="資訊周邊">資訊周邊</a>
+                                    <a href="index.php?act=search&cate_id=9107" title="電腦/筆電">電腦/筆電</a>
+                                    <a href="index.php?act=search&cate_id=9108" title="電競/遊戲">電競/遊戲</a>
+                                    <a href="index.php?act=search&cate_id=9109" title="電腦組件">電腦組件</a>
+                                    <a href="index.php?act=search&cate_id=9104" title="數位週邊">數位週邊</a>
+                                    <a href="index.php?act=search&cate_id=9101" title="手機/平板">手機/平板</a>
+                                    <a href="index.php?act=search&cate_id=9102" title="手機/平板配件">手機/平板配件</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=8843" title="家電百貨">家電百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9098" title="廚房家電">廚房家電</a>
+                                    <a href="index.php?act=search&cate_id=9099" title="生活家電">生活家電</a>
+                                    <a href="index.php?act=search&cate_id=9100" title="視覺家電">視覺家電</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li id="cat_7">
+                        <h3><a href="index.php?act=search&cate_id=9046" title="收藏百貨">收藏百貨</a></h3>
+                        <div class="cat-menu" id="cat_7_menu">
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9061" title="收藏百貨">收藏百貨</a></dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9059" title="免費百貨">免費百貨</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9167" title="免費漫畫">免費漫畫</a>
+                                    <a href="index.php?act=search&cate_id=9168" title="免費影片">免費影片</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9172" title="二手商品">二手商品</a></dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9048" title="宗教收藏百貨">宗教收藏百貨</a></dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li id="cat_8">
+                        <h3><a href="index.php?act=search&cate_id=9115" title="B2B專區">B2B專區</a></h3>
+                        <div class="cat-menu" id="cat_8_menu">
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9158" title="工商服務">工商服務</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9165" title="資訊通訊">資訊通訊</a>
+                                    <a href="index.php?act=search&cate_id=9166" title="包裝服務">包裝服務</a>
+                                    <a href="index.php?act=search&cate_id=9161" title="廣告印刷">廣告印刷</a>
+                                    <a href="index.php?act=search&cate_id=9162" title="金融工商">金融工商</a>
+                                    <a href="index.php?act=search&cate_id=9163" title="事務文具">事務文具</a>
+                                    <a href="index.php?act=search&cate_id=9164" title="聲光影視">聲光影視</a>
+                                    <a href="index.php?act=search&cate_id=9159" title="行車運輸">行車運輸</a>
+                                    <a href="index.php?act=search&cate_id=9160" title="環境保護">環境保護</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9116" title="生活消費">生活消費</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9118" title="食品餐飲">食品餐飲</a>
+                                    <a href="index.php?act=search&cate_id=9119" title="衣著配件">衣著配件</a>
+                                    <a href="index.php?act=search&cate_id=9120" title="住屋居家">住屋居家</a>
+                                    <a href="index.php?act=search&cate_id=9122" title="百貨購物">百貨購物</a>
+                                    <a href="index.php?act=search&cate_id=9117" title="家用電器">家用電器</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9123" title="休閒文化">休閒文化</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9124" title="育才學術">育才學術</a>
+                                    <a href="index.php?act=search&cate_id=9125" title="樂在休閒">樂在休閒</a>
+                                    <a href="index.php?act=search&cate_id=9156" title="美容護膚">美容護膚</a>
+                                    <a href="index.php?act=search&cate_id=9126" title="新聞文化">新聞文化</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9131" title="社會服務">社會服務</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9132" title="醫療保健">醫療保健</a>
+                                    <a href="index.php?act=search&cate_id=9133" title="社會服務">社會服務</a>
+                                    <a href="index.php?act=search&cate_id=9135" title="公用事業">公用事業</a>
+                                    <a href="index.php?act=search&cate_id=9134" title="生命禮儀">生命禮儀</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="index.php?act=search&cate_id=9146" title="工業製品">工業製品</a></dt>
+                                <dd>
+                                    <a href="index.php?act=search&cate_id=9148" title="紡織工業">紡織工業</a>
+                                    <a href="index.php?act=search&cate_id=9147" title="電工器材">電工器材</a>
+                                    <a href="index.php?act=search&cate_id=9149" title="化學工業">化學工業</a>
+                                    <a href="index.php?act=search&cate_id=9150" title="工業機械">工業機械</a>
+                                    <a href="index.php?act=search&cate_id=9151" title="金屬工業">金屬工業</a>
+                                    <a href="index.php?act=search&cate_id=9152" title="農林漁業">農林漁業</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <div class="clear"></div>
+                    <li class="more"><a href="index.php?act=category" title="查看更多分類">查看更多分類</a></li>
+                </ul>
+            </div>
+        </div>
+        <ul class="nc-nav-menu">
+            <li class="current"><a href="https://www.lineshop.tw"><span>首頁</span></a></li>
+            <!--
+    <li class="link"><a href="https://www.lineshop.tw/index.php?act=brand"><span>品牌</span></a></li>
+    <li class="link"><a href="https://www.lineshop.tw/index.php?act=coupon"><span>優惠券</span></a></li> -->
+            <li class="link"><a href="https://www.lineshop.tw/index.php?act=search&cate_id=5607"><span>好康爆報</span></a>
+            </li>
+            <li class="link"><a target="_blank"
+                    href="https://www.facebook.com/lineshoptw/?__tn__=kC-R&eid=ARBQgSWgH2Q9u_Cl_1muUQ0Kr3Ic7UCnVHoY1AYQ_kd8pasd9jSiA-IlWmiAEDDAAxEpqSV75bx5_HAj&hc_ref=ARSu1XmJGkPkoLy3HhXJyD2wfgf-y48_9ySc-i3U79wg8VwvhqjW7uTVO1M-3u04wCg&fref=nf"><span>商城FB</span></a>
+            </li>
+        </ul>
+    </div>
+    <link href="https://www.lineshop.tw/templates/default/css/home_index.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #all-category .category {
+            display: block !important;
+        }
+
+        #all-category .title i {
+            display: none !important;
+        }
+    </style>
+    <!--[if IE 6]>
+<script type="text/javascript" src="https://www.lineshop.tw/resource/js/ie6.js" charset="utf-8"></script>
+<![endif]-->
+    <script src="https://www.lineshop.tw/resource/js/jquery.KinSlideshow.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.accordion.js"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/tonjay.js"></script>
+    <script src="https://www.lineshop.tw/resource/js/swfobject_modified.js" type="text/javascript"></script>
+    <script src="https://www.lineshop.tw/resource/js/jquery.lazyload.mini.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/index.js" charset="utf-8"></script>
+    <!-- 首页对联广告 -->
+    <script src="https://www.lineshop.tw/resource/js/double_adv.js" type="text/javascript"></script>
+    <script language="JavaScript">
+        var tms = [];
+        var day = [];
+        var hour = [];
+        var minute = [];
+        var second = [];
+        function takeCount() {
+            setTimeout("takeCount()", 1000);
+            for (var i = 0, j = tms.length; i < j; i++) {
+                tms[i] -= 1;
+                //计算天、时、分、秒、
+                var days = Math.floor(tms[i] / (1 * 60 * 60 * 24));
+                var hours = Math.floor(tms[i] / (1 * 60 * 60)) % 24;
+                var minutes = Math.floor(tms[i] / (1 * 60)) % 60;
+                var seconds = Math.floor(tms[i] / 1) % 60;
+                if (days < 0) days = 0;
+                if (hours < 0) hours = 0;
+                if (minutes < 0) minutes = 0;
+                if (seconds < 0) seconds = 0;
+                //将天、时、分、秒插入到html中
+                document.getElementById(day[i]).innerHTML = days;
+                document.getElementById(hour[i]).innerHTML = hours;
+                document.getElementById(minute[i]).innerHTML = minutes;
+                document.getElementById(second[i]).innerHTML = seconds;
+            }
+        }
+        setTimeout("takeCount()", 1000);
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1668253859218012",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <div class="advshow_float" style='left:0px; position:absolute; top:69px; display:none; z-index:999;'>
+        <script type="text/javascript" src="https://www.lineshop.tw/api.php?act=adv&op=advshow&ap_id=14"></script>
+        <br>
+        <a href='JavaScript:;' onclick="$(this).parent().hide();"><img border=0
+                src="https://www.lineshop.tw/templates/default/images/close.gif"></a>
+    </div>
+    <div class="advshow_float" style='right:0px; position:absolute; top:69px; display:none; z-index:999;'>
+        <script type="text/javascript" src="https://www.lineshop.tw/api.php?act=adv&op=advshow&ap_id=15"></script>
+        <br>
+        <a href='JavaScript:;' onclick="$(this).parent().hide();"><img border=0
+                src="https://www.lineshop.tw/templates/default/images/close.gif"></a>
+    </div>
+    <div class="mb10 warp-all">
+        <div class="fl w210"> </div>
+        <div class="fr w780">
+            <div class="fr w240">
+
+                <div id="quickLink" class="module-sidebar-style1 mb10"><a class="login" href="index.php?act=login"
+                        title="會員登錄"><i class="pngFix"></i>會員登錄</a><a class="register"
+                        href="index.php?act=login&op=register" title="免費註冊"><i class="pngFix"></i>免費註冊</a><a
+                        class="join pngFix" style="width:80px;" href="index.php?act=store&op=create" title="商家開店"><i
+                            class="pngFix"></i>商家開店</a></div>
+                <div class="module-sidebar-style1 mb10 nc-home-news" style="min-height:150px;">
+                    <ul class="tabs-nav">
+                        <li class="tabs-selected"><a href="javascript:void(0)">常見問題</a></li>
+                        <li class=""><a href="javascript:void(0)">店家資訊</a></li>
+                        <li class=""><a href="javascript:void(0)">關於我們</a></li>
+                    </ul>
+
+                    <div class="tabs-panel ">
+                        <ul class="list-style01">
+                            <li><a href="index.php?act=article&article_id=585" title="會員等級">會員等級
+                                </a><span>(2022-06-17)</span>
+                            </li>
+                            <li><a href="index.php?act=article&article_id=584" title="積分折抵">積分折抵
+                                </a><span>(2022-06-08)</span>
+                            </li>
+                            <li><a href="index.php?act=article&article_id=583" title="商城積分">商城積分
+                                </a><span>(2022-06-08)</span>
+                            </li>
+                            <li><a href="index.php?act=article&article_id=579" title="購買率統計">購買率統計
+                                </a><span>(2022-06-07)</span>
+                            </li>
+                            <li><a href="index.php?act=article&article_id=578" title="銷售統計">銷售統計
+                                </a><span>(2022-06-07)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tabs-panel tabs-hide">
+                        <ul class="list-style01">
+                            <li><a href="index.php?act=article&article_id=586" title="首頁廣告位價格">首頁廣告位價格
+                                </a><span>(2022-06-23)</span>
+                            </li>
+                            <li><a href="index.php?act=article&article_id=538" title="頂級VIP店家">頂級VIP店家
+                                </a><span>(2022-05-28)</span>
+                            </li>
+                            <li><a href="index.php?act=article&article_id=505" title="店家守則">店家守則
+                                </a><span>(2022-05-23)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tabs-panel tabs-hide">
+                        <ul class="list-style01">
+                            <li><a href="index.php?act=article&article_id=468" title="校友會商城">校友會商城
+                                </a><span>(2022-05-21)</span>
+                            </li>
+                            <li><a href="index.php?act=article&article_id=430" title="維護公告">維護公告
+                                </a><span>(2022-03-22)</span>
+                            </li>
+                            <li><a href="index.php?act=article&article_id=429" title="人才招募">人才招募
+                                </a><span>(2022-03-22)</span>
+                            </li>
+                            <li><a href="index.php?act=article&article_id=428" title="公司資訊">公司資訊
+                                </a><span>(2022-03-22)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nc-home-news module-sidebar-style1 mb10" style="min-height:115px;">
+                    <ul class="tabs-nav">
+                        <li class="tabs-selected"><a href="javascript:void(0)">明星店舖</a></li>
+                        <li><a href="javascript:void(0)">最近加盟</a></li>
+                    </ul>
+                    <div class="tabs-panel">
+                        <ul class="nc-index-stores">
+                            <li>
+                                <dl>
+                                    <dt><a href="index.php?act=show_store&id=535" title="LERS服飾">LERS服飾</a></dt>
+                                    <dd class="picture"><a href="index.php?act=show_store&id=535"><span
+                                                class="thumb size70"><i></i><img
+                                                    src="https://www.lineshop.tw/upload/store/593f548bbf440b2174b3c39dbd30d7af.jpg_small.jpg"
+                                                    onload="javascript:DrawImage(this,70,70);"></span></a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><a href="index.php?act=show_store&id=686" title="毛孩萌趣事">毛孩萌趣事</a></dt>
+                                    <dd class="picture"><a href="index.php?act=show_store&id=686"><span
+                                                class="thumb size70"><i></i><img
+                                                    src="https://www.lineshop.tw/upload/store/85cce38afda0a577d39649112386121b.png_small.png"
+                                                    onload="javascript:DrawImage(this,70,70);"></span></a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><a href="index.php?act=show_store&id=483" title="媛媛服飾">媛媛服飾</a></dt>
+                                    <dd class="picture"><a href="index.php?act=show_store&id=483"><span
+                                                class="thumb size70"><i></i><img
+                                                    src="https://www.lineshop.tw/upload/store/d5bdcdee410c469956ef22011eb33182.png_small.png"
+                                                    onload="javascript:DrawImage(this,70,70);"></span></a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tabs-panel tabs-hide">
+                        <ul class="nc-index-stores">
+                            <li>
+                                <dl>
+                                    <dt><a href="index.php?act=show_store&id=720" title="liser精品">liser精品</a></dt>
+                                    <dd class="picture"><a href="index.php?act=show_store&id=720"><span
+                                                class="thumb size70"><i></i><img
+                                                    src="https://www.lineshop.tw/upload/common/4c048205ea517bdd5e3bce6f3a795b05.jpg"
+                                                    onload="javascript:DrawImage(this,70,70);"></span></a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><a href="index.php?act=show_store&id=719" title="好生活家具">好生活家具</a></dt>
+                                    <dd class="picture"><a href="index.php?act=show_store&id=719"><span
+                                                class="thumb size70"><i></i><img
+                                                    src="https://www.lineshop.tw/upload/common/4c048205ea517bdd5e3bce6f3a795b05.jpg"
+                                                    onload="javascript:DrawImage(this,70,70);"></span></a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><a href="index.php?act=show_store&id=718" title="旭陌食品">旭陌食品</a></dt>
+                                    <dd class="picture"><a href="index.php?act=show_store&id=718"><span
+                                                class="thumb size70"><i></i><img
+                                                    src="https://www.lineshop.tw/upload/common/4c048205ea517bdd5e3bce6f3a795b05.jpg"
+                                                    onload="javascript:DrawImage(this,70,70);"></span></a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="fl w530">
+                <script type="text/javascript"
+                    src="https://www.lineshop.tw/index.php?act=adv&op=advshow&ap_id=417"></script>
+                <script type="text/javascript"
+                    src="https://www.lineshop.tw/index.php?act=adv&op=advshow&ap_id=418"></script>
+                <!-- <div id="mallRecommend" class="clearfix">
+        <div id="slideshow" class="clearfix">
+         
+          <div id="previous" class="previous pngFix"><a href="JavaScript:void(0);" title="向前">&laquo;</a></div>
+          <div id="next" class="next pngFix"><a href="JavaScript:void(0);" title="向後">&raquo;</a></div>
+        </div>
+      </div> -->
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="fr w240 mt10">
+        </div>
+        <div class="clear"></div>
+
+        <div class="nc-home-pattern style-blue">
+            <div class="rightbar">
+                <div class="title">
+                    <h3>美食排行</h3>
+                </div>
+                <ol class="saletop-list">
+                    <li class="top">
+                        <dl>
+                            <dt class="goods-name"><a href="index.php?act=goods&goods_id=13269" target="_blank"
+                                    title="【KIPLING】溫暖牛奶玫瑰粉翻蓋前袋側背包-RENIA">
+                                    【KIPLING】溫暖牛奶玫瑰粉翻蓋前袋側背包-RENIA</a></dt>
+                            <dd class="nokey">1</dd>
+                            <dd class="goods-pic"><a href="index.php?act=goods&goods_id=13269" target="_blank"
+                                    title="【KIPLING】溫暖牛奶玫瑰粉翻蓋前袋側背包-RENIA"><span class="thumb size60"><i></i>
+                                        <img src="https://www.lineshop.tw/upload/store/goods/647/647_b7f9fcb139552394391c47c4b65db583.jpg_small.jpg"
+                                            title="【KIPLING】溫暖牛奶玫瑰粉翻蓋前袋側背包-RENIA"
+                                            onload="javascript:DrawImage(this,60,60);" target="_blank">
+                                    </span></a></dd>
+
+                            <dd class="goods-price" style="float: left;"><em>2862</em></dd>
+
+                        </dl>
+                    </li>
+                    <li class="top">
+                        <dl>
+                            <dt class="goods-name"><a href="index.php?act=goods&goods_id=13268" target="_blank"
+                                    title="【KIPLING】溫柔粉菱格紋印花多層隨身斜背包-ABANU M">
+                                    【KIPLING】溫柔粉菱格紋印花多層隨身斜背包-ABANU M</a></dt>
+                            <dd class="nokey">2</dd>
+                            <dd class="goods-pic"><a href="index.php?act=goods&goods_id=13268" target="_blank"
+                                    title="【KIPLING】溫柔粉菱格紋印花多層隨身斜背包-ABANU M"><span class="thumb size60"><i></i>
+                                        <img src="https://www.lineshop.tw/upload/store/goods/647/647_e53e03fa7563512800ce1799cb5e8188.jpg_small.jpg"
+                                            title="【KIPLING】溫柔粉菱格紋印花多層隨身斜背包-ABANU M"
+                                            onload="javascript:DrawImage(this,60,60);" target="_blank">
+                                    </span></a></dd>
+
+                            <dd class="goods-price" style="float: left;"><em>3402</em></dd>
+
+                        </dl>
+                    </li>
+                    <li class="top">
+                        <dl>
+                            <dt class="goods-name"><a href="index.php?act=goods&goods_id=13267" target="_blank"
+                                    title="【KIPLING】溫柔粉菱格紋印花多袋實用側背包-GABBIE S">
+                                    【KIPLING】溫柔粉菱格紋印花多袋實用側背包-GABBIE S</a></dt>
+                            <dd class="nokey">3</dd>
+                            <dd class="goods-pic"><a href="index.php?act=goods&goods_id=13267" target="_blank"
+                                    title="【KIPLING】溫柔粉菱格紋印花多袋實用側背包-GABBIE S"><span class="thumb size60"><i></i>
+                                        <img src="https://www.lineshop.tw/upload/store/goods/647/647_ca2f15b31002b1f7862cc0a09646a643.jpg_small.jpg"
+                                            title="【KIPLING】溫柔粉菱格紋印花多袋實用側背包-GABBIE S"
+                                            onload="javascript:DrawImage(this,60,60);" target="_blank">
+                                    </span></a></dd>
+
+                            <dd class="goods-price" style="float: left;"><em>3402</em></dd>
+
+                        </dl>
+                    </li>
+                </ol>
+                <div class="ad-banner">
+                    <a href="https://www.lineshop.tw/index.php?act=brand&op=list&brand=133" target="_blank">
+                        <img border=0
+                            src="https://www.lineshop.tw/upload/adv/web-5-58_94fe92fcf3acb94642574e69ab4d912e.png">
+                    </a>
+                </div>
+            </div>
+            <div class="leftbar">
+                <div class="title">
+                    <a href="https://www.lineshop.tw/index.php?act=article&article_id=425" target="_blank">
+                        <img border=0
+                            src="https://www.lineshop.tw/upload/adv/web-5-51_f0b575ecf7bd5c63b72c0320c20d4287.png">
+                    </a>
+                </div>
+                <div class="category">
+
+                    <dl>
+                        <dt><a href="index.php?act=search&cate_id=8778" title="美妝百貨" target="_blank">美妝百貨</a></dt>
+                        <dd><a href="index.php?act=search&cate_id=9067" title="彩妝" target="_blank">彩妝</a></dd>
+                        <dd><a href="index.php?act=search&cate_id=9068" title="保養品" target="_blank">保養品</a></dd>
+                        <dd><a href="index.php?act=search&cate_id=9069" title="洗護品" target="_blank">洗護品</a></dd>
+                    </dl>
+                </div>
+                <div class="sale-pic">
+                    <a href="https://lineshop.tw/index.php?act=search&cate_id=8426" target="_blank">
+                        <img border=0
+                            src="https://www.lineshop.tw/upload/adv/web-5-53_b4ef4970df9e4017135326d812d7f3fa.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="middle">
+                <ul class="tabs-nav">
+
+                    <li class="tabs-selected"><a href="JavaScript:void(0);">廚房家電</a></li>
+                    <li class=""><a href="JavaScript:void(0);">手機推薦</a></li>
+                    <li class=""><a href="JavaScript:void(0);">adidas愛迪達</a></li>
+                </ul>
+
+                <div class="tabs-panel ">
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12101"
+                                        title="【HITACHI 日立】313L一級能效變頻右開雙門冰箱(RBX330-XGR)">
+                                        【HITACHI 日立】313L一級能效變頻右開雙門冰箱(RBX330-XGR)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12101&id=715">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/715/715_e2e8f68eff557a69b5d40f891c2d8181.png_small.png"
+                                                alt="【HITACHI 日立】313L一級能效變頻右開雙門冰箱(RBX330-XGR)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>21900</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12102"
+                                        title="【HITACHI 日立】313L一級能效變頻右開雙門冰箱(RBX330-GPW)">
+                                        【HITACHI 日立】313L一級能效變頻右開雙門冰箱(RBX330-GPW)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12102&id=715">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/715/715_9b9ace3cebcea502b8dd761c57628a2c.png_small.png"
+                                                alt="【HITACHI 日立】313L一級能效變頻右開雙門冰箱(RBX330-GPW)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>22950</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12143"
+                                        title="【HITACHI 日立】331L一級能效變頻三門左開冰箱(RG36BL-GPW)">
+                                        【HITACHI 日立】331L一級能效變頻三門左開冰箱(RG36BL-GPW)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12143&id=715">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/715/715_bbc99ab6cd4add0413c32c0973ae4f14.png_small.png"
+                                                alt="【HITACHI 日立】331L一級能效變頻三門左開冰箱(RG36BL-GPW)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>28900</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12144"
+                                        title="【HITACHI 日立】313L一級能效變頻左開雙門冰箱(RBX330L-GPW)">
+                                        【HITACHI 日立】313L一級能效變頻左開雙門冰箱(RBX330L-GPW)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12144&id=715">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/715/715_2afcf43704d9742c2b3ddbc77e84afdc.png_small.png"
+                                                alt="【HITACHI 日立】313L一級能效變頻左開雙門冰箱(RBX330L-GPW)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>24400</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12145"
+                                        title="【HITACHI 日立】394L一級能效變頻三門左開冰箱(RG41BL-GPW)">
+                                        【HITACHI 日立】394L一級能效變頻三門左開冰箱(RG41BL-GPW)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12145&id=715">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/715/715_576ccd1ef49434474f6ed906ff3f3794.png_small.png"
+                                                alt="【HITACHI 日立】394L一級能效變頻三門左開冰箱(RG41BL-GPW)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>31900</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12146"
+                                        title="【HITACHI 日立】407L一級能效日製變頻五門左開冰箱(RS42NJL-SN)">
+                                        【HITACHI 日立】407L一級能效日製變頻五門左開冰箱(RS42NJL-SN)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12146&id=715">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/715/715_7d1f0124577f77a5979ccdf1612fdd77.png_small.png"
+                                                alt="【HITACHI 日立】407L一級能效日製變頻五門左開冰箱(RS42NJL-SN)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>43950</em>元</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabs-panel tabs-hide">
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12359"
+                                        title="【SAMSUNG 三星】Galaxy A52s 5G 8G/256G 6.5吋智慧型手機">
+                                        【SAMSUNG 三星】Galaxy A52s 5G 8G/256G 6.5吋智慧型手機</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12359&id=534">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/534/534_dd5059ff4023d7602986192ae1b963c7.jpg_small.jpg"
+                                                alt="【SAMSUNG 三星】Galaxy A52s 5G 8G/256G 6.5吋智慧型手機"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>7413</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12358"
+                                        title="【SAMSUNG 三星】Galaxy A53 5G 8G+256G 6.5吋八核5G手機">
+                                        【SAMSUNG 三星】Galaxy A53 5G 8G+256G 6.5吋八核5G手機</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12358&id=534">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/534/534_938e95a4fa1c14322dcb0fe47405b5ad.jpg_small.jpg"
+                                                alt="【SAMSUNG 三星】Galaxy A53 5G 8G+256G 6.5吋八核5G手機"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>8596</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12357"
+                                        title="【SAMSUNG 三星】Galaxy A52s 5G 8G+256G 6.5吋八核手機">
+                                        【SAMSUNG 三星】Galaxy A52s 5G 8G+256G 6.5吋八核手機</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12357&id=534">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/534/534_e79012eaa7cbff4de5ef3558fd1fb9ec.jpg_small.jpg"
+                                                alt="【SAMSUNG 三星】Galaxy A52s 5G 8G+256G 6.5吋八核手機"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>7833</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12338"
+                                        title="【SAMSUNG 三星】Galaxy A22 5G 4G/128G 6.6吋智慧型手機">
+                                        【SAMSUNG 三星】Galaxy A22 5G 4G/128G 6.6吋智慧型手機</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12338&id=534">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/534/534_c12aedb47988f68eeaa692249c466192.jpg_small.jpg"
+                                                alt="【SAMSUNG 三星】Galaxy A22 5G 4G/128G 6.6吋智慧型手機"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>3906</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12337"
+                                        title="【SAMSUNG 三星】Galaxy A53 5G 6.5吋四鏡頭智慧型手機(8G/128G)">
+                                        【SAMSUNG 三星】Galaxy A53 5G 6.5吋四鏡頭智慧型手機(8G/128G)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12337&id=534">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/534/534_348ec3c53d1e746250bce40169073d61.jpg_small.jpg"
+                                                alt="【SAMSUNG 三星】Galaxy A53 5G 6.5吋四鏡頭智慧型手機(8G/128G)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>6993</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12335"
+                                        title="【SAMSUNG 三星】Galaxy S21 FE 6.4吋 防水旗艦智慧手機(8GB/256G)">
+                                        【SAMSUNG 三星】Galaxy S21 FE 6.4吋 防水旗艦智慧手機(8GB/256G)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12335&id=534">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/534/534_03932b26755c21939293309210835e61.jpg_small.jpg"
+                                                alt="【SAMSUNG 三星】Galaxy S21 FE 6.4吋 防水旗艦智慧手機(8GB/256G)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>10773</em>元</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabs-panel tabs-hide">
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12403"
+                                        title="【adidas】ADICOLOR 運動長褲 女(H37822)">
+                                        【adidas】ADICOLOR 運動長褲 女(H37822)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12403&id=647">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/647/647_9a8b6d1d29c0af9bb1ee40501436bde3.jpg_small.jpg"
+                                                alt="【adidas】ADICOLOR 運動長褲 女(H37822)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+                                <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：2890元</dd>
+                                <dd class="goods-price" style="float: left;">特惠價：<em>1170</em>元</dd>
+
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12402"
+                                        title="【adidas】ADICOLOR 運動長褲 女(GD2259)">
+                                        【adidas】ADICOLOR 運動長褲 女(GD2259)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12402&id=647">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/647/647_45166b8d45a8e7009f11cdc25a33ff3c.jpg_small.jpg"
+                                                alt="【adidas】ADICOLOR 運動長褲 女(GD2259)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+                                <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：2490元</dd>
+                                <dd class="goods-price" style="float: left;">特惠價：<em>990</em>元</dd>
+
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12401"
+                                        title="【adidas】R.Y.V. 運動長褲 女(FL9103">
+                                        【adidas】R.Y.V. 運動長褲 女(FL9103</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12401&id=647">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/647/647_092eb17c8285a0ccbdf6c96bbf0fd803.jpg_small.jpg"
+                                                alt="【adidas】R.Y.V. 運動長褲 女(FL9103"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+                                <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：3090元</dd>
+                                <dd class="goods-price" style="float: left;">特惠價：<em>1260</em>元</dd>
+
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12400"
+                                        title="【adidas】ADICOLOR 運動短褲 女(H37807)">
+                                        【adidas】ADICOLOR 運動短褲 女(H37807)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12400&id=647">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/647/647_2d9bb22143bf778424411151f559dc2b.jpg_small.jpg"
+                                                alt="【adidas】ADICOLOR 運動短褲 女(H37807)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+                                <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：1490元</dd>
+                                <dd class="goods-price" style="float: left;">特惠價：<em>585</em>元</dd>
+
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12399"
+                                        title="【adidas】V-DAY 短袖上衣 女 情人節 (GN3063)">
+                                        【adidas】V-DAY 短袖上衣 女 情人節 (GN3063)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12399&id=647">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/647/647_922fcc5d3b2c691b7e539a81195cf14a.jpg_small.jpg"
+                                                alt="【adidas】V-DAY 短袖上衣 女 情人節 (GN3063)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+                                <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：1690元</dd>
+                                <dd class="goods-price" style="float: left;">特惠價：<em>585</em>元</dd>
+
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12398"
+                                        title="【adidas】TENNIS LUXE 連身洋裝(H56459)">
+                                        【adidas】TENNIS LUXE 連身洋裝(H56459)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12398&id=647">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/647/647_93cb8bf9f340c03e740d1801d402d744.jpg_small.jpg"
+                                                alt="【adidas】TENNIS LUXE 連身洋裝(H56459)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+                                <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：1890元</dd>
+                                <dd class="goods-price" style="float: left;">特惠價：<em>989</em>元</dd>
+
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-bar">
+                <ul class="brands">
+                    <li>
+                        <div class="brands-logo"><i></i><a href="index.php?act=brand&op=list&brand=53" target="_blank">
+                                <img src="https://www.lineshop.tw/upload/brand/baf8848c7070fa4dae8bbefad4e53572.jpg"
+                                    alt="SAMSUNG" onload="javascript:DrawImage(this,88,44);"></a></div>
+                        <div class="brands-name"><a href="index.php?act=brand&op=list&brand=53" target="_blank"
+                                title="SAMSUNG">SAMSUNG</a></div>
+                    </li>
+                    <li>
+                        <div class="brands-logo"><i></i><a href="index.php?act=brand&op=list&brand=88" target="_blank">
+                                <img src="https://www.lineshop.tw/upload/brand/c93147db8994fc98ce7109ae0633159e.png"
+                                    alt="adidas" onload="javascript:DrawImage(this,88,44);"></a></div>
+                        <div class="brands-name"><a href="index.php?act=brand&op=list&brand=88" target="_blank"
+                                title="adidas">adidas</a></div>
+                    </li>
+                    <li>
+                        <div class="brands-logo"><i></i><a href="index.php?act=brand&op=list&brand=126" target="_blank">
+                                <img src="https://www.lineshop.tw/upload/brand/df5bc2e34894dbb49d550ad3c3e12332.png_small.png"
+                                    alt="品木宣言" onload="javascript:DrawImage(this,88,44);"></a></div>
+                        <div class="brands-name"><a href="index.php?act=brand&op=list&brand=126" target="_blank"
+                                title="品木宣言">品木宣言</a></div>
+                    </li>
+                    <li>
+                        <div class="brands-logo"><i></i><a href="index.php?act=brand&op=list&brand=127" target="_blank">
+                                <img src="https://www.lineshop.tw/upload/brand/3953c6ab86995e7df95d9200eb0e82a0.png_small.png"
+                                    alt="肯夢AVEDA" onload="javascript:DrawImage(this,88,44);"></a></div>
+                        <div class="brands-name"><a href="index.php?act=brand&op=list&brand=127" target="_blank"
+                                title="肯夢AVEDA">肯夢AVEDA</a></div>
+                    </li>
+                    <li>
+                        <div class="brands-logo"><i></i><a href="index.php?act=brand&op=list&brand=128" target="_blank">
+                                <img src="https://www.lineshop.tw/upload/brand/9d53dbb0ca8e6143c5d8c615a8a2a43c.png_small.png"
+                                    alt="統一企業" onload="javascript:DrawImage(this,88,44);"></a></div>
+                        <div class="brands-name"><a href="index.php?act=brand&op=list&brand=128" target="_blank"
+                                title="統一企業">統一企業</a></div>
+                    </li>
+                    <li>
+                        <div class="brands-logo"><i></i><a href="index.php?act=brand&op=list&brand=129" target="_blank">
+                                <img src="https://www.lineshop.tw/upload/brand/1490cdd3bb333aea864df0afbe0dc543.png_small.png"
+                                    alt="【KIPLING】" onload="javascript:DrawImage(this,88,44);"></a></div>
+                        <div class="brands-name"><a href="index.php?act=brand&op=list&brand=129" target="_blank"
+                                title="【KIPLING】">【KIPLING】</a></div>
+                    </li>
+                    <li>
+                        <div class="brands-logo"><i></i><a href="index.php?act=brand&op=list&brand=130" target="_blank">
+                                <img src="https://www.lineshop.tw/upload/brand/2edc579c5cf406fb068b32989bdf5853.png_small.png"
+                                    alt="白蘭氏" onload="javascript:DrawImage(this,88,44);"></a></div>
+                        <div class="brands-name"><a href="index.php?act=brand&op=list&brand=130" target="_blank"
+                                title="白蘭氏">白蘭氏</a></div>
+                    </li>
+                    <li>
+                        <div class="brands-logo"><i></i><a href="index.php?act=brand&op=list&brand=131" target="_blank">
+                                <img src="https://www.lineshop.tw/upload/brand/44575b4eb329f181f93a8cca5048e901.png_small.png"
+                                    alt="亞培" onload="javascript:DrawImage(this,88,44);"></a></div>
+                        <div class="brands-name"><a href="index.php?act=brand&op=list&brand=131" target="_blank"
+                                title="亞培">亞培</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="nc-home-pattern style-pink">
+            <div class="rightbar">
+                <div class="title">
+                    <h3>商品排行</h3>
+                </div>
+                <ol class="saletop-list">
+                    <li class="top">
+                        <dl>
+                            <dt class="goods-name"><a href="index.php?act=goods&goods_id=13373" target="_blank"
+                                    title="【hoi! 好好生活】林氏木業防靜電乳膠彈簧床墊 5尺/150x 200cm">
+                                    【hoi! 好好生活】林氏木業防靜電乳膠彈簧床墊 5尺/150x 200cm</a></dt>
+                            <dd class="nokey">1</dd>
+                            <dd class="goods-pic"><a href="index.php?act=goods&goods_id=13373" target="_blank"
+                                    title="【hoi! 好好生活】林氏木業防靜電乳膠彈簧床墊 5尺/150x 200cm"><span class="thumb size60"><i></i>
+                                        <img src="https://www.lineshop.tw/upload/store/goods/719/719_8cc09be0ffbbb8112ef93b2e785bc8c3.jpg_small.jpg"
+                                            title="【hoi! 好好生活】林氏木業防靜電乳膠彈簧床墊 5尺/150x 200cm"
+                                            onload="javascript:DrawImage(this,60,60);" target="_blank">
+                                    </span></a></dd>
+
+                            <dd class="goods-price" style="float: left;"><em>11403</em></dd>
+
+                        </dl>
+                    </li>
+                    <li class="top">
+                        <dl>
+                            <dt class="goods-name"><a href="index.php?act=goods&goods_id=13372" target="_blank"
+                                    title="【hoi! 好好生活】林氏木業透氣針織彈簧床墊5尺/150x 200cm">
+                                    【hoi! 好好生活】林氏木業透氣針織彈簧床墊5尺/150x 200cm</a></dt>
+                            <dd class="nokey">2</dd>
+                            <dd class="goods-pic"><a href="index.php?act=goods&goods_id=13372" target="_blank"
+                                    title="【hoi! 好好生活】林氏木業透氣針織彈簧床墊5尺/150x 200cm"><span class="thumb size60"><i></i>
+                                        <img src="https://www.lineshop.tw/upload/store/goods/719/719_6e80068622d2f4aa589bea41da2f1dd7.jpg_small.jpg"
+                                            title="【hoi! 好好生活】林氏木業透氣針織彈簧床墊5尺/150x 200cm"
+                                            onload="javascript:DrawImage(this,60,60);" target="_blank">
+                                    </span></a></dd>
+
+                            <dd class="goods-price" style="float: left;"><em>5803</em></dd>
+
+                        </dl>
+                    </li>
+                    <li class="top">
+                        <dl>
+                            <dt class="goods-name"><a href="index.php?act=goods&goods_id=13370" target="_blank"
+                                    title="【hoi! 好好生活】林氏木業防螨抗菌竹炭護脊彈簧床墊5尺.150x 200x22cｍ">
+                                    【hoi! 好好生活】林氏木業防螨抗菌竹炭護脊彈簧床墊5尺.150x 200x22cｍ</a></dt>
+                            <dd class="nokey">3</dd>
+                            <dd class="goods-pic"><a href="index.php?act=goods&goods_id=13370" target="_blank"
+                                    title="【hoi! 好好生活】林氏木業防螨抗菌竹炭護脊彈簧床墊5尺.150x 200x22cｍ"><span
+                                        class="thumb size60"><i></i>
+                                        <img src="https://www.lineshop.tw/upload/store/goods/719/719_69d748663d5cc660bd7f5f4c61ff020a.jpg_small.jpg"
+                                            title="【hoi! 好好生活】林氏木業防螨抗菌竹炭護脊彈簧床墊5尺.150x 200x22cｍ"
+                                            onload="javascript:DrawImage(this,60,60);" target="_blank">
+                                    </span></a></dd>
+
+                            <dd class="goods-price" style="float: left;"><em>6013</em></dd>
+
+                        </dl>
+                    </li>
+                </ol>
+                <div class="ad-banner">
+                    <a href="https://www.lineshop.tw/index.php?act=show_store&id=439" target="_blank">
+                        <img border=0
+                            src="https://www.lineshop.tw/upload/adv/web-1-18_2ac1cee291b5ace889d225817bf1ba7d.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="leftbar">
+                <div class="title">
+                    <a href="http://www.lineshop.tw/index.php?act=search&cate_id=2260" target="_blank">
+                        <img border=0
+                            src="https://www.lineshop.tw/upload/adv/web-1-11_6a48cf48ee7cbfeb4f9cc16989442bf4.png">
+                    </a>
+                </div>
+                <div class="category">
+
+                    <dl>
+                        <dt><a href="index.php?act=search&cate_id=8777" title="服裝百貨" target="_blank">服裝百貨</a></dt>
+                        <dd><a href="index.php?act=search&cate_id=8779" title="服裝" target="_blank">服裝</a></dd>
+                        <dd><a href="index.php?act=search&cate_id=8780" title="鞋子" target="_blank">鞋子</a></dd>
+                        <dd><a href="index.php?act=search&cate_id=8781" title="包包" target="_blank">包包</a></dd>
+                        <dd><a href="index.php?act=search&cate_id=8783" title="配飾精品" target="_blank">配飾精品</a></dd>
+                    </dl>
+                </div>
+                <div class="sale-pic">
+                    <a href="https://www.lineshop.tw/index.php?act=search&cate_id=8802" target="_blank">
+                        <img border=0
+                            src="https://www.lineshop.tw/upload/adv/web-1-13_6c676945db8ed247a557199684406149.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="middle">
+                <ul class="tabs-nav">
+
+                    <li class="tabs-selected"><a href="JavaScript:void(0);">服裝百貨</a></li>
+                    <li class=""><a href="JavaScript:void(0);">品木宣言</a></li>
+                    <li class=""><a href="JavaScript:void(0);">肯夢AVEDA</a></li>
+                </ul>
+
+                <div class="tabs-panel ">
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12366"
+                                        title="【adidas】ARTIST CRAIG & KARL☆短袖上衣(HA4705)">
+                                        【adidas】ARTIST CRAIG & KARL☆短袖上衣(HA4705)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12366&id=673">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/673/673_cd19fe3a25f7045f3b60075bdfa95d47.jpg_small.jpg"
+                                                alt="【adidas】ARTIST CRAIG & KARL☆短袖上衣(HA4705)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>549</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12365"
+                                        title="【adidas】PRIMEBLUE 運動寬褲 女(GD2273)">
+                                        【adidas】PRIMEBLUE 運動寬褲 女(GD2273)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12365&id=673">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/673/673_53fc85ad1071c0d0a524bad7ab9605bb.jpg_small.jpg"
+                                                alt="【adidas】PRIMEBLUE 運動寬褲 女(GD2273)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>1049</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12364"
+                                        title="【adidas】BELLISTA 連身洋裝 女(GN3165)">
+                                        【adidas】BELLISTA 連身洋裝 女(GN3165)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12364&id=673">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/673/673_d46c6caa5a9f26777b02b3836206d9fc.jpg_small.jpg"
+                                                alt="【adidas】BELLISTA 連身洋裝 女(GN3165)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>750</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12363"
+                                        title="【adidas】ADICOLOR 短袖上衣 女(GP3497)">
+                                        【adidas】ADICOLOR 短袖上衣 女(GP3497)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12363&id=673">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/673/673_4f26618786d6a283325c9b98f3c1ac71.jpg_small.jpg"
+                                                alt="【adidas】ADICOLOR 短袖上衣 女(GP3497)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>600</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12362"
+                                        title="【adidas官方】ADIBREAK 短袖上衣 女(HC6569)">
+                                        【adidas官方】ADIBREAK 短袖上衣 女(HC6569)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12362&id=673">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/673/673_b7031b7e3183d5c1959643858077bc98.jpg_small.jpg"
+                                                alt="【adidas官方】ADIBREAK 短袖上衣 女(HC6569)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>579</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12367"
+                                        title="【adidas】BELLISTA 運動長褲 女(GN3181)">
+                                        【adidas】BELLISTA 運動長褲 女(GN3181)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12367&id=673">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/673/673_a533ced68412b75520486adba497dd94.jpg_small.jpg"
+                                                alt="【adidas】BELLISTA 運動長褲 女(GN3181)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>899</em>元</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabs-panel tabs-hide">
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12533"
+                                        title="Dr. WEIL亮白無敵凝乳50ML">
+                                        Dr. WEIL亮白無敵凝乳50ML</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12533&id=717">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/717/717_0d2dbe41b383f0561237838afa2e2a40.jpg_small.jpg"
+                                                alt="Dr. WEIL亮白無敵凝乳50ML" onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>1876</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12532"
+                                        title="扭轉乾坤賦活保濕凝乳Plus + 50ML">
+                                        扭轉乾坤賦活保濕凝乳Plus + 50ML</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12532&id=717">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/717/717_8b67da335ef9602a3d65b9e49d4079f4.jpg_small.jpg"
+                                                alt="扭轉乾坤賦活保濕凝乳Plus + 50ML"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>1505</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12531"
+                                        title="美夢成真晚安煥膚霜50ML">
+                                        美夢成真晚安煥膚霜50ML</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12531&id=717">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/717/717_176405cf7984d8b073e9df04a33e9d42.jpg_small.jpg"
+                                                alt="美夢成真晚安煥膚霜50ML" onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>1330</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12522"
+                                        title="青春無敵靈芝光潤機能水 (全新升級 靈芝水)200ML">
+                                        青春無敵靈芝光潤機能水 (全新升級 靈芝水)200ML</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12522&id=717">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/717/717_0afe796b7a471e61fa479919fabe63c6.jpg_small.jpg"
+                                                alt="青春無敵靈芝光潤機能水 (全新升級 靈芝水)200ML"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>1050</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12520"
+                                        title="【ORIGINS 品木宣言】DR.WEIL青春無敵靈芝舒緩保濕噴霧(靈芝噴霧 隨身攜帶 水感保濕)">
+                                        【ORIGINS 品木宣言】DR.WEIL青春無敵靈芝舒緩保濕噴霧(靈芝噴霧 隨身攜帶 水感保濕)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12520&id=717">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/717/717_a7019a128a7afde862c5b17bd706b4c4.jpg_small.jpg"
+                                                alt="【ORIGINS 品木宣言】DR.WEIL青春無敵靈芝舒緩保濕噴霧(靈芝噴霧 隨身攜帶 水感保濕)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>707</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12518"
+                                        title="【ORIGINS 品木宣言】漫步雲端腿霜組(漫步在雲端腿部舒緩霜 250ml)">
+                                        【ORIGINS 品木宣言】漫步雲端腿霜組(漫步在雲端腿部舒緩霜 250ml)</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12518&id=717">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/717/717_91e1030237c6f16fba0e14f6282d80a7.jpg_small.jpg"
+                                                alt="【ORIGINS 品木宣言】漫步雲端腿霜組(漫步在雲端腿部舒緩霜 250ml)"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>1120</em>元</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabs-panel tabs-hide">
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12583"
+                                        title="純香洗髮菁1000ML">
+                                        純香洗髮菁1000ML</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12583&id=717">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/717/717_487887ba8f04f521fded39218ddb5d5f.png_small.png"
+                                                alt="純香洗髮菁1000ML" onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>1470</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12581"
+                                        title="蘊活菁華更新洗髮精1000ML">
+                                        蘊活菁華更新洗髮精1000ML</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12581&id=717">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/717/717_2576acdf4ef95784cdb702cc3d7a492d.png_small.png"
+                                                alt="蘊活菁華更新洗髮精1000ML" onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>2940</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12579"
+                                        title="花植結構重鍵洗髮精1000ML">
+                                        花植結構重鍵洗髮精1000ML</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12579&id=717">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/717/717_8a0e7eb9902bb832a7601b4e5e6ee8d1.png_small.png"
+                                                alt="花植結構重鍵洗髮精1000ML" onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>3465</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12577"
+                                        title="蘊活光萃洗髮精 (潤澤)1000ML">
+                                        蘊活光萃洗髮精 (潤澤)1000ML</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12577&id=717">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/717/717_e99495132c36c335d0b157f58b83e8bd.png_small.png"
+                                                alt="蘊活光萃洗髮精 (潤澤)1000ML" onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>3045</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12574"
+                                        title="直感輕亮洗髮精 200ml">
+                                        直感輕亮洗髮精 200ml</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12574&id=717">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/717/717_86fd61d9edd9a581fc5b89b147e28d7f.png_small.png"
+                                                alt="直感輕亮洗髮精 200ml" onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>700</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12573"
+                                        title="地球月限定經典純香皂">
+                                        地球月限定經典純香皂</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12573&id=717">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/717/717_a84a78b8cb4c024e618a4aee637ac9fd.jpg_small.jpg"
+                                                alt="地球月限定經典純香皂" onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>490</em>元</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-bar">
+                <ul class="brands">
+                    <li>
+                        <div class="brands-logo"><i></i><a href="index.php?act=brand&op=list&brand=125" target="_blank">
+                                <img src="https://www.lineshop.tw/upload/brand/4d611781e4215f26623219fb28e82f81.png_small.png"
+                                    alt="日立" onload="javascript:DrawImage(this,88,44);"></a></div>
+                        <div class="brands-name"><a href="index.php?act=brand&op=list&brand=125" target="_blank"
+                                title="日立">日立</a></div>
+                    </li>
+                    <li>
+                        <div class="brands-logo"><i></i><a href="index.php?act=brand&op=list&brand=132" target="_blank">
+                                <img src="https://www.lineshop.tw/upload/brand/a7a999bf87e4a078ce2da7859d3461b2.png_small.png"
+                                    alt="hoi! 好好生活" onload="javascript:DrawImage(this,88,44);"></a></div>
+                        <div class="brands-name"><a href="index.php?act=brand&op=list&brand=132" target="_blank"
+                                title="hoi! 好好生活">hoi! 好好生活</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="nc-home-pattern style-orange">
+            <div class="rightbar">
+                <div class="title">
+                    <h3>生活排行</h3>
+                </div>
+                <ol class="saletop-list">
+                    <li class="top">
+                        <dl>
+                            <dt class="goods-name"><a href="index.php?act=goods&goods_id=13770" target="_blank"
+                                    title="林氏木業時尚簡約岩板單抽床頭櫃 JI1B-灰+黑色">
+                                    林氏木業時尚簡約岩板單抽床頭櫃 JI1B-灰+黑色</a></dt>
+                            <dd class="nokey">1</dd>
+                            <dd class="goods-pic"><a href="index.php?act=goods&goods_id=13770" target="_blank"
+                                    title="林氏木業時尚簡約岩板單抽床頭櫃 JI1B-灰+黑色"><span class="thumb size60"><i></i>
+                                        <img src="https://www.lineshop.tw/upload/store/goods/719/719_9e496bd65a4daeab460c98fed253c0b0.jpg_small.jpg"
+                                            title="林氏木業時尚簡約岩板單抽床頭櫃 JI1B-灰+黑色" onload="javascript:DrawImage(this,60,60);"
+                                            target="_blank">
+                                    </span></a></dd>
+
+                            <dd class="goods-price" style="float: left;"><em>3626</em></dd>
+
+                        </dl>
+                    </li>
+                    <li class="top">
+                        <dl>
+                            <dt class="goods-name"><a href="index.php?act=goods&goods_id=13769" target="_blank"
+                                    title="【預購】源氏木語西雅圖胡桃色橡木床頭櫃 H90A01">
+                                    【預購】源氏木語西雅圖胡桃色橡木床頭櫃 H90A01</a></dt>
+                            <dd class="nokey">2</dd>
+                            <dd class="goods-pic"><a href="index.php?act=goods&goods_id=13769" target="_blank"
+                                    title="【預購】源氏木語西雅圖胡桃色橡木床頭櫃 H90A01"><span class="thumb size60"><i></i>
+                                        <img src="https://www.lineshop.tw/upload/store/goods/719/719_b0459834e98f55cf9fd493242f3f2c5a.jpg_small.jpg"
+                                            title="【預購】源氏木語西雅圖胡桃色橡木床頭櫃 H90A01"
+                                            onload="javascript:DrawImage(this,60,60);" target="_blank">
+                                    </span></a></dd>
+
+                            <dd class="goods-price" style="float: left;"><em>3766</em></dd>
+
+                        </dl>
+                    </li>
+                    <li class="top">
+                        <dl>
+                            <dt class="goods-name"><a href="index.php?act=goods&goods_id=13768" target="_blank"
+                                    title="【預購】源氏木語胡桃色橡木單抽儲物床頭櫃 H84A07">
+                                    【預購】源氏木語胡桃色橡木單抽儲物床頭櫃 H84A07</a></dt>
+                            <dd class="nokey">3</dd>
+                            <dd class="goods-pic"><a href="index.php?act=goods&goods_id=13768" target="_blank"
+                                    title="【預購】源氏木語胡桃色橡木單抽儲物床頭櫃 H84A07"><span class="thumb size60"><i></i>
+                                        <img src="https://www.lineshop.tw/upload/store/goods/719/719_55d8e41598a54c3fa8dfa55961b971b2.jpg_small.jpg"
+                                            title="【預購】源氏木語胡桃色橡木單抽儲物床頭櫃 H84A07"
+                                            onload="javascript:DrawImage(this,60,60);" target="_blank">
+                                    </span></a></dd>
+
+                            <dd class="goods-price" style="float: left;"><em>3836</em></dd>
+
+                        </dl>
+                    </li>
+                </ol>
+                <div class="ad-banner">
+                    <a href="https://www.lineshop.tw/index.php?act=search&cate_id=6203" target="_blank">
+                        <img border=0
+                            src="https://www.lineshop.tw/upload/adv/web-3-38_3b4833341ee7c6504d2b02673991c8ff.jpeg">
+                    </a>
+                </div>
+            </div>
+            <div class="leftbar">
+                <div class="title">
+                    <a href="https://www.lineshop.tw/index.php?act=search&cate_id=6203" target="_blank">
+                        <img border=0
+                            src="https://www.lineshop.tw/upload/adv/web-3-31_657a8fc5f4462868fd93e8ca02630a3e.jpg">
+                    </a>
+                </div>
+                <div class="category">
+
+                    <dl>
+                        <dt><a href="index.php?act=search&cate_id=9043" title="生活百貨" target="_blank">生活百貨</a></dt>
+                        <dd><a href="index.php?act=search&cate_id=9052" title="母嬰親子百貨" target="_blank">母嬰親子百貨</a></dd>
+                        <dd><a href="index.php?act=search&cate_id=9111" title="玩具百貨" target="_blank">玩具百貨</a></dd>
+                        <dd><a href="index.php?act=search&cate_id=9060" title="文具百貨" target="_blank">文具百貨</a></dd>
+                        <dd><a href="index.php?act=search&cate_id=9050" title="寵物百貨" target="_blank">寵物百貨</a></dd>
+                        <dd><a href="index.php?act=search&cate_id=9054" title="寢具家具百貨" target="_blank">寢具家具百貨</a></dd>
+                        <dd><a href="index.php?act=search&cate_id=9053" title="居家收納百貨" target="_blank">居家收納百貨</a></dd>
+                        <dd><a href="index.php?act=search&cate_id=9055" title="餐廚用具百貨" target="_blank">餐廚用具百貨</a></dd>
+                        <dd><a href="index.php?act=search&cate_id=9056" title="浴室用具百貨" target="_blank">浴室用具百貨</a></dd>
+                        <dd><a href="index.php?act=search&cate_id=9058" title="運動休閒百貨" target="_blank">運動休閒百貨</a></dd>
+                        <dd><a href="index.php?act=search&cate_id=9051" title="汽機車百貨" target="_blank">汽機車百貨</a></dd>
+                    </dl>
+                </div>
+                <div class="sale-pic">
+                    <a href="https://www.lineshop.tw/index.php?act=article&article_id=420" target="_blank">
+                        <img border=0
+                            src="https://www.lineshop.tw/upload/adv/web-3-33_e0430a4738aa7bc154d8881f2ce18545.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="middle">
+                <ul class="tabs-nav">
+
+                    <li class="tabs-selected"><a href="JavaScript:void(0);">飲品百貨</a></li>
+                    <li class=""><a href="JavaScript:void(0);">麥香</a></li>
+                    <li class=""><a href="JavaScript:void(0);">白蘭氏</a></li>
+                </ul>
+
+                <div class="tabs-panel ">
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12736"
+                                        title="【濃韻】濃韻烏龍茶600mlx24入/箱">
+                                        【濃韻】濃韻烏龍茶600mlx24入/箱</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12736&id=651">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/651/651_41df192ced4477e1a52dc10b7fbfb598.jpg_small.jpg"
+                                                alt="【濃韻】濃韻烏龍茶600mlx24入/箱"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>420</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12734"
+                                        title="【統一】麥香綠茶375mlx24入/箱">
+                                        【統一】麥香綠茶375mlx24入/箱</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12734&id=651">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/651/651_1b2c907e0dddc780ef25418ce0089777.jpg_small.jpg"
+                                                alt="【統一】麥香綠茶375mlx24入/箱"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>252</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12733"
+                                        title="【麥香】麥香錫蘭奶茶600mlx24入/箱">
+                                        【麥香】麥香錫蘭奶茶600mlx24入/箱</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12733&id=651">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/651/651_f1a0f6dd63a49e0091367e3459093c49.jpg_small.jpg"
+                                                alt="【麥香】麥香錫蘭奶茶600mlx24入/箱"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>420</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12726"
+                                        title="【茶裏王】青心烏龍茶無糖600mlx24入/箱">
+                                        【茶裏王】青心烏龍茶無糖600mlx24入/箱</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12726&id=651">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/651/651_aeff59307c84f0c2c6cc24816ba09b7c.jpg_small.jpg"
+                                                alt="【茶裏王】青心烏龍茶無糖600mlx24入/箱"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>336</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12725"
+                                        title="【茶裏王】英式紅茶600mlx24入/箱">
+                                        【茶裏王】英式紅茶600mlx24入/箱</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12725&id=651">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/651/651_b97bba148bb5cdfe174da3bd2d564fc1.jpg_small.jpg"
+                                                alt="【茶裏王】英式紅茶600mlx24入/箱"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>336</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12737"
+                                        title="【濃韻】濃韻烏龍茶975mlx12入/箱">
+                                        【濃韻】濃韻烏龍茶975mlx12入/箱</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12737&id=651">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/651/651_775427d287be8118305bfd3819ec8eb8.jpg_small.jpg"
+                                                alt="【濃韻】濃韻烏龍茶975mlx12入/箱"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>319</em>元</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabs-panel tabs-hide">
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12733"
+                                        title="【麥香】麥香錫蘭奶茶600mlx24入/箱">
+                                        【麥香】麥香錫蘭奶茶600mlx24入/箱</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12733&id=651">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/651/651_f1a0f6dd63a49e0091367e3459093c49.jpg_small.jpg"
+                                                alt="【麥香】麥香錫蘭奶茶600mlx24入/箱"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>420</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12732"
+                                        title="【統一】麥香奶茶375mlx24入/箱">
+                                        【統一】麥香奶茶375mlx24入/箱</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12732&id=651">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/651/651_5259a2196ac0eba58e614ebffd1a4062.jpg_small.jpg"
+                                                alt="【統一】麥香奶茶375mlx24入/箱"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>252</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12731"
+                                        title="【麥香】阿薩姆奶茶600mlx24入/箱">
+                                        【麥香】阿薩姆奶茶600mlx24入/箱</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12731&id=651">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/651/651_dad2db4f7cb0412a5956721868936d77.jpg_small.jpg"
+                                                alt="【麥香】阿薩姆奶茶600mlx24入/箱"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>470</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12730"
+                                        title="【麥香】阿薩姆紅茶600mlx24入/箱">
+                                        【麥香】阿薩姆紅茶600mlx24入/箱</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12730&id=651">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/651/651_b30cf942e4227affa0cc82b9079a0a60.jpg_small.jpg"
+                                                alt="【麥香】阿薩姆紅茶600mlx24入/箱"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>420</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12728"
+                                        title="【麥香】奶茶300mlx24入/箱">
+                                        【麥香】奶茶300mlx24入/箱</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12728&id=651">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/651/651_747e82d6f5cea5c6a602ee4819c1e70f.jpg_small.jpg"
+                                                alt="【麥香】奶茶300mlx24入/箱" onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>168</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12727"
+                                        title="【麥香】紅茶300mlx24入/箱">
+                                        【麥香】紅茶300mlx24入/箱</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12727&id=651">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/651/651_503e921ca003f97bf604f5fa9f459be3.jpg_small.jpg"
+                                                alt="【麥香】紅茶300mlx24入/箱" onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>216</em>元</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabs-panel tabs-hide">
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=13002"
+                                        title="【白蘭氏冬蟲夏草鷄精42克6入/盒】採用冬蟲夏草子實體精燉 補充體力調節元氣">
+                                        【白蘭氏冬蟲夏草鷄精42克6入/盒】採用冬蟲夏草子實體精燉 補充體力調節元氣</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=13002&id=654">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/654/654_c06111005d8f339700761b9cabc76f8b.jpg_small.jpg"
+                                                alt="【白蘭氏冬蟲夏草鷄精42克6入/盒】採用冬蟲夏草子實體精燉 補充體力調節元氣"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+                                <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：400元</dd>
+                                <dd class="goods-price" style="float: left;">特惠價：<em>306</em>元</dd>
+
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=13001"
+                                        title="【白蘭氏雙認證鷄精70Gx12入禮盒】">
+                                        【白蘭氏雙認證鷄精70Gx12入禮盒】</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=13001&id=654">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/654/654_37b05832103f672b788ac7303a6e87f0.png_small.png"
+                                                alt="【白蘭氏雙認證鷄精70Gx12入禮盒】"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+                                <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：1016元</dd>
+                                <dd class="goods-price" style="float: left;">特惠價：<em>720</em>元</dd>
+
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=13000"
+                                        title="【白蘭氏兒童學進鷄精42克 6+2入/盒】給孩子好體力、專注力 掌握成長關鍵">
+                                        【白蘭氏兒童學進鷄精42克 6+2入/盒】給孩子好體力、專注力 掌握成長關鍵</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=13000&id=654">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/654/654_741b5d4ff34d6cbbda54a4d9c5caef00.jpg_small.jpg"
+                                                alt="【白蘭氏兒童學進鷄精42克 6+2入/盒】給孩子好體力、專注力 掌握成長關鍵"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+                                <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：472元</dd>
+                                <dd class="goods-price" style="float: left;">特惠價：<em>360</em>元</dd>
+
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12999"
+                                        title="【白蘭氏四物鷄精42克 6入/盒】四物精華調節生理機能">
+                                        【白蘭氏四物鷄精42克 6入/盒】四物精華調節生理機能</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12999&id=654">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/654/654_8688c01da62c60ffc8ad86eae55e637e.jpg_small.jpg"
+                                                alt="【白蘭氏四物鷄精42克 6入/盒】四物精華調節生理機能"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+                                <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：400元</dd>
+                                <dd class="goods-price" style="float: left;">特惠價：<em>306</em>元</dd>
+
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12998"
+                                        title="【白蘭氏學進枸杞鷄精70克6入/盒】 特添枸杞 讀書更有神 思緒更清晰">
+                                        【白蘭氏學進枸杞鷄精70克6入/盒】 特添枸杞 讀書更有神 思緒更清晰</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12998&id=654">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/654/654_4e379e17d2ceeaba882f5ea95af9eb9f.jpg_small.jpg"
+                                                alt="【白蘭氏學進枸杞鷄精70克6入/盒】 特添枸杞 讀書更有神 思緒更清晰"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+
+                                <dd class="goods-price" style="float: left;">商城價：<em>378</em>元</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12997"
+                                        title="【白蘭氏鷄精70克6入裝/盒】補充體力必備 提升代謝充沛體力 專注力">
+                                        【白蘭氏鷄精70克6入裝/盒】補充體力必備 提升代謝充沛體力 專注力</a></dt>
+                                <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                        <a target="_blank" href="index.php?act=goods&goods_id=12997&id=654">
+                                            <img src="https://www.lineshop.tw/upload/store/goods/654/654_5e9a5d3f612fdc5668f04cb80bbe45c2.jpg_small.jpg"
+                                                alt="【白蘭氏鷄精70克6入裝/盒】補充體力必備 提升代謝充沛體力 專注力"
+                                                onload="javascript:DrawImage(this,120,120);" />
+                                        </a></span></dd>
+                                <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：462元</dd>
+                                <dd class="goods-price" style="float: left;">特惠價：<em>360</em>元</dd>
+
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-bar">
+                <ul class="brands">
+                </ul>
+            </div>
+        </div>
+        <div class="nc-home-pattern style-green">
+            <div class="rightbar">
+                <div class="title">
+                    <h3>家電排行</h3>
+                </div>
+                <ol class="saletop-list">
+                    <li class="top">
+                        <dl>
+                            <dt class="goods-name"><a href="index.php?act=goods&goods_id=11777" target="_blank"
+                                    title="THOMSON 多功能環保除濕機 TM-SADE02">
+                                    THOMSON 多功能環保除濕機 TM-SADE02</a></dt>
+                            <dd class="nokey">1</dd>
+                            <dd class="goods-pic"><a href="index.php?act=goods&goods_id=11777" target="_blank"
+                                    title="THOMSON 多功能環保除濕機 TM-SADE02"><span class="thumb size60"><i></i>
+                                        <img src="https://www.lineshop.tw/upload/store/goods/669/669_883f7815106e18ab09cdc566160c8a9b.jpg_small.jpg"
+                                            title="THOMSON 多功能環保除濕機 TM-SADE02"
+                                            onload="javascript:DrawImage(this,60,60);" target="_blank">
+                                    </span></a></dd>
+                            <dd class="goods-price" style="
+                text-decoration: line-through;
+                ">4990元</dd>
+                            <dd class="goods-price" "><em>3060</em>元</dd>
+   
+             
+          </dl>
+        </li>
+										        								        										        	        <li class=" top">
+                                <dl>
+                                    <dt class="goods-name"><a href="index.php?act=goods&goods_id=11668" target="_blank"
+                                            title="東京電通 微晶去角質美足機-煙燻玫瑰 獨家專利 去腳皮機 美足機">
+                                            東京電通 微晶去角質美足機-煙燻玫瑰 獨家專利 去腳皮機 美足機</a></dt>
+                                    <dd class="nokey">2</dd>
+                                    <dd class="goods-pic"><a href="index.php?act=goods&goods_id=11668" target="_blank"
+                                            title="東京電通 微晶去角質美足機-煙燻玫瑰 獨家專利 去腳皮機 美足機"><span class="thumb size60"><i></i>
+                                                <img src="https://www.lineshop.tw/upload/store/goods/674/674_1b47badec57678f40b39070f8c809aaa.jpg_small.jpg"
+                                                    title="東京電通 微晶去角質美足機-煙燻玫瑰 獨家專利 去腳皮機 美足機"
+                                                    onload="javascript:DrawImage(this,60,60);" target="_blank">
+                                            </span></a></dd>
+                                    <dd class="goods-price" style="
+                text-decoration: line-through;
+                ">1100元</dd>
+                                    <dd class="goods-price" "><em>630</em>元</dd>
+   
+             
+          </dl>
+        </li>
+										        								        										        	        <li class=" top">
+                                        <dl>
+                                            <dt class="goods-name"><a href="index.php?act=goods&goods_id=11404"
+                                                    target="_blank" title="☆伊瑪三明治機">
+                                                    ☆伊瑪三明治機</a></dt>
+                                            <dd class="nokey">3</dd>
+                                            <dd class="goods-pic"><a href="index.php?act=goods&goods_id=11404"
+                                                    target="_blank" title="☆伊瑪三明治機"><span class="thumb size60"><i></i>
+                                                        <img src="https://www.lineshop.tw/upload/store/goods/673/673_4473d9f3b6974b87492ee8359849b156.jpg_small.jpg"
+                                                            title="☆伊瑪三明治機" onload="javascript:DrawImage(this,60,60);"
+                                                            target="_blank">
+                                                    </span></a></dd>
+                                            <dd class="goods-price" style="
+                text-decoration: line-through;
+                ">2100元</dd>
+                                            <dd class="goods-price" "><em>800</em>元</dd>
+   
+             
+          </dl>
+        </li>
+										        								                      		      </ol>
+      <div class=" ad-banner">
+                                                <a href="http://www.lineshop.tw/index.php?act=search&cate_id=1198"
+                                                    target="_blank">
+                                                    <img border=0
+                                                        src="https://www.lineshop.tw/upload/adv/web-4-48_0cbad129705b64773b0af68326bcfe3f.jpg">
+                                                </a>
+            </div>
+        </div>
+        <div class="leftbar">
+            <div class="title">
+                <a href="http://www.lineshop.tw/index.php?act=search&cate_id=1198" target="_blank">
+                    <img border=0
+                        src="https://www.lineshop.tw/upload/adv/web-4-41_85b4b718e3cbee42e981ee1a2e13eedc.jpg">
+                </a>
+            </div>
+            <div class="category">
+
+            </div>
+            <div class="sale-pic">
+                <a href="http://www.lineshop.tw/index.php?act=show_store&id=276" target="_blank">
+                    <img border=0
+                        src="https://www.lineshop.tw/upload/adv/web-4-43_e4a3a78d41c635361cf22b9573be7537.jpg">
+                </a>
+            </div>
+        </div>
+        <div class="middle">
+            <ul class="tabs-nav">
+
+                <li class="tabs-selected"><a href="JavaScript:void(0);">亞培</a></li>
+            </ul>
+
+            <div class="tabs-panel ">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=13174"
+                                    title="亞培安素液體營養品草莓口味-減甜x 24入(箱購)">
+                                    亞培安素液體營養品草莓口味-減甜x 24入(箱購)</a></dt>
+                            <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                    <a target="_blank" href="index.php?act=goods&goods_id=13174&id=654">
+                                        <img src="https://www.lineshop.tw/upload/store/goods/654/654_67da9d289047ea08c20cf066517d95e1.jpg_small.jpg"
+                                            alt="亞培安素液體營養品草莓口味-減甜x 24入(箱購)"
+                                            onload="javascript:DrawImage(this,120,120);" />
+                                    </a></span></dd>
+
+                            <dd class="goods-price" style="float: left;">商城價：<em>1485</em>元</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=13173"
+                                    title="安素沛力優蛋白配方-香草減甜口味(237MLx24入)">
+                                    安素沛力優蛋白配方-香草減甜口味(237MLx24入)</a></dt>
+                            <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                    <a target="_blank" href="index.php?act=goods&goods_id=13173&id=654">
+                                        <img src="https://www.lineshop.tw/upload/store/goods/654/654_80a000050bd6c5d871982179c71c4d9d.jpg_small.jpg"
+                                            alt="安素沛力優蛋白配方-香草減甜口味(237MLx24入)"
+                                            onload="javascript:DrawImage(this,120,120);" />
+                                    </a></span></dd>
+
+                            <dd class="goods-price" style="float: left;">商城價：<em>1706</em>元</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=13172"
+                                    title="安素原味菁選隨身瓶(237ml) x 24入 (箱購)">
+                                    安素原味菁選隨身瓶(237ml) x 24入 (箱購)</a></dt>
+                            <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                    <a target="_blank" href="index.php?act=goods&goods_id=13172&id=654">
+                                        <img src="https://www.lineshop.tw/upload/store/goods/654/654_dfea123d83b7fa4a5ec9568b0425a2d4.jpg_small.jpg"
+                                            alt="安素原味菁選隨身瓶(237ml) x 24入 (箱購)"
+                                            onload="javascript:DrawImage(this,120,120);" />
+                                    </a></span></dd>
+
+                            <dd class="goods-price" style="float: left;">商城價：<em>1611</em>元</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=13167"
+                                    title="安素高鈣鈣強化配方-香草減甜口味(237MLx24入)">
+                                    安素高鈣鈣強化配方-香草減甜口味(237MLx24入)</a></dt>
+                            <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                    <a target="_blank" href="index.php?act=goods&goods_id=13167&id=654">
+                                        <img src="https://www.lineshop.tw/upload/store/goods/654/654_963b5648296558bf7f830d5bedafe651.jpg_small.jpg"
+                                            alt="安素高鈣鈣強化配方-香草減甜口味(237MLx24入)"
+                                            onload="javascript:DrawImage(this,120,120);" />
+                                    </a></span></dd>
+
+                            <dd class="goods-price" style="float: left;">商城價：<em>1706</em>元</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=13166"
+                                    title="安素香草減甜均衡營養配方237ml-網購限定30入(箱購)">
+                                    安素香草減甜均衡營養配方237ml-網購限定30入(箱購)</a></dt>
+                            <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                    <a target="_blank" href="index.php?act=goods&goods_id=13166&id=654">
+                                        <img src="https://www.lineshop.tw/upload/store/goods/654/654_36c1ac2a4138e84a1469c4b0e43e491f.jpg_small.jpg"
+                                            alt="安素香草減甜均衡營養配方237ml-網購限定30入(箱購)"
+                                            onload="javascript:DrawImage(this,120,120);" />
+                                    </a></span></dd>
+
+                            <dd class="goods-price" style="float: left;">商城價：<em>1709</em>元</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=13165"
+                                    title="亞培 安素原味(237ml)-網購限定30入(箱購)">
+                                    亞培 安素原味(237ml)-網購限定30入(箱購)</a></dt>
+                            <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                    <a target="_blank" href="index.php?act=goods&goods_id=13165&id=654">
+                                        <img src="https://www.lineshop.tw/upload/store/goods/654/654_7257e6bc65634912f0e5a3f0f9df1252.jpg_small.jpg"
+                                            alt="亞培 安素原味(237ml)-網購限定30入(箱購)"
+                                            onload="javascript:DrawImage(this,120,120);" />
+                                    </a></span></dd>
+
+                            <dd class="goods-price" style="float: left;">商城價：<em>1754</em>元</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <ul class="brands">
+            </ul>
+        </div>
+    </div>
+    <div class="nc-home-pattern style-purple">
+        <div class="rightbar">
+            <div class="title">
+                <h3>防疫小物排行</h3>
+            </div>
+            <ol class="saletop-list">
+                <li class="top">
+                    <dl>
+                        <dt class="goods-name"><a href="index.php?act=goods&goods_id=6163" target="_blank"
+                                title="酒精手部消毒機">
+                                酒精手部消毒機</a></dt>
+                        <dd class="nokey">1</dd>
+                        <dd class="goods-pic"><a href="index.php?act=goods&goods_id=6163" target="_blank"
+                                title="酒精手部消毒機"><span class="thumb size60"><i></i>
+                                    <img src="https://www.lineshop.tw/upload/store/goods/439/439_76ecb9547277ac54ab4bc3f3c7ece5ea.jpg_small.jpg"
+                                        title="酒精手部消毒機" onload="javascript:DrawImage(this,60,60);" target="_blank">
+                                </span></a></dd>
+
+                        <dd class="goods-price" style="float: left;"><em>880</em></dd>
+
+                    </dl>
+                </li>
+                <li class="top">
+                    <dl>
+                        <dt class="goods-name"><a href="index.php?act=goods&goods_id=11075" target="_blank"
+                                title="加深半透明收納盒">
+                                加深半透明收納盒</a></dt>
+                        <dd class="nokey">2</dd>
+                        <dd class="goods-pic"><a href="index.php?act=goods&goods_id=11075" target="_blank"
+                                title="加深半透明收納盒"><span class="thumb size60"><i></i>
+                                    <img src="https://www.lineshop.tw/upload/store/goods/531/531_d259cab7050eff7089934dbc00784353.jpg_small.jpg"
+                                        title="加深半透明收納盒" onload="javascript:DrawImage(this,60,60);" target="_blank">
+                                </span></a></dd>
+
+                        <dd class="goods-price" style="float: left;"><em>32</em></dd>
+
+                    </dl>
+                </li>
+                <li class="top">
+                    <dl>
+                        <dt class="goods-name"><a href="index.php?act=goods&goods_id=11076" target="_blank"
+                                title="壁掛調味包收納架 ">
+                                壁掛調味包收納架 </a></dt>
+                        <dd class="nokey">3</dd>
+                        <dd class="goods-pic"><a href="index.php?act=goods&goods_id=11076" target="_blank"
+                                title="壁掛調味包收納架 "><span class="thumb size60"><i></i>
+                                    <img src="https://www.lineshop.tw/upload/store/goods/531/531_4d8796f9ca2d5c6b01c4f50333f28756.jpg_small.jpg"
+                                        title="壁掛調味包收納架 " onload="javascript:DrawImage(this,60,60);" target="_blank">
+                                </span></a></dd>
+
+                        <dd class="goods-price" style="float: left;"><em>108</em></dd>
+
+                    </dl>
+                </li>
+            </ol>
+            <div class="ad-banner">
+                <a href="https://www.lineshop.tw/index.php?act=search&cate_id=8809" target="_blank">
+                    <img border=0
+                        src="https://www.lineshop.tw/upload/adv/web-6-68_3968d429df6b41a8562c7d5d647aed18.jpg">
+                </a>
+            </div>
+        </div>
+        <div class="leftbar">
+            <div class="title">
+                <a href="https://www.lineshop.tw/index.php?act=search&cate_id=8429" target="_blank">
+                    <img border=0
+                        src="https://www.lineshop.tw/upload/adv/web-6-61_90dbca32031d5622c1bf5ed5db715b21.jpg">
+                </a>
+            </div>
+            <div class="category">
+
+                <dl>
+                    <dt><a href="index.php?act=search&cate_id=9046" title="收藏百貨" target="_blank">收藏百貨</a></dt>
+                    <dd><a href="index.php?act=search&cate_id=9048" title="宗教收藏百貨" target="_blank">宗教收藏百貨</a></dd>
+                    <dd><a href="index.php?act=search&cate_id=9059" title="愛好收藏百貨" target="_blank">愛好收藏百貨</a></dd>
+                    <dd><a href="index.php?act=search&cate_id=9061" title="古董百貨" target="_blank">古董百貨</a></dd>
+                </dl>
+            </div>
+            <div class="sale-pic">
+                <a href="https://www.lineshop.tw/index.php?act=search&cate_id=8803" target="_blank">
+                    <img border=0
+                        src="https://www.lineshop.tw/upload/adv/web-6-63_a362d5eb010825d61536963f637eec08.png">
+                </a>
+            </div>
+        </div>
+        <div class="middle">
+            <ul class="tabs-nav">
+
+                <li class="tabs-selected"><a href="JavaScript:void(0);">收藏百貨</a></li>
+            </ul>
+
+            <div class="tabs-panel ">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=9817"
+                                    title="台灣天上聖母白沙屯媽祖婆可愛勇字頭盔安全帽鑰匙扣挂件吊飾(接受開發廣告創意產品)">
+                                    台灣天上聖母白沙屯媽祖婆可愛勇字頭盔安全帽鑰匙扣挂件吊飾(接受開發廣告創意產品)</a></dt>
+                            <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                    <a target="_blank" href="index.php?act=goods&goods_id=9817&id=463">
+                                        <img src="https://www.lineshop.tw/upload/store/goods/463/463_32e54f2f5bef10651a2893807131c27e.jpg_small.jpg"
+                                            alt="台灣天上聖母白沙屯媽祖婆可愛勇字頭盔安全帽鑰匙扣挂件吊飾(接受開發廣告創意產品)"
+                                            onload="javascript:DrawImage(this,120,120);" />
+                                    </a></span></dd>
+                            <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：80元</dd>
+                            <dd class="goods-price" style="float: left;">特惠價：<em>50</em>元</dd>
+
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=9816"
+                                    title="財神法藥臥香(龍藥)萬僧法藥、甘露加持">
+                                    財神法藥臥香(龍藥)萬僧法藥、甘露加持</a></dt>
+                            <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                    <a target="_blank" href="index.php?act=goods&goods_id=9816&id=463">
+                                        <img src="https://www.lineshop.tw/upload/store/goods/463/463_3f7761dabd8a75ef962c0864ecbfdd48.jpg_small.jpg"
+                                            alt="財神法藥臥香(龍藥)萬僧法藥、甘露加持" onload="javascript:DrawImage(this,120,120);" />
+                                    </a></span></dd>
+                            <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：1000元</dd>
+                            <dd class="goods-price" style="float: left;">特惠價：<em>800</em>元</dd>
+
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=9801"
+                                    title="紫晶宮***自然藏香堂晨香特級香室內養生香佛香(線香120根/盒，長18厘米，直徑2.0mm)">
+                                    紫晶宮***自然藏香堂晨香特級香室內養生香佛香(線香120根/盒，長18厘米，直徑2.0mm)</a></dt>
+                            <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                    <a target="_blank" href="index.php?act=goods&goods_id=9801&id=463">
+                                        <img src="https://www.lineshop.tw/upload/store/goods/463/463_ea7c8fca10c0349173fe3464acc20245.jpg_small.jpg"
+                                            alt="紫晶宮***自然藏香堂晨香特級香室內養生香佛香(線香120根/盒，長18厘米，直徑2.0mm)"
+                                            onload="javascript:DrawImage(this,120,120);" />
+                                    </a></span></dd>
+                            <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：520元</dd>
+                            <dd class="goods-price" style="float: left;">特惠價：<em>252</em>元</dd>
+
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=9747"
+                                    title="ROCKS Whiskey Chilling Stones 鑑賞家套裝-經典玻璃杯版">
+                                    ROCKS Whiskey Chilling Stones 鑑賞家套裝-經典玻璃杯版</a></dt>
+                            <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                    <a target="_blank" href="index.php?act=goods&goods_id=9747&id=628">
+                                        <img src="https://www.lineshop.tw/upload/store/goods/628/628_c0d9a7bfc1901f81f5a0507a368c7c41.jpg_small.jpg"
+                                            alt="ROCKS Whiskey Chilling Stones 鑑賞家套裝-經典玻璃杯版"
+                                            onload="javascript:DrawImage(this,120,120);" />
+                                    </a></span></dd>
+                            <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：1800元</dd>
+                            <dd class="goods-price" style="float: left;">特惠價：<em>1600</em>元</dd>
+
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=9746"
+                                    title="ROCKS Whiskey Chilling Stones 鑑賞家套裝 - 鼻鏡版">
+                                    ROCKS Whiskey Chilling Stones 鑑賞家套裝 - 鼻鏡版</a></dt>
+                            <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                    <a target="_blank" href="index.php?act=goods&goods_id=9746&id=628">
+                                        <img src="https://www.lineshop.tw/upload/store/goods/628/628_70bf9e64063b7153e8b5658a83d9b285.jpg_small.jpg"
+                                            alt="ROCKS Whiskey Chilling Stones 鑑賞家套裝 - 鼻鏡版"
+                                            onload="javascript:DrawImage(this,120,120);" />
+                                    </a></span></dd>
+                            <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：1800元</dd>
+                            <dd class="goods-price" style="float: left;">特惠價：<em>1600</em>元</dd>
+
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=9745"
+                                    title="ROCKS Whiskey Chilling Stones 鑑賞家套裝-掌心玻璃杯版">
+                                    ROCKS Whiskey Chilling Stones 鑑賞家套裝-掌心玻璃杯版</a></dt>
+                            <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                    <a target="_blank" href="index.php?act=goods&goods_id=9745&id=628">
+                                        <img src="https://www.lineshop.tw/upload/store/goods/628/628_5bea1fa449bc7355e05c020e0ad2155c.jpg_small.jpg"
+                                            alt="ROCKS Whiskey Chilling Stones 鑑賞家套裝-掌心玻璃杯版"
+                                            onload="javascript:DrawImage(this,120,120);" />
+                                    </a></span></dd>
+                            <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：1800元</dd>
+                            <dd class="goods-price" style="float: left;">特惠價：<em>1600</em>元</dd>
+
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <ul class="brands">
+            </ul>
+        </div>
+    </div>
+    <div class="nc-home-pattern style-brown">
+        <div class="rightbar">
+            <div class="title">
+                <h3>推薦</h3>
+            </div>
+            <ol class="saletop-list">
+                <li class="top">
+                    <dl>
+                        <dt class="goods-name"><a href="index.php?act=goods&goods_id=6514" target="_blank"
+                                title="MHJ60921 夏裝減齡波點短袖連衣裙">
+                                MHJ60921 夏裝減齡波點短袖連衣裙</a></dt>
+                        <dd class="nokey">1</dd>
+                        <dd class="goods-pic"><a href="index.php?act=goods&goods_id=6514" target="_blank"
+                                title="MHJ60921 夏裝減齡波點短袖連衣裙"><span class="thumb size60"><i></i>
+                                    <img src="https://www.lineshop.tw/upload/store/goods/483/483_765d4465e4b2e1bc078110af293f37b2.jpg_small.jpg"
+                                        title="MHJ60921 夏裝減齡波點短袖連衣裙" onload="javascript:DrawImage(this,60,60);"
+                                        target="_blank">
+                                </span></a></dd>
+                        <dd class="goods-price" style="
+                text-decoration: line-through;
+                ">450元</dd>
+                        <dd class="goods-price" "><em>315</em>元</dd>
+   
+             
+          </dl>
+        </li>
+										        								        										        	        <li class=" top">
+                            <dl>
+                                <dt class="goods-name"><a href="index.php?act=goods&goods_id=6323" target="_blank"
+                                        title="MK13-9755 夏季開叉蝴蝶結繫帶七分袖雪紡衫">
+                                        MK13-9755 夏季開叉蝴蝶結繫帶七分袖雪紡衫</a></dt>
+                                <dd class="nokey">2</dd>
+                                <dd class="goods-pic"><a href="index.php?act=goods&goods_id=6323" target="_blank"
+                                        title="MK13-9755 夏季開叉蝴蝶結繫帶七分袖雪紡衫"><span class="thumb size60"><i></i>
+                                            <img src="https://www.lineshop.tw/upload/store/goods/483/483_7e56a148b3fb8060b484472b397b6402.jpg_small.jpg"
+                                                title="MK13-9755 夏季開叉蝴蝶結繫帶七分袖雪紡衫"
+                                                onload="javascript:DrawImage(this,60,60);" target="_blank">
+                                        </span></a></dd>
+                                <dd class="goods-price" style="
+                text-decoration: line-through;
+                ">450元</dd>
+                                <dd class="goods-price" "><em>315</em>元</dd>
+   
+             
+          </dl>
+        </li>
+										        								        										        	        <li class=" top">
+                                    <dl>
+                                        <dt class="goods-name"><a href="index.php?act=goods&goods_id=6322"
+                                                target="_blank" title="MK16-3665 夏季性感印花露肩短袖T恤">
+                                                MK16-3665 夏季性感印花露肩短袖T恤</a></dt>
+                                        <dd class="nokey">3</dd>
+                                        <dd class="goods-pic"><a href="index.php?act=goods&goods_id=6322"
+                                                target="_blank" title="MK16-3665 夏季性感印花露肩短袖T恤"><span
+                                                    class="thumb size60"><i></i>
+                                                    <img src="https://www.lineshop.tw/upload/store/goods/483/483_11dd11c1ab9af68a47c4bec73b4ac2f1.jpg_small.jpg"
+                                                        title="MK16-3665 夏季性感印花露肩短袖T恤"
+                                                        onload="javascript:DrawImage(this,60,60);" target="_blank">
+                                                </span></a></dd>
+                                        <dd class="goods-price" style="
+                text-decoration: line-through;
+                ">450元</dd>
+                                        <dd class="goods-price" "><em>315</em>元</dd>
+   
+             
+          </dl>
+        </li>
+										        								                      		      </ol>
+      <div class=" ad-banner">
+                                            <a href="http://www.lineshop.tw" target="_blank">
+                                                <img border=0
+                                                    src="https://www.lineshop.tw/upload/adv/web-7-78_53c9187f0719aef1d1408ff410a810f9.jpg">
+                                            </a>
+        </div>
+    </div>
+    <div class="leftbar">
+        <div class="title">
+            <a href="http://www.lineshop.tw" target="_blank">
+                <img border=0 src="https://www.lineshop.tw/upload/adv/web-7-71_10edc944314c1c2e82df86e7e406ce22.jpg">
+            </a>
+        </div>
+        <div class="category">
+
+            <dl>
+                <dt><a href="index.php?act=search&cate_id=5607" title="好康爆報" target="_blank">好康爆報</a></dt>
+                <dd><a href="index.php?act=search&cate_id=8820" title="好文分享" target="_blank">好文分享</a></dd>
+                <dd><a href="index.php?act=search&cate_id=8940" title="影音分享" target="_blank">影音分享</a></dd>
+                <dd><a href="index.php?act=search&cate_id=6202" title="服裝百貨" target="_blank">服裝百貨</a></dd>
+                <dd><a href="index.php?act=search&cate_id=6204" title="美妝百貨" target="_blank">美妝百貨</a></dd>
+                <dd><a href="index.php?act=search&cate_id=6203" title="美食百貨" target="_blank">美食百貨</a></dd>
+                <dd><a href="index.php?act=search&cate_id=6207" title="生活百貨" target="_blank">生活百貨</a></dd>
+                <dd><a href="index.php?act=search&cate_id=6205" title="3C百貨" target="_blank">3C百貨</a></dd>
+                <dd><a href="index.php?act=search&cate_id=7699" title="收藏百貨" target="_blank">收藏百貨</a></dd>
+            </dl>
+        </div>
+        <div class="sale-pic">
+            <a href="http://www.yungching.com.tw/Buy/Taipei" target="_blank">
+                <img border=0 src="https://www.lineshop.tw/upload/adv/web-7-73_001de44ae854f616a4c10f1750985031.png">
+            </a>
+        </div>
+    </div>
+    <div class="middle">
+        <ul class="tabs-nav">
+
+            <li class="tabs-selected"><a href="JavaScript:void(0);">好康爆報</a></li>
+        </ul>
+
+        <div class="tabs-panel ">
+            <ul>
+                <li>
+                    <dl>
+                        <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12013"
+                                title="ANLUX 台灣三洋 ( SA-L28FEA ) 4坪 定頻冷專 左吹窗型冷氣[含安裝]">
+                                ANLUX 台灣三洋 ( SA-L28FEA ) 4坪 定頻冷專 左吹窗型冷氣[含安裝]</a></dt>
+                        <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                <a target="_blank" href="index.php?act=goods&goods_id=12013&id=676">
+                                    <img src="https://www.lineshop.tw/upload/store/goods/676/676_242461586b2a6399aeee00537bc060e6.jpg_small.jpg"
+                                        alt="ANLUX 台灣三洋 ( SA-L28FEA ) 4坪 定頻冷專 左吹窗型冷氣[含安裝]"
+                                        onload="javascript:DrawImage(this,120,120);" />
+                                </a></span></dd>
+                        <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：21000元</dd>
+                        <dd class="goods-price" style="float: left;">特惠價：<em>12599</em>元</dd>
+
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=12011"
+                                title="台灣製造~ MIT晶工360度12">
+                                台灣製造~ MIT晶工360度12</a></dt>
+                        <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                <a target="_blank" href="index.php?act=goods&goods_id=12011&id=676">
+                                    <img src="https://www.lineshop.tw/upload/store/goods/676/676_4c7a257768d7495efeda167d83ba8c0e.jpg_small.jpg"
+                                        alt="台灣製造~ MIT晶工360度12" onload="javascript:DrawImage(this,120,120);" />
+                                </a></span></dd>
+
+                        <dd class="goods-price" style="float: left;">商城價：<em>490</em>元</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=11779"
+                                title="THOMSON TM-SAT15A 2.5L氣炸鍋(復古綠)">
+                                THOMSON TM-SAT15A 2.5L氣炸鍋(復古綠)</a></dt>
+                        <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                <a target="_blank" href="index.php?act=goods&goods_id=11779&id=669">
+                                    <img src="https://www.lineshop.tw/upload/store/goods/669/669_ef638c4857334d6e322bff3b0280558c.jpg_small.jpg"
+                                        alt="THOMSON TM-SAT15A 2.5L氣炸鍋(復古綠)"
+                                        onload="javascript:DrawImage(this,120,120);" />
+                                </a></span></dd>
+                        <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：4990元</dd>
+                        <dd class="goods-price" style="float: left;">特惠價：<em>3330</em>元</dd>
+
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=11730"
+                                title="无线蓝牙耳机适用蓝牙5.0无线入耳式男款pro 运动型tyc充电男女款">
+                                无线蓝牙耳机适用蓝牙5.0无线入耳式男款pro 运动型tyc充电男女款</a></dt>
+                        <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                <a target="_blank" href="index.php?act=goods&goods_id=11730&id=673">
+                                    <img src="https://www.lineshop.tw/upload/store/goods/673/673_d51cd91c9e4e0d14e429670bf6be96be.jpg_small.jpg"
+                                        alt="无线蓝牙耳机适用蓝牙5.0无线入耳式男款pro 运动型tyc充电男女款"
+                                        onload="javascript:DrawImage(this,120,120);" />
+                                </a></span></dd>
+                        <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：760元</dd>
+                        <dd class="goods-price" style="float: left;">特惠價：<em>300</em>元</dd>
+
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=11723"
+                                title="Honeywell InSightTM 空氣清淨機 HPA5150WTW">
+                                Honeywell InSightTM 空氣清淨機 HPA5150WTW</a></dt>
+                        <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                <a target="_blank" href="index.php?act=goods&goods_id=11723&id=676">
+                                    <img src="https://www.lineshop.tw/upload/store/goods/676/676_6623059e8ca67c70a4caefc1a8a99b6c.jpg_small.jpg"
+                                        alt="Honeywell InSightTM 空氣清淨機 HPA5150WTW"
+                                        onload="javascript:DrawImage(this,120,120);" />
+                                </a></span></dd>
+                        <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：9999元</dd>
+                        <dd class="goods-price" style="float: left;">特惠價：<em>5950</em>元</dd>
+
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt class="goods-name"><a target="_blank" href="index.php?act=goods&goods_id=11719"
+                                title="台灣製造~ MIT晶工360度12">
+                                台灣製造~ MIT晶工360度12</a></dt>
+                        <dd class="goods-pic"><span class="thumb size120"><i></i>
+                                <a target="_blank" href="index.php?act=goods&goods_id=11719&id=676">
+                                    <img src="https://www.lineshop.tw/upload/store/goods/676/676_4c7a257768d7495efeda167d83ba8c0e.jpg_small.jpg"
+                                        alt="台灣製造~ MIT晶工360度12" onload="javascript:DrawImage(this,120,120);" />
+                                </a></span></dd>
+                        <dd class="goods-price" style="
+                line-height: 5px;
+                font-size: 9px;
+                text-decoration: line-through;
+                ">市場價：1000元</dd>
+                        <dd class="goods-price" style="float: left;">特惠價：<em>630</em>元</dd>
+
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <ul class="brands">
+        </ul>
+    </div>
+    </div>
+    <div class="mt10">
+        <!-- <script type="text/javascript" src="https://www.lineshop.tw/api.php?act=adv&op=advshow&ap_id=9"></script> -->
+        <script type="text/javascript" src="https://www.lineshop.tw/index.php?act=adv&op=advshow&ap_id=419"></script>
+    </div>
+    <div class="full_module">
+        <h2><b>友情連結</b></h2>
+        <div class="piclink">
+            <span><a href="https://www.facebook.com/TaiwanChinaMedicalUniversity" target="_blank"><img
+                        src="upload/link/b28430c96de4dec37e6ef547d5bbb5de.png" title="中國醫藥大學校友會總會" alt="中國醫藥大學校友會總會"
+                        width="88" height="31"></a></span>
+            <div class="clear"></div>
+        </div>
+        <div class="textlink">
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div id="faq">
+        <ul class="s1">
+            <h3>
+                會員服務 </h3>
+            <li><a href="index.php?act=article&article_id=582" title="會員教學"> 會員教學 </a></li>
+            <li><a href="index.php?act=article&article_id=481" title="會員條款"> 會員條款 </a></li>
+        </ul>
+        <ul class="s2">
+            <h3>
+                店家資訊 </h3>
+            <li><a href="index.php?act=article&article_id=586" title="首頁廣告位價格"> 首頁廣告位價 </a></li>
+            <li><a href="index.php?act=article&article_id=538" title="頂級VIP店家"> 頂級VIP店家 </a></li>
+            <li><a href="index.php?act=article&article_id=505" title="店家守則"> 店家守則 </a></li>
+        </ul>
+        <ul class="s3">
+            <h3>
+                條款說明 </h3>
+            <li><a href="index.php?act=article&article_id=488" title="商城政策"> 商城政策 </a></li>
+        </ul>
+        <ul class="s4">
+            <h3>
+                合作交流 </h3>
+            <li><a href="index.php?act=article&article_id=551" title="B2B"> B2B </a></li>
+            <li><a href="index.php?act=article&article_id=466" title="開店類型"> 開店類型 </a></li>
+            <li><a href="index.php?act=article&article_id=453" title="做生意要訂單!!!到校友會商城開店就對了!不看你會後悔"> 做生意要訂單! </a></li>
+        </ul>
+        <ul class="s5">
+            <h3>
+                客服中心 </h3>
+            <li><a href="index.php?act=article&article_id=421" title="聯絡我們"> 聯絡我們 </a></li>
+        </ul>
+        <ul class="s6">
+            <h3>
+                關於我們 </h3>
+            <li><a href="index.php?act=article&article_id=468" title="校友會商城"> 校友會商城 </a></li>
+            <li><a href="index.php?act=article&article_id=430" title="維護公告"> 維護公告 </a></li>
+            <li><a href="index.php?act=article&article_id=429" title="人才招募"> 人才招募 </a></li>
+            <li><a href="index.php?act=article&article_id=428" title="公司資訊"> 公司資訊 </a></li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    </div>
+
+    <div class="clear">&nbsp;</div>
+    <div id="footer">
+        <p><a href="https://www.lineshop.tw">首頁</a>
+            | <a href="https://www.lineshop.tw/index.php?act=article&article_id=468">關於商城</a>
+        </p>
+        <a href="http://www.6393.tw" target="_blank" style="color:#FFF;">愛格室內設計</a>
+        <br />
+    </div>
+    <script type="text/javascript" src="https://www.lineshop.tw/resource/js/jquery.cookie.js"></script>
+    <script language="javascript">
+        var searchTxt = ' 搜尋其實很容易！';
+        function searchFocus(e) {
+            if (e.value == searchTxt) {
+                e.value = '';
+                $('#keyword').css("color", "");
+            }
+        }
+        function searchBlur(e) {
+            if (e.value == '') {
+                e.value = searchTxt;
+                $('#keyword').css("color", "#999999");
+            }
+        }
+        function searchInput() {
+            if ($('#keyword').val() == searchTxt)
+                $('#keyword').attr("value", "");
+            return true;
+        }
+        $('#keyword').css("color", "#999999");
+        // 加载购物车信息
+        function load_cart_information() {
+            $.getJSON('index.php?act=cart&op=ajaxcart', function (result) {
+                if (result) {
+                    var result = result;
+                    $('.goods_num').html(result.goods_all_num);
+                    var html = '';
+                    if (result.goods_all_num > 0) {
+                        html += "<div class='order'><table border='0' cellpadding='0' cellspacing='0'>";
+                        var i = 0;
+                        var data = result['goodslist'];
+                        for (i = 0; i < data.length; i++) {
+                            html += "<tr id='cart_item_" + data[i]['specid'] + "' count='" + data[i]['num'] + "'>";
+                            html += "<td class='picture'><span class='thumb size40'><i></i><img src='" + data[i]['images'] + "' title='" + data[i]['gname'] + "' onload='javascript:DrawImage(this,40,40);' ></span></td>";
+                            html += "<td class='name'><a href='https://www.lineshop.tw/index.php?act=goods&goods_id=" + data[i]['goodsid'] + "' title='" + data[i]['gname'] + "' target='_top'>" + data[i]['gname'] + "</a></td>";
+                            html += "<td class='price'><p>NT$" + data[i]['price'] + "×" + data[i]['num'] + "</p><p><a href='javascript:void(0)' onClick='drop_topcart_item(" + data[i]['storeid'] + "," + data[i]['specid'] + ");' style='color: #999;'>刪除</a></p></td>";
+                            html += "</tr>";
+                        }
+                        html += "<tr><td colspan='3' class='no-border'><span class='all'>共<strong class='goods_num'>" + result.goods_all_num + "</strong>種商品   金額總計：<strong id='cart_amount'>NT$" + result.goods_all_price + "</strong></span><span class='button' ><a href='https://www.lineshop.tw/index.php?act=cart' target='_top' title='結算商品' style='color: #FFF;' >結算商品</a></span></td></tr>";
+                    } else {
+                        html = "<div class='no-order'><span>您的購物車中暫無商品，趕快選擇心愛的商品吧！</span><a href='https://www.lineshop.tw/index.php?act=cart' class='button' target='_top' title='查看購物車' style=' color: #FFF;' >查看購物車</a></div>";
+                    }
+                    $("#top_cartlist").html(html);
+                }
+            });
+        }
+
+        //头部删除购物车信息
+        function drop_topcart_item(store_id, spec_id) {
+            var tr = $('#cart_item_' + spec_id);
+            var amount_span = $('#cart_amount');
+            var cart_goods_kinds = $('.goods_num');
+            $.getJSON('index.php?act=cart&op=drop&specid=' + spec_id + '&storeid=' + store_id, function (result) {
+                if (result.done) {
+                    //删除成功
+                    if (result.quantity == 0) {
+                        $('.goods_num').html('0');
+                        var html = '';
+                        html = "<div class='no-order'><span>您的購物車中暫無商品，趕快選擇心愛的商品吧！</span><a href='https://www.lineshop.tw/index.php?act=cart' class='button' target='_top' title='查看購物車' style=' color: #FFF;' >查看購物車</a></div>";
+                        $("#top_cartlist").html(html);
+                    }
+                    else {
+                        tr.remove();        //移除
+                        amount_span.html(price_format(result.amount));  //刷新总费用
+                        cart_goods_kinds.html(result.quantity);       //刷新商品种类
+                    }
+                } else {
+                    alert(result.msg);
+                }
+            });
+        }
+
+        $(function () {
+            $('#topNav').find('li[class="cart"]').mouseover(function () {
+                // 运行加载购物车
+                load_cart_information();
+                $(this).unbind();
+            });
+        });
+    </script>
+</body>
+
+</html>

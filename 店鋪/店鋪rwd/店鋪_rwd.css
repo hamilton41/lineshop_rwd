@@ -473,6 +473,9 @@
 
 /****************************************************商品.css******************************************************/
 
+
+
+
 @media (max-width:1000px) {
     #content .nc-detail-bd .ncs-info {
         float: none !important;
@@ -521,6 +524,19 @@
     }
 }
 
+
+@media (max-width:1000px) {
+    .ncg-com-list .content ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .ncg-com-list .content ul li {
+        margin: 0 30px;
+    }
+}
+
+
 @media (max-width:800px) {
     .nc-gallery {
         margin: auto !important;
@@ -532,10 +548,7 @@
         float: none !important;
     }
 
-    .ncg-com-list .content ul {
-        display: flex;
-        flex-wrap: wrap;
-    }
+
 
     .nc-s-c-s2 .content {
         width: 100% !important;
@@ -585,7 +598,16 @@
     .tabbar ul li a {
         padding: 5px 12px !important;
     }
-     
+
+
+    .nc-g-r th dl dt {
+        width: 100% !important;
+    }
+
+    .nc-g-r th dl {
+        width: 300px !important;
+    }
+
 
 }
 
@@ -599,23 +621,21 @@
     }
 }
 
-@media (max-width:590px) {
+@media (max-width:615px) {
     .layout.expanded.sticky .nc-sidebar {
         position: relative !important;
     }
 
-    
+
 }
 
 @media (max-width:530px) {
-    .expanded .nc-goods-main {
-        
-    }
+    .expanded .nc-goods-main {}
 }
 
 
 
-@media (max-width :530px) {
+@media (max-width :550px) {
 
 
     .nc-g-r th dl {
@@ -623,7 +643,7 @@
     }
 
     #content .nc-detail-bd .ncs-info {
-        width: 100% !important;
+        width: 90% !important;
     }
 
     .nc-s-c-s4 .content table {
@@ -643,5 +663,12 @@
 
     .nc-inform span {
         top: -11px !important;
+    }
+}
+
+
+@media (max-width:480px) {
+    .expanded .nc-goods-main {
+        width: 100% !important;
     }
 }
