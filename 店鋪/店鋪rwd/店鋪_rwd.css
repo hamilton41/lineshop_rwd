@@ -672,3 +672,14 @@
         width: 100% !important;
     }
 }
+
+
+
+
+/*****************************************************/
+@media (max-width: 1000px) {
+    .nc-s-c-s4.ncg-intro .default img {
+        width: 100% !important;
+        height: unset !important;
+    }
+}

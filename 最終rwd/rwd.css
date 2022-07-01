@@ -913,3 +913,20 @@
         width: 100px !important;
     }
 }
+
+
+/***************************************************************/
+
+
+@media (max-width:650px) {
+    #no_results {
+        padding: 0px 50px 60px 50px !important;
+        background-position: 100px !important;
+    }
+}
+
+@media (max-width:400px) {
+    #no_results {
+        font-size: 12px !important;
+    }
+}
